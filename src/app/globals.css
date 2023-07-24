@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
+
+.shape{
+    @apply rounded-tr-3xl rounded-bl-3xl
+}
+
 @tailwind utilities;

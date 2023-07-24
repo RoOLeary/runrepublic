@@ -25,7 +25,12 @@ export default function RootLayout({
     <html lang="en" className={poppins.className}>
       <body className="">
         <div className="bg-[#f8f8f8] text-base dark:bg-neutral-900/95 text-neutral-900 dark:text-neutral-200">
+        
           <SiteHeader />
+          <div className={`w-full bg-red-500 flex items-center justify-center p-2 mb-2`}>
+            <p className="text-white">Ashes to Ashes, Funk to Funky, We know Major Tom&#39;s a junkie</p>
+          </div>
+    
           {children}
           <MusicPlayer />
           <Footer />

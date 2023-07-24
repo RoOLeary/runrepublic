@@ -12,8 +12,8 @@ const SectionMagazine10: FC<SectionMagazine10Props> = ({
   return (
     <div className={`nc-SectionMagazine10 ${className}`}>
       {!posts.length && <span>Nothing we found!</span>}
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
-        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-5 gap-5">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-5 gap-3">
           {posts
             .filter((_, i) => i < 3 && i >= 1)
             .map((item, index) => (

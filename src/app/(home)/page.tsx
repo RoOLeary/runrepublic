@@ -14,7 +14,7 @@ const MAGAZINE2_POSTS = DEMO_POSTS_NEWS.filter((_, i) => i >= 0 && i < 7);
 
 const PageHome = () => {
   return (
-    <div className="nc-PageHomeDemo6 relative [ nc-section-rounded-md ]">
+    <div className="PageHome relative [ nc-section-rounded-md ]">
       <div className="relative overflow-hidden">
         <div className="container relative">
           <SectionMagazine10 posts={MAGAZINE1_POSTS} />
