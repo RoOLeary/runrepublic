@@ -14,18 +14,11 @@ import SwitchDarkMode2 from "@/components/SwitchDarkMode/SwitchDarkMode2";
 import { useThemeMode } from "@/hooks/useThemeMode";
 
 const SiteHeader = () => {
-  let pathname = usePathname();
   useThemeMode();
-  //
-
-  //
-  // FOR OUR DEMO PAGE, use do not use this, you can delete it.
-  const [headerSelected, setHeaderSelected] = useState<"Header 1">("Header 1");
-
   const headerComponent = useMemo(() => {
     let HeadComponent = HeaderLogged;
     return <HeadComponent />;
-  }, [pathname, headerSelected]);
+  }, []);
 
   return (
     <>

@@ -384,11 +384,11 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
   },
 
   //
-  {
-    id: randomId(),
-    href: "/archive/demo-slug" as Route,
-    name: "Beauty",
-  },
+  // {
+  //   id: randomId(),
+  //   href: "/archive/demo-slug" as Route,
+  //   name: "Beauty",
+  // },
 
   {
     id: randomId(),
