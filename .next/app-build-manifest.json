@@ -15,16 +15,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(home)/page.js"
-    ],
-    "/(singles)/(default)/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(singles)/(default)/layout.js"
-    ],
-    "/(singles)/(default)/single/[[...slug]]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(singles)/(default)/single/[[...slug]]/page.js"
     ]
   }
 }
