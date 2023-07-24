@@ -21,7 +21,7 @@ const PageHome = () => {
 
           <SectionMagazine9
             gapClassName="gap-6"
-            className="pt-16 lg:pt-24"
+            className="pt-12 lg:pt-10"
             posts={DEMO_POSTS_NEWS.filter((_, i) => i >= 6 && i < 18)}
           />
 

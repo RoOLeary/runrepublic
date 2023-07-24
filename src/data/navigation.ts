@@ -6,20 +6,28 @@ const randomId = _.uniqueId;
 
 export const MEGAMENU_TEMPLATES: NavItemType[] = [
   // home pages ---------
+  // {
+  //   id: randomId(),
+  //   href: "/#",
+  //   name: "Home Page",
+  //   children: [
+  //     { id: randomId(), href: "/", name: "Home page" },
+  //     { id: randomId(), href: "/home-2", name: "Home page 2" },
+  //     { id: randomId(), href: "/home-3", name: "Home page 3" },
+  //     { id: randomId(), href: "/home-4", name: "Home page 4" },
+  //     // { id: randomId(), href: "/home-6", name: "Home page 5" },
+  //     { id: randomId(), href: "/", name: "Header style 1", isNew: true },
+  //     { id: randomId(), href: "/home-2", name: "Header style 2", isNew: true },
+  //   ],
+  // },
+
   {
     id: randomId(),
-    href: "/#",
-    name: "Home Page",
-    children: [
-      { id: randomId(), href: "/", name: "Home page" },
-      { id: randomId(), href: "/home-2", name: "Home page 2" },
-      { id: randomId(), href: "/home-3", name: "Home page 3" },
-      { id: randomId(), href: "/home-4", name: "Home page 4" },
-      // { id: randomId(), href: "/home-6", name: "Home page 5" },
-      { id: randomId(), href: "/", name: "Header style 1", isNew: true },
-      { id: randomId(), href: "/home-2", name: "Header style 2", isNew: true },
-    ],
+    href: "/" as Route,
+    name: "Home",
   },
+
+  
 
   // single pages ---------
   {
@@ -319,21 +327,27 @@ const OTHER_PAGE_CHILD: NavItemType[] = [
 ];
 
 export const NAVIGATION_DEMO_2: NavItemType[] = [
+  // {
+  //   id: randomId(),
+  //   href: "/",
+  //   name: "Homes",
+  //   type: "dropdown",
+  //   children: [
+  //     { id: randomId(), href: "/", name: "Home page 1" },
+  //     { id: randomId(), href: "/home-2", name: "Home page 2" },
+  //     { id: randomId(), href: "/home-3", name: "Home page 3" },
+  //     { id: randomId(), href: "/home-4", name: "Home page 4" },
+  //     // { id: randomId(), href: "/home-6", name: "Home page 5" },
+  //     { id: randomId(), href: "/", name: "Header style 1", isNew: true },
+  //     { id: randomId(), href: "/home-2", name: "Header style 2", isNew: true },
+  //     { id: randomId(), href: "/home-3", name: "Header style 3" },
+  //   ],
+  // },
+
   {
     id: randomId(),
-    href: "/",
-    name: "Homes",
-    type: "dropdown",
-    children: [
-      { id: randomId(), href: "/", name: "Home page 1" },
-      { id: randomId(), href: "/home-2", name: "Home page 2" },
-      { id: randomId(), href: "/home-3", name: "Home page 3" },
-      { id: randomId(), href: "/home-4", name: "Home page 4" },
-      // { id: randomId(), href: "/home-6", name: "Home page 5" },
-      { id: randomId(), href: "/", name: "Header style 1", isNew: true },
-      { id: randomId(), href: "/home-2", name: "Header style 2", isNew: true },
-      { id: randomId(), href: "/home-3", name: "Header style 3" },
-    ],
+    href: "/" as Route,
+    name: "Home",
   },
 
   // single pages ----------------
