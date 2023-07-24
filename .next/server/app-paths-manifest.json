@@ -1,11 +1,4 @@
 {
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/(home)/page": "app/(home)/page.js",
-  "/(home)/home-4/page": "app/(home)/home-4/page.js",
-  "/(home)/home-2/page": "app/(home)/home-2/page.js",
-  "/(home)/home-3/page": "app/(home)/home-3/page.js",
-  "/(search)/search/page": "app/(search)/search/page.js",
-  "/(singles)/(has-sidebar)/single-3/[[...slug]]/page": "app/(singles)/(has-sidebar)/single-3/[[...slug]]/page.js",
-  "/(singles)/(default)/single/[[...slug]]/page": "app/(singles)/(default)/single/[[...slug]]/page.js",
-  "/(singles)/(default)/single-video/[[...slug]]/page": "app/(singles)/(default)/single-video/[[...slug]]/page.js"
+  "/(home)/page": "app/(home)/page.js"
 }

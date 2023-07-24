@@ -30,22 +30,22 @@ declare namespace __next_route_internal_types__ {
 
   type StaticRoutes = 
     | `/`
-    | `/home-3`
     | `/home-2`
+    | `/home-3`
     | `/home-4`
-    | `/search`
-    | `/search-2`
-    | `/contact`
     | `/dashboard`
     | `/dashboard/billing-address`
     | `/dashboard/edit-profile`
     | `/dashboard/posts`
     | `/dashboard/submit-post`
     | `/dashboard/subscription`
+    | `/contact`
     | `/forgot-pass`
     | `/login`
     | `/signup`
     | `/subscription`
+    | `/search`
+    | `/search-2`
     | `/about`
     | `/api/hello`
   type DynamicRoutes<T extends string = string> = 
@@ -57,8 +57,8 @@ declare namespace __next_route_internal_types__ {
     | `/single-5/${OptionalCatchAllSlug<T>}`
     | `/single/${OptionalCatchAllSlug<T>}`
     | `/single-2/${OptionalCatchAllSlug<T>}`
-    | `/single-audio/${OptionalCatchAllSlug<T>}`
     | `/single-gallery/${OptionalCatchAllSlug<T>}`
+    | `/single-audio/${OptionalCatchAllSlug<T>}`
     | `/single-video/${OptionalCatchAllSlug<T>}`
     | `/author/${OptionalCatchAllSlug<T>}`
 
