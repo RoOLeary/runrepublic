@@ -1,8 +1,4 @@
 {
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/not-found": "app/not-found.js",
-  "/(home)/page": "app/(home)/page.js",
-  "/(home)/home-3/page": "app/(home)/home-3/page.js",
-  "/(singles)/(default)/single/[[...slug]]/page": "app/(singles)/(default)/single/[[...slug]]/page.js",
-  "/(singles)/(default)/single-2/[[...slug]]/page": "app/(singles)/(default)/single-2/[[...slug]]/page.js"
+  "/(home)/page": "app/(home)/page.js"
 }

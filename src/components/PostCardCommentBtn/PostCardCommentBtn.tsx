@@ -46,7 +46,7 @@ const PostCardCommentBtn: FC<PostCardCommentBtnProps> = ({
         </svg>
 
         <span className="ml-1 text-neutral-900 dark:text-neutral-200">
-          {"110"}
+          {"220"}
         </span>
       </a>
     );
@@ -87,7 +87,7 @@ const PostCardCommentBtn: FC<PostCardCommentBtnProps> = ({
       </svg>
 
       <span className="ml-1 text-neutral-900 dark:text-neutral-200">
-        {"110"}
+        {"220"}
       </span>
     </Link>
   );

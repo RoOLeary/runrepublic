@@ -12,7 +12,7 @@ const MAGAZINE1_POSTS = DEMO_POSTS_NEWS.filter((_, i) => i >= 8 && i < 16);
 const MAGAZINE2_POSTS = DEMO_POSTS_NEWS.filter((_, i) => i >= 0 && i < 7);
 //
 
-const PageHomeDemo6: React.FC = () => {
+const PageHome = () => {
   return (
     <div className="nc-PageHomeDemo6 relative [ nc-section-rounded-md ]">
       <div className="relative overflow-hidden">
@@ -54,4 +54,4 @@ const PageHomeDemo6: React.FC = () => {
   );
 };
 
-export default PageHomeDemo6;
+export default PageHome;
