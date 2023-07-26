@@ -52,14 +52,14 @@ declare namespace __next_route_internal_types__ {
     | `/archive/${OptionalCatchAllSlug<T>}`
     | `/archive-2/${OptionalCatchAllSlug<T>}`
     | `/archive-3/${OptionalCatchAllSlug<T>}`
+    | `/single-4/${OptionalCatchAllSlug<T>}`
+    | `/single-3/${OptionalCatchAllSlug<T>}`
+    | `/single-5/${OptionalCatchAllSlug<T>}`
     | `/single/${OptionalCatchAllSlug<T>}`
     | `/single-2/${OptionalCatchAllSlug<T>}`
     | `/single-audio/${OptionalCatchAllSlug<T>}`
     | `/single-gallery/${OptionalCatchAllSlug<T>}`
     | `/single-video/${OptionalCatchAllSlug<T>}`
-    | `/single-3/${OptionalCatchAllSlug<T>}`
-    | `/single-5/${OptionalCatchAllSlug<T>}`
-    | `/single-4/${OptionalCatchAllSlug<T>}`
     | `/author/${OptionalCatchAllSlug<T>}`
 
   type RouteImpl<T> = 

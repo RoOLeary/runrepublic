@@ -16,7 +16,7 @@ const PageHome = () => {
   return (
     <div className="PageHome relative [ nc-section-rounded-md ]">
       <div className="relative overflow-hidden">
-        <div className="container relative">
+        <div className="container relative mt-2">
           <SectionMagazine10 posts={MAGAZINE1_POSTS} />
 
           <SectionMagazine9
