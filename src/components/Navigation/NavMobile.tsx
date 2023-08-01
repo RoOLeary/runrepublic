@@ -6,7 +6,7 @@ import Logo from "@/components/Logo/Logo";
 import { Disclosure } from "@/app/headlessui";
 import { NavItemType } from "./NavigationItem";
 import { NAVIGATION_DEMO_2 } from "@/data/navigation";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
+// import ButtonPrimary from "@/components/Button/ButtonPrimary";
 import SocialsList from "@/components/SocialsList/SocialsList";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import SwitchDarkMode from "@/components/SwitchDarkMode/SwitchDarkMode";
@@ -188,17 +188,6 @@ const NavMobile: React.FC<NavMobileProps> = ({
       <ul className="flex flex-col py-6 px-2 space-y-1 rtl:space-x-reverse">
         {data.map(_renderItem)}
       </ul>
-      <div className="flex items-center justify-between py-6 px-5 space-x-2 rtl:space-x-reverse">
-        <ButtonPrimary className="!px-10 relative">
-          Buy this template
-          <a
-            href="https://themeforest.net/item/ncmaz-blog-news-magazine-nextjs-template/44412092"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute inset-0"
-          ></a>
-        </ButtonPrimary>
-      </div>
     </div>
   );
 };
