@@ -18,6 +18,12 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "ronan-oleary.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
