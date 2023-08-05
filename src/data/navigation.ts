@@ -409,13 +409,13 @@ export const NAVIGATION_MAIN: NavItemType[] = [
     href: "/archive/demo-slug" as Route,
     name: "Sport",
   },
-  {
-    id: randomId(),
-    href: "/search",
-    name: "Templates",
-    type: "megaMenu",
-    children: MEGAMENU_TEMPLATES,
-  },
+  // {
+  //   id: randomId(),
+  //   href: "/search",
+  //   name: "Templates",
+  //   type: "megaMenu",
+  //   children: MEGAMENU_TEMPLATES,
+  // },
   {
     id: randomId(),
     href: "/search",
