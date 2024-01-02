@@ -1,1 +1,10 @@
-{}
+{
+  "/about/page": "app/about/page.js",
+  "/(home)/page": "app/(home)/page.js",
+  "/(search)/search/page": "app/(search)/search/page.js",
+  "/(archives)/archive/[[...slug]]/page": "app/(archives)/archive/[[...slug]]/page.js",
+  "/(others)/dashboard/posts/page": "app/(others)/dashboard/posts/page.js",
+  "/(others)/dashboard/subscription/page": "app/(others)/dashboard/subscription/page.js",
+  "/(singles)/(default)/single-video/[[...slug]]/page": "app/(singles)/(default)/single-video/[[...slug]]/page.js",
+  "/(others)/dashboard/submit-post/page": "app/(others)/dashboard/submit-post/page.js"
+}

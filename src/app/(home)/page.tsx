@@ -25,7 +25,7 @@ const PageHome = () => {
             posts={DEMO_POSTS_NEWS.filter((_, i) => i >= 6 && i < 18)}
           />
 
-          <SectionAds className="pt-16 lg:pt-24" />
+          {/* <SectionAds className="pt-16 lg:pt-24" /> */}
 
           <SectionMagazine2
             className="pt-16 lg:pt-24"

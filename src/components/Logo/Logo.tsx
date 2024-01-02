@@ -13,12 +13,9 @@ export interface LogoProps {
 const Logo = ({}:LogoProps): React.JSX.Element => {
   return (
     <Link
-      href="/"
-      className="ttnc-logo inline-block text-primary-6000 flex-shrink-0"
-    >
-      {/* THIS USE FOR MY MULTI DEMO */}
-      {/* IF YOU ARE MY CLIENT. PLESE DELETE THIS CODE AND YOU YOUR IMAGE PNG BY BELLOW CODE */}
-      <Image alt="Logo" src="https://ronan-oleary.com/assets/ro-bw.d434f415.png" width="50" height="50" className="rounded-full" />
+      href="/">
+      <h2 className="font-black text-xl tracking-tighter">TECHSCENE</h2>
+      {/* <Image alt="Logo" src="https://ronan-oleary.com/assets/ro-bw.d434f415.png" width="50" height="50" className="rounded-full" /> */}
     </Link>
   );
 };

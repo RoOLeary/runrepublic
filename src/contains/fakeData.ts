@@ -63,7 +63,7 @@ const tagNames = [
   "Javascript",
   "Vue",
   "Reactjs",
-  "Androind",
+  "Android",
 ];
 
 const featuredImgs = [
