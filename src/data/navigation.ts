@@ -349,7 +349,8 @@ export const NAVIGATION_MAIN: NavItemType[] = [
     href: "/" as Route,
     name: "Home",
   },
-  { id: randomId(), href: "/about", name: "About" },
+  // @ts-ignore
+  { id: randomId(), href: "/archive/demo-slug", name: "Latest" },
   // single pages ----------------
   // {
   //   id: randomId(),
@@ -406,8 +407,14 @@ export const NAVIGATION_MAIN: NavItemType[] = [
 
   {
     id: randomId(),
-    href: "/archive/demo-slug" as Route,
-    name: "Sport",
+    href: "/archive-2/demo-slug" as Route,
+    name: "Dev",
+  },
+
+  {
+    id: randomId(),
+    href: "/archive-2/demo-slug" as Route,
+    name: "Cool Stuff",
   },
   // {
   //   id: randomId(),
