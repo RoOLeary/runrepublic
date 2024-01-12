@@ -13,7 +13,7 @@ export interface SectionSubscribe2Props {
 const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
   return (
     <div
-      className={`nc-SectionSubscribe2 relative flex flex-col lg:flex-row items-center ${className}`}
+      className={`SectionSubscribe2 relative flex flex-col lg:flex-row items-center ${className}`}
     >
       <div className="flex-shrink-0 mb-14 lg:mb-0 lg:me-10 lg:w-2/5">
         <h2 className="font-semibold text-4xl">Join our newsletter 🎉</h2>

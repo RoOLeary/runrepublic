@@ -10,7 +10,7 @@ export interface MainNav1Props {}
 
 const MainNav1: FC<MainNav1Props> = ({}) => {
   return (
-    <div className="nc-MainNav1 relative z-10 bg-white dark:bg-slate-900 ">
+    <div className="MainNav1 relative z-10 bg-white dark:bg-slate-900 ">
       <div className="container">
         <div className="h-20 py-5 flex justify-between items-center">
           <div className="flex items-center lg:hidden flex-1">

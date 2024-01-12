@@ -81,7 +81,7 @@ const TRAVEL_SUBCATS: TaxonomyType[] = [
 
 const PageHomeDemo4: React.FC = () => {
   return (
-    <div className="nc-PageHomeDemo4 relative">
+    <div className="PageHomeDemo4 relative">
       <div className="relative">
         <SectionHero2 />
         <div className="relative overflow-hidden">

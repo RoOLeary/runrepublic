@@ -40,7 +40,7 @@ const Card16Podcast: FC<Card16PodcastProps> = ({
   };
 
   return (
-    <div className={`nc-Card16Podcast relative flex flex-col ${className}`}>
+    <div className={`Card16Podcast relative flex flex-col ${className}`}>
       <Link
         href={href}
         className={`block flex-shrink-0 relative w-full rounded-3xl overflow-hidden ${ratio}`}
@@ -78,7 +78,7 @@ const Card16Podcast: FC<Card16PodcastProps> = ({
           />
         </div>
         <div className="p-5 mt-5 bg-white dark:bg-neutral-900 shadow-xl dark:shadow-2xl rounded-3xl rounded-ss-none flex flex-col flex-grow ">
-          <h2 className="nc-card-title block sm:text-lg lg:text-xl font-semibold text-neutral-900 dark:text-neutral-100 ">
+          <h2 className="card-title block sm:text-lg lg:text-xl font-semibold text-neutral-900 dark:text-neutral-100 ">
             <Link href={href} className="line-clamp-1" title={title}>
               {title}
             </Link>

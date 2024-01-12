@@ -23,7 +23,7 @@ const ModalCategories: FC<ModalCategoriesProps> = ({ categories }) => {
   };
 
   return (
-    <div className="nc-ModalCategories">
+    <div className="ModalCategories">
       <NcModal
         renderTrigger={(openModal) => (
           <Button

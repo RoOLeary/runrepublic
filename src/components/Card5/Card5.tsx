@@ -13,7 +13,7 @@ const Card5: FC<Card5Props> = ({ className = "", post }) => {
   const { author, title, href, id, date, categories, readingTime } = post;
   return (
     <div
-      className={`nc-Card5 relative p-5 group border border-neutral-200 hover:shadow-lg transition-shadow dark:border-neutral-700 rounded-3xl bg-white dark:bg-neutral-900 ${className}`}
+      className={`Card5 relative p-5 group border border-neutral-200 hover:shadow-lg transition-shadow dark:border-neutral-700 rounded-3xl bg-white dark:bg-neutral-900 ${className}`}
     >
       <Link href={href} className="absolute inset-0 rounded-lg"></Link>
 

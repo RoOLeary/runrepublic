@@ -29,7 +29,7 @@ const PageArchive = ({}) => {
   ];
 
   return (
-    <div className={`nc-PageArchive`}>
+    <div className={`PageArchive`}>
       {/* HEADER */}
       <div className="w-full px-2 xl:max-w-screen-2xl mx-auto">
         <div className="relative aspect-w-16 aspect-h-13 sm:aspect-h-9 lg:aspect-h-8 xl:aspect-h-5 rounded-3xl md:rounded-[40px] overflow-hidden z-0">

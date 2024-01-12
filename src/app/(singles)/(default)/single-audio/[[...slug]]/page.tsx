@@ -39,7 +39,7 @@ const PageSingleAudio = ({}) => {
         className={`aspect-w-1 aspect-h-1 rounded-full overflow-hidden z-10 shadow-2xl group cursor-pointer`}
       >
         <Image
-          className={`w-full h-full object-cover transition-transform z-0 nc-animation-spin rounded-full ${
+          className={`w-full h-full object-cover transition-transform z-0 animation-spin rounded-full ${
             playing ? "playing" : ""
           }`}
           src={featuredImageDemo}

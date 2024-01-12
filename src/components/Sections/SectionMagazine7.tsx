@@ -19,7 +19,7 @@ const SectionMagazine7: FC<SectionMagazine7Props> = ({
   className = "",
 }) => {
   return (
-    <div className={`nc-SectionMagazine7 relative ${className}`}>
+    <div className={`SectionMagazine7 relative ${className}`}>
       <Heading desc={"Over 218 articles has gallery type"}>
         {"View more gallery articles"}
       </Heading>

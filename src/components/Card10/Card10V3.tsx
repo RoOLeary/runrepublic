@@ -115,7 +115,7 @@ const Card10V3: FC<Card10V3Props> = ({
 
   return (
     <div
-      className={`nc-Card10V3 group relative flex flex-col ${className}`}
+      className={`Card10V3 group relative flex flex-col ${className}`}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
@@ -141,7 +141,7 @@ const Card10V3: FC<Card10V3Props> = ({
       </div>
 
       <div className="space-y-2.5 mt-4 px-4">
-        <h2 className="nc-card-title block sm:text-lg font-semibold text-neutral-900 dark:text-neutral-100 ">
+        <h2 className="card-title block sm:text-lg font-semibold text-neutral-900 dark:text-neutral-100 ">
           <Link href={href} className="line-clamp-1" title={title}>
             {title}
           </Link>

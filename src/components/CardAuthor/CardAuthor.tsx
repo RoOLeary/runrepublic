@@ -13,7 +13,7 @@ const CardAuthor: FC<CardAuthorProps> = ({ className = "", author }) => {
   return (
     <Link
       href={href}
-      className={`nc-CardAuthor flex items-center ${className}`}
+      className={`CardAuthor flex items-center ${className}`}
     >
       <Avatar
         sizeClass="h-10 w-10 text-base"

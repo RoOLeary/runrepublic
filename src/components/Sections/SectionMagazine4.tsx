@@ -12,7 +12,7 @@ const SectionMagazine4: FC<SectionMagazine4Props> = ({
   heading = "Latest Articles 🎈",
 }) => {
   return (
-    <div className={`nc-SectionMagazine4 ${className}`}>
+    <div className={`SectionMagazine4 ${className}`}>
       <HeaderFilter heading={heading} />
 
       {!posts?.length && <span>Nothing we found!</span>}

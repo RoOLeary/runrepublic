@@ -12,7 +12,7 @@ const CardCategory3: FC<CardCategory3Props> = ({ className = "" }) => {
   return (
     <Link
       href={"/archive/demo-slug"}
-      className={`nc-CardCategory3 block ${className}`}
+      className={`CardCategory3 block ${className}`}
     >
       <div
         className={`relative w-full aspect-w-16 aspect-h-11 sm:aspect-h-9 h-0 rounded-2xl overflow-hidden group bg-sky-100`}
@@ -44,7 +44,7 @@ const CardCategory3: FC<CardCategory3Props> = ({ className = "" }) => {
               <ButtonPrimary
                 sizeClass="py-3 px-4 sm:py-3.5 sm:px-6"
                 fontSize="text-sm font-medium"
-                className="nc-shadow-lg"
+                className="shadow-lg"
               >
                 Show me more
               </ButtonPrimary>

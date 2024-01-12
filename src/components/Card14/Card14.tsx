@@ -24,7 +24,7 @@ const Card14: FC<Card14Props> = ({
 
   return (
     <div
-      className={`nc-Card14 relative flex flex-col group rounded-3xl overflow-hidden ${hoverClass} ${className}`}
+      className={`Card14 relative flex flex-col group rounded-3xl overflow-hidden ${hoverClass} ${className}`}
     >
       <Link href={href} className={`flex items-start relative w-full ${ratio}`}>
         <NcImage

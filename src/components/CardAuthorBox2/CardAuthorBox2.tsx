@@ -18,7 +18,7 @@ const CardAuthorBox2: FC<CardAuthorBox2Props> = ({
   return (
     <Link
       href={href}
-      className={`nc-CardAuthorBox2 flex flex-col overflow-hidden bg-white dark:bg-neutral-800 rounded-3xl ${className}`}
+      className={`CardAuthorBox2 flex flex-col overflow-hidden bg-white dark:bg-neutral-800 rounded-3xl ${className}`}
     >
       <div className="relative flex-shrink-0 ">
         <div>

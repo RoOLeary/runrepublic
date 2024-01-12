@@ -43,7 +43,7 @@ const PageArchiveAudio = ({}) => {
   };
 
   return (
-    <div className={`nc-PageArchiveAudio `}>
+    <div className={`PageArchiveAudio `}>
       {/* HEADER */}
       <div className="w-full px-2 xl:max-w-screen-2xl mx-auto">
         <div className="rounded-3xl relative aspect-w-16 aspect-h-12 sm:aspect-h-7 lg:aspect-h-6 xl:aspect-h-5 2xl:aspect-h-4 overflow-hidden z-0">

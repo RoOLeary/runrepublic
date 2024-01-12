@@ -18,7 +18,7 @@ const WidgetCategories: FC<WidgetCategoriesProps> = ({
 }) => {
   return (
     <div
-      className={`nc-WidgetCategories rounded-3xl  overflow-hidden ${className}`}
+      className={`WidgetCategories rounded-3xl  overflow-hidden ${className}`}
     >
       <WidgetHeading1
         title="✨ Trending topic"

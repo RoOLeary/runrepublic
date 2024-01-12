@@ -2,7 +2,7 @@ import ButtonPrimary from "@/components/Button/ButtonPrimary";
 import React from "react";
 
 const Page404: React.FC = () => (
-  <div className="nc-Page404">
+  <div className="Page404">
     <div className="container relative py-16 lg:py-20">
       {/* HEADER */}
       <header className="text-center max-w-2xl mx-auto space-y-7">

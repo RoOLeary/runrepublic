@@ -47,7 +47,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
 
   return (
-    <div className={`nc-PageDashboard`}>
+    <div className={`PageDashboard`}>
       <header className="text-center max-w-2xl mx-auto - mb-14 sm:mb-16 lg:mb-24">
         <Heading2 emoji="">Dash board</Heading2>
         <span className="block text-sm mt-2 text-neutral-700 sm:text-base dark:text-neutral-200">

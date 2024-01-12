@@ -26,7 +26,7 @@ const MAGAZINE1_POSTS = POSTS.filter((_, i) => i >= 0 && i < 8);
 
 const PageHomeDemo3: React.FC = () => {
   return (
-    <div className="nc-PageHomeDemo3 relative">
+    <div className="PageHomeDemo3 relative">
       <div className="container relative">
         <SectionHero
           rightImg={rightImg}

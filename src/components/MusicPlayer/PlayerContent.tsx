@@ -111,7 +111,7 @@ const PlayerContent: FC<PlayerContentProps> = ({
             alt={title}
             fill
             sizes="3rem"
-            containerClassName={`absolute start-0 w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 transition-transform nc-animation-spin rounded-full ${
+            containerClassName={`absolute start-0 w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 transition-transform animation-spin rounded-full ${
               playing ? "playing" : ""
             }`}
             src={featuredImage}
@@ -588,7 +588,7 @@ const PlayerContent: FC<PlayerContentProps> = ({
   return (
     <>
       <Transition
-        className="relative bg-white dark:bg-neutral-800 w-full flex flex-col px-2 sm:px-3 z-0 - nc-google-shadow"
+        className="relative bg-white dark:bg-neutral-800 w-full flex flex-col px-2 sm:px-3 z-0 - google-shadow"
         show={!!post && !!post.audioUrl}
         enter="transition-transform duration-150"
         enterFrom="translate-y-full"
@@ -602,7 +602,7 @@ const PlayerContent: FC<PlayerContentProps> = ({
           className="w-[26px] h-6 flex lg:hidden items-center justify-center absolute z-20 right-0 -top-3"
           onClick={() => setIsShowContentOnMobile(!isShowContentOnMobile)}
         >
-          <div className="w-6 h-6 bg-white dark:bg-neutral-800 flex items-center justify-center  rounded-full - nc-google-shadow">
+          <div className="w-6 h-6 bg-white dark:bg-neutral-800 flex items-center justify-center  rounded-full - google-shadow">
             <ChevronUpIcon
               className={`w-4 h-4 ${isShowContentOnMobile ? "rotate-180" : ""}`}
             />

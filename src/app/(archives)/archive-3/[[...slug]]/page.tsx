@@ -24,7 +24,7 @@ const PageArchiveVideo = ({}) => {
   ];
 
   return (
-    <div className={`nc-PageArchiveVideo`}>
+    <div className={`PageArchiveVideo`}>
       <div className="dark bg-neutral-900/95 text-white">
         <div className="container py-16 lg:py-28 ">
           {/* HEADER */}

@@ -10,7 +10,7 @@ const LoadingVideo: FC<LoadingVideoProps> = ({
   chilClassName = "bg-white",
 }) => {
   return (
-    <div className={`nc-LoadingVideo lds-ellipsis ${className}`}>
+    <div className={`LoadingVideo lds-ellipsis ${className}`}>
       <div className={chilClassName}></div>
       <div className={chilClassName}></div>
       <div className={chilClassName}></div>

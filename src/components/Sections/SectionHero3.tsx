@@ -60,7 +60,7 @@ const SectionHero3: FC<SectionHero3Props> = ({ posts, className = "" }) => {
   };
 
   return (
-    <div className={`nc-SectionHero3 ${className}`}>
+    <div className={`SectionHero3 ${className}`}>
       {posts.length && renderMain()}
       {posts.length > 1 && renderSubPosts()}
     </div>

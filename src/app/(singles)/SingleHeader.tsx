@@ -20,7 +20,7 @@ const SingleHeader: FC<SingleHeaderProps> = ({
 }) => {
   return (
     <>
-      <div className={`nc-SingleHeader ${className}`}>
+      <div className={`SingleHeader ${className}`}>
         <div className="space-y-5">
           <CategoryBadgeList
             itemClass="!px-3"

@@ -15,8 +15,8 @@ const CategoryBadgeList: FC<CategoryBadgeListProps> = ({
 }) => {
   return (
     <div
-      className={`nc-CategoryBadgeList ${className}`}
-      data-nc-id="CategoryBadgeList"
+      className={`CategoryBadgeList ${className}`}
+      data-id="CategoryBadgeList"
     >
       {categories.map((item, index) => (
         <Badge

@@ -4,7 +4,7 @@ import { Dialog, Transition } from "@/app/headlessui";
 import Button from "../Button/Button";
 import ButtonClose from "../ButtonClose/ButtonClose";
 
-export interface NcModalProps {
+export interface ModalProps {
   renderContent: () => ReactNode;
   renderTrigger?: (openModal: () => void) => ReactNode;
   contentExtraClass?: string;
@@ -15,7 +15,7 @@ export interface NcModalProps {
   onCloseModal?: () => void;
 }
 
-const NcModal: FC<NcModalProps> = ({
+const Modal: FC<ModalProps> = ({
   renderTrigger,
   renderContent,
   contentExtraClass = "max-w-screen-xl",
@@ -45,7 +45,7 @@ const NcModal: FC<NcModalProps> = ({
   }, [isOpenProp]);
 
   return (
-    <div className="nc-NcModal">
+    <div className="Modal">
       {renderTrigger ? (
         renderTrigger(openModal)
       ) : (
@@ -114,4 +114,4 @@ const NcModal: FC<NcModalProps> = ({
   );
 };
 
-export default NcModal;
+export default Modal;

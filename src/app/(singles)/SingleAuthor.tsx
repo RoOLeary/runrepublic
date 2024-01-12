@@ -10,7 +10,7 @@ export interface SingleAuthorProps {
 
 const SingleAuthor: FC<SingleAuthorProps> = ({ author = DEMO_AUTHORS[1] }) => {
   return (
-    <div className="nc-SingleAuthor flex">
+    <div className="SingleAuthor flex">
       <Link href={author.href}>
         <Avatar
           imgUrl={author.avatar}

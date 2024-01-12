@@ -18,7 +18,7 @@ const Card10V2: FC<Card10V2Props> = ({ className = "h-full", post }) => {
 
   return (
     <div
-      className={`nc-Card10V2 relative flex flex-col ${className}`}
+      className={`Card10V2 relative flex flex-col ${className}`}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >

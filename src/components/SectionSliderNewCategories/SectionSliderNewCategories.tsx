@@ -46,7 +46,7 @@ const SectionSliderNewCategories: FC<SectionSliderNewCategoriesProps> = ({
   };
 
   return (
-    <div className={`nc-SectionSliderNewCategories ${className}`}>
+    <div className={`SectionSliderNewCategories ${className}`}>
       <Heading desc={subHeading}>{heading}</Heading>
       <MySlider
         data={categories}

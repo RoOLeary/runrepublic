@@ -14,7 +14,7 @@ const SectionMagazine5: FC<SectionMagazine5Props> = ({
   heading = "Latest Articles 🎈 ",
 }) => {
   return (
-    <div className="nc-SectionMagazine5">
+    <div className="SectionMagazine5">
       <HeaderFilter heading={heading} />
       {!posts.length && <span>Nothing we found!</span>}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-7">

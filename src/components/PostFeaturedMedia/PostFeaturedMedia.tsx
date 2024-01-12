@@ -66,7 +66,7 @@ const PostFeaturedMedia: FC<PostFeaturedMediaProps> = ({
   };
 
   return (
-    <div className={`nc-PostFeaturedMedia relative ${className}`}>
+    <div className={`PostFeaturedMedia relative ${className}`}>
       {postType !== "gallery" && (
         <Image
           alt="featured"

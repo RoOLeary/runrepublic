@@ -60,7 +60,7 @@ const PageSv = ({}) => {
 
   const renderHeader = () => {
     return (
-      <div className={`nc-SingleHeader `}>
+      <div className={`SingleHeader `}>
         <div className="space-y-5 dark text-neutral-100">
           <CategoryBadgeList
             itemClass="!px-3"
@@ -89,7 +89,7 @@ const PageSv = ({}) => {
   return (
     <>
       <header className="container relative py-14 lg:py-20 flex flex-col lg:flex-row lg:items-center">
-        <div className="nc-PageSingleVideo__headerWrap absolute inset-y-0 transform translate-x-1/2 end-1/2 w-screen lg:translate-x-0 lg:w-[calc(100vw/2)] bg-neutral-900 dark:bg-black dark:bg-opacity-50 lg:rounded-e-[40px]"></div>
+        <div className="PageSingleVideo__headerWrap absolute inset-y-0 transform translate-x-1/2 end-1/2 w-screen lg:translate-x-0 lg:w-[calc(100vw/2)] bg-neutral-900 dark:bg-black dark:bg-opacity-50 lg:rounded-e-[40px]"></div>
         <div className="pb-10 lg:pb-0 lg:pr-10 relative">{renderHeader()}</div>
         <div className="relative lg:w-8/12 flex-shrink-0">
           <div className="aspect-w-16 aspect-h-16 sm:aspect-h-9 border-4 border-neutral-300 dark:border-neutral-800 shadow-2xl bg-neutral-800 rounded-3xl overflow-hidden z-0">

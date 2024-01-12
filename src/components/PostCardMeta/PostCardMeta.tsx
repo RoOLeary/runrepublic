@@ -20,7 +20,7 @@ const PostCardMeta: FC<PostCardMetaProps> = ({
 
   return (
     <div
-      className={`nc-PostCardMeta inline-flex items-center flex-wrap text-neutral-800 dark:text-neutral-200 ${className}`}
+      className={`PostCardMeta inline-flex items-center flex-wrap text-neutral-800 dark:text-neutral-200 ${className}`}
     >
       <Link
         href={author.href}

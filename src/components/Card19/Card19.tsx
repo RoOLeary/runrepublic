@@ -39,8 +39,8 @@ const Card19: FC<Card19Props> = ({
 
   return (
     <div
-      className={`nc-Card19 relative flex flex-col group rounded-xl overflow-hidden ${hoverClass} ${className}`}
-      data-nc-id="Card19"
+      className={`Card19 relative flex flex-col group rounded-xl overflow-hidden ${hoverClass} ${className}`}
+      data-id="Card19"
     >
       <div className="absolute inset-x-0 top-0 p-3 flex items-center justify-between transition-all opacity-0 z-[-1] group-hover:opacity-100 group-hover:z-10 duration-300">
         <PostCardLikeAndComment className="relative" />

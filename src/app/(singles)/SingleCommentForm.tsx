@@ -22,7 +22,7 @@ const SingleCommentForm: FC<SingleCommentFormProps> = ({
   rows = 4,
 }) => {
   return (
-    <form action="#" className={`nc-SingleCommentForm ${className}`}>
+    <form action="#" className={`SingleCommentForm ${className}`}>
       <Textarea
         placeholder="Add to discussion"
         ref={textareaRef}

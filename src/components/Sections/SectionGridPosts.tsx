@@ -51,7 +51,7 @@ const SectionGridPosts: FC<SectionGridPostsProps> = ({
         return (
           <Card3
             key={post.id}
-            className="p-3 sm:p-5 2xl:p-6 [ nc-box-has-hover ] [ nc-dark-box-bg-has-hover ]"
+            className="p-3 sm:p-5 2xl:p-6 [ box-has-hover ] [ dark-box-bg-has-hover ]"
             post={post}
           />
         );
@@ -79,7 +79,7 @@ const SectionGridPosts: FC<SectionGridPostsProps> = ({
   };
 
   return (
-    <div className={`nc-SectionGridPosts relative ${className}`}>
+    <div className={`SectionGridPosts relative ${className}`}>
       <Heading desc={subHeading} isCenter={headingIsCenter}>
         {heading}
       </Heading>

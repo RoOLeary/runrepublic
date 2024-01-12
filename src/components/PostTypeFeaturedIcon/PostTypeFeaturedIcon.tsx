@@ -122,8 +122,8 @@ const PostTypeFeaturedIcon: FC<PostTypeFeaturedIconProps> = ({
 
   return (
     <div
-      className={`nc-PostTypeFeaturedIcon ${className}`}
-      data-nc-id="PostTypeFeaturedIcon"
+      className={`PostTypeFeaturedIcon ${className}`}
+      data-id="PostTypeFeaturedIcon"
       onClick={onClick}
     >
       {!!postType && postType !== "standard" && (

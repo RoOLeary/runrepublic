@@ -12,7 +12,7 @@ const Nav: FC<NavProps> = ({
   children,
 }) => {
   return (
-    <nav className={`nc-Nav ${containerClassName}`} data-nc-id="Nav">
+    <nav className={`Nav ${containerClassName}`} data-id="Nav">
       <ul className={`flex  ${className}`}>{children}</ul>
     </nav>
   );

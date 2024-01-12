@@ -23,7 +23,7 @@ const MediaVideo: FC<MediaVideoProps> = ({ videoUrl, isHover }) => {
   }, [__timeOut]);
 
   return (
-    <div className="nc-MediaVideo">
+    <div className="MediaVideo">
       <ReactPlayer
         url={videoUrl}
         muted={isMuted}

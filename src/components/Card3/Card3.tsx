@@ -26,14 +26,14 @@ const Card3: FC<Card3Props> = ({ className = "h-full", post }) => {
 
   return (
     <div
-      className={`nc-Card3 relative flex flex-row items-center group ${className}`}
+      className={`Card3 relative flex flex-row items-center group ${className}`}
     >
       <div className="flex flex-col flex-grow">
         <div className="space-y-3.5">
           <CategoryBadgeList categories={categories} />
           <Link href={href} className="block">
             <h2
-              className={`nc-card-title block font-medium sm:font-semibold text-neutral-900 dark:text-neutral-100 text-sm sm:text-base xl:text-lg`}
+              className={`card-title block font-medium sm:font-semibold text-neutral-900 dark:text-neutral-100 text-sm sm:text-base xl:text-lg`}
             >
               <span className="line-clamp-2" title={title}>
                 {title}

@@ -67,7 +67,7 @@ const SectionLatestPosts: FC<SectionLatestPostsProps> = ({
   };
 
   return (
-    <div className={`nc-SectionLatestPosts relative ${className}`}>
+    <div className={`SectionLatestPosts relative ${className}`}>
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-3/5 xl:w-2/3 xl:pe-14">
           <Heading>{heading}</Heading>

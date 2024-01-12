@@ -4,7 +4,7 @@ const data = [
   { name: "Subcription Name", content: " Premium" },
   { name: "Package & billing details", content: " $222.00" },
   { name: "Remaining post", content: " 18" },
-  { name: "Expire date", content: " October 20, 2021" },
+  { name: "Expire date", content: " October 20, 2023" },
 ];
 
 const DashboardSubcription = () => {

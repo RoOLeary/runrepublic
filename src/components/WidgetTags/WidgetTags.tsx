@@ -16,7 +16,7 @@ const WidgetTags: FC<WidgetTagsProps> = ({
   tags = tagsDemo,
 }) => {
   return (
-    <div className={`nc-WidgetTags rounded-3xl overflow-hidden ${className}`}>
+    <div className={`WidgetTags rounded-3xl overflow-hidden ${className}`}>
       <WidgetHeading1
         title="💡 More tags"
         viewAll={{ label: "View all", href: "/#" }}

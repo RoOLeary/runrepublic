@@ -2,7 +2,8 @@ import React from "react";
 import { DEMO_POSTS_NEWS } from "@/data/posts";
 import SectionMagazine10 from "@/components/Sections/SectionMagazine10";
 import SectionMagazine9 from "@/components/Sections/SectionMagazine9";
-import SectionAds from "@/components/Sections/SectionAds";
+// import SectionAds from "@/components/Sections/SectionAds";
+import SectionLargeSlider from "@/app/(home)/SectionLargeSlider";
 import SectionMagazine2 from "@/components/Sections/SectionMagazine2";
 import SectionMagazine11 from "@/components/Sections/SectionMagazine11";
 import SectionLatestPosts from "@/components/Sections/SectionLatestPosts";
@@ -14,9 +15,10 @@ const MAGAZINE2_POSTS = DEMO_POSTS_NEWS.filter((_, i) => i >= 0 && i < 7);
 
 const PageHome = () => {
   return (
-    <div className="PageHome relative [ nc-section-rounded-md ]">
+    <div className="PageHome relative [ section-rounded-md ]">
       <div className="relative overflow-hidden">
         <div className="container relative mt-2">
+       
           <SectionMagazine10 posts={MAGAZINE1_POSTS} />
 
           <SectionMagazine9

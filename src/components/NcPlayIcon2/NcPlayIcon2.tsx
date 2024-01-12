@@ -11,7 +11,7 @@ const NcPlayIcon2: FC<NcPlayIcon2Props> = ({
 }) => {
   return (
     <div
-      className={`nc-NcPlayIcon2 bg-white relative rounded-full shadow-inner ${className}`}
+      className={`NcPlayIcon2 bg-white relative rounded-full shadow-inner ${className}`}
     >
       <span className="absolute inset-0 flex items-center justify-center text-primary-500">
         <svg

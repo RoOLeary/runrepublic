@@ -32,7 +32,7 @@ const MAGAZINE2_POSTS = DEMO_POSTS.filter((_, i) => i >= 0 && i < 7);
 
 const PageHome = ({}) => {
   return (
-    <div className="nc-PageHome relative">
+    <div className="PageHome relative">
       <div className="container relative">
         <SectionLargeSlider
           className="pt-10 pb-16 md:py-16 lg:pb-28 lg:pt-20"

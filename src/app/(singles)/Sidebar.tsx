@@ -19,7 +19,7 @@ const authors = DEMO_AUTHORS.filter((_, i) => i < 5);
 
 export const Sidebar: FC<SidebarProps> = ({ className = "space-y-6 " }) => {
   return (
-    <div className={`nc-SingleSidebar ${className}`}>
+    <div className={`SingleSidebar ${className}`}>
       <WidgetTags tags={tags} />
       <WidgetCategories categories={categories} />
       <WidgetAuthors authors={authors} />

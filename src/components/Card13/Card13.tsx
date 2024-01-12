@@ -14,10 +14,10 @@ const Card13: FC<Card13Props> = ({ className = "", post }) => {
   const { title, href, desc, featuredImage, date, postType } = post;
 
   return (
-    <div className={`nc-Card13 relative flex justify-between ${className}`}>
+    <div className={`Card13 relative flex justify-between ${className}`}>
       <div className="flex flex-col h-full py-2">
         <h2
-          className={`nc-card-title block font-semibold text-sm sm:text-base`}
+          className={`card-title block font-semibold text-sm sm:text-base`}
         >
           <Link href={href} className="line-clamp-2" title={title}>
             {title}

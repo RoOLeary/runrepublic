@@ -31,7 +31,7 @@ const Card17Podcast: FC<Card17PodcastProps> = ({ className = "", post }) => {
 
   return (
     <div
-      className={`nc-Card17Podcast relative flex items-center justify-between p-2.5 space-x-5 rounded-full bg-neutral-100 dark:bg-neutral-800/30 hover:shadow-lg transition-shadow ${className}`}
+      className={`Card17Podcast relative flex items-center justify-between p-2.5 space-x-5 rounded-full bg-neutral-100 dark:bg-neutral-800/30 hover:shadow-lg transition-shadow ${className}`}
     >
       <Link href={href} className="flex items-center space-x-4">
         <div className="block flex-shrink-0 w-11 h-11 sm:w-16 sm:h-16 relative rounded-full overflow-hidden shadow-lg">

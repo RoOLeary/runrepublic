@@ -8,7 +8,7 @@ interface Props {
 
 const Navigation: FC<Props> = ({ className = "flex" }) => {
   return (
-    <ul className={`nc-Navigation items-center ${className}`}>
+    <ul className={`Navigation items-center ${className}`}>
       {NAVIGATION_MAIN.map((item) => (
         <NavigationItem key={item.id} menuItem={item} />
       ))}

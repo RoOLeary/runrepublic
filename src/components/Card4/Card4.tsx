@@ -17,7 +17,7 @@ const Card4: FC<Card4Props> = ({ className = "h-full", post }) => {
 
   return (
     <div
-      className={`nc-Card4 relative flex flex-col group bg-white dark:bg-neutral-900 rounded-3xl ${className}`}
+      className={`Card4 relative flex flex-col group bg-white dark:bg-neutral-900 rounded-3xl ${className}`}
     >
       <span className="block flex-shrink-0 relative w-full aspect-w-16 aspect-h-9 rounded-t-xl overflow-hidden">
         <Image
@@ -34,7 +34,7 @@ const Card4: FC<Card4Props> = ({ className = "h-full", post }) => {
       <div className="p-4 flex flex-col flex-grow">
         <div className="space-y-2.5 mb-4">
           <CategoryBadgeList categories={categories} />
-          <h2 className="nc-card-title block text-base font-semibold text-neutral-900 dark:text-neutral-100 ">
+          <h2 className="card-title block text-base font-semibold text-neutral-900 dark:text-neutral-100 ">
             <Link href={href} className="line-clamp-2" title={title}>
               {title}
             </Link>

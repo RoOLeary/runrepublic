@@ -16,7 +16,7 @@ const SectionMagazine1: FC<SectionMagazine1Props> = ({
   className = "",
 }) => {
   return (
-    <div className={`nc-SectionMagazine1 ${className}`}>
+    <div className={`SectionMagazine1 ${className}`}>
       <HeaderFilter heading={heading} />
       {!posts.length && <span>Nothing we found!</span>}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">

@@ -21,7 +21,7 @@ const PostCardMetaV2: FC<PostCardMetaV2Props> = ({
   const { date, author, title } = meta;
   return (
     <div
-      className={`nc-PostCardMetaV2 inline-flex items-center flex-wrap text-neutral-800 dark:text-neutral-200 ${className}`}
+      className={`PostCardMetaV2 inline-flex items-center flex-wrap text-neutral-800 dark:text-neutral-200 ${className}`}
     >
       <div className="relative flex items-center space-x-2 rtl:space-x-reverse">
         {!hiddenAvatar && (

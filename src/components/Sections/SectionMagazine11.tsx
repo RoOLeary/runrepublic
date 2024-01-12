@@ -58,7 +58,7 @@ const SectionMagazine11: FC<SectionMagazine11Props> = ({
             .filter((_, i) => i > 0)
             .map((post) => (
               <li key={post.id}>
-                <h2 className="nc-card-title flex items-start font-medium space-x-4 rtl:space-x-reverse">
+                <h2 className="card-title flex items-start font-medium space-x-4 rtl:space-x-reverse">
                   <Badge
                     className="w-2.5 h-2.5 !p-0 rounded flex-shrink-0 mt-2"
                     name={""}
@@ -76,7 +76,7 @@ const SectionMagazine11: FC<SectionMagazine11Props> = ({
   };
 
   return (
-    <div className={`nc-SectionMagazine11 relative ${className}`}>
+    <div className={`SectionMagazine11 relative ${className}`}>
       <Heading desc={"Click on music icon and enjoy music or podcast"}>
         Listen to audio live
       </Heading>

@@ -34,7 +34,7 @@ const Card7: FC<Card7Props> = ({
 
   return (
     <div
-      className={`nc-Card7 relative flex flex-col group rounded-3xl overflow-hidden z-0 ${hoverClass} ${className}`}
+      className={`Card7 relative flex flex-col group rounded-3xl overflow-hidden z-0 ${hoverClass} ${className}`}
     >
       <div className="absolute inset-x-0 top-0 p-3  flex items-center justify-between transition-all opacity-0 z-[-1] group-hover:opacity-100 group-hover:z-10 duration-300">
         <PostCardLikeAndComment className="relative" />

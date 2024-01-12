@@ -17,7 +17,7 @@ const PostCardLikeAndComment: FC<PostCardLikeAndCommentProps> = ({
 }) => {
   return (
     <div
-      className={`nc-PostCardLikeAndComment flex items-center space-x-2 rtl:space-x-reverse ${className}`}
+      className={`PostCardLikeAndComment flex items-center space-x-2 rtl:space-x-reverse ${className}`}
     >
       <PostCardLikeAction className={itemClass} />
       <PostCardCommentBtn

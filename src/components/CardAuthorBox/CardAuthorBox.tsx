@@ -14,7 +14,7 @@ const CardAuthorBox: FC<CardAuthorBoxProps> = ({ className = "", author }) => {
   return (
     <Link
       href={href}
-      className={`nc-CardAuthorBox flex flex-col items-center justify-center text-center px-3 py-5 sm:px-6 sm:py-7 rounded-3xl bg-white dark:bg-neutral-900 ${className}`}
+      className={`CardAuthorBox flex flex-col items-center justify-center text-center px-3 py-5 sm:px-6 sm:py-7 rounded-3xl bg-white dark:bg-neutral-900 ${className}`}
     >
       <Avatar
         sizeClass="w-20 h-20 text-2xl"

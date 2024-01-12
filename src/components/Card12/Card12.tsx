@@ -14,7 +14,7 @@ const Card12: FC<Card12Props> = ({ className = "h-full", post }) => {
   const { title, href, featuredImage, desc, postType } = post;
 
   return (
-    <div className={`nc-Card12 group relative flex flex-col ${className}`}>
+    <div className={`Card12 group relative flex flex-col ${className}`}>
       <Link
         href={href}
         className="block flex-shrink-0 flex-grow relative w-full h-0 aspect-w-4 aspect-h-3 rounded-3xl overflow-hidden"
@@ -37,7 +37,7 @@ const Card12: FC<Card12Props> = ({ className = "h-full", post }) => {
 
       <div className="mt-5 sm:mt-8 pe-10 flex flex-col">
         <h2
-          className={`nc-card-title block font-semibold text-neutral-900 dark:text-neutral-100 transition-colors sm:text-lg lg:text-2xl`}
+          className={`card-title block font-semibold text-neutral-900 dark:text-neutral-100 transition-colors sm:text-lg lg:text-2xl`}
         >
           <Link href={href} className="line-clamp-2" title={title}>
             {title}

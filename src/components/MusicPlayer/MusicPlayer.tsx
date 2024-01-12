@@ -129,7 +129,7 @@ const MusicPlayer: FC<MusicPlayerProps> = ({}) => {
   };
 
   return (
-    <div className={`nc-MusicPlayer fixed bottom-0 inset-x-0 flex z-30`}>
+    <div className={`MusicPlayer fixed bottom-0 inset-x-0 flex z-30`}>
       {/* ---- PLAYER CONTROL ---- */}
       <PlayerContent
         isError={isError}

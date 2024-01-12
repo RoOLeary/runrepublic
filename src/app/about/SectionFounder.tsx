@@ -42,7 +42,7 @@ const FOUNDER_DEMO: People[] = [
 
 const SectionFounder = () => {
   return (
-    <div className="nc-SectionFounder relative">
+    <div className="SectionFounder relative">
       <Heading
         desc="We’re impartial and independent, and every day we create distinctive,
           world-class programmes and content"

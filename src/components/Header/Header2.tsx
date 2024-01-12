@@ -3,7 +3,7 @@ import MainNav1 from "./MainNav1";
 
 const Header2 = () => {
   return (
-    <div className="nc-Header2 sticky top-0 w-full z-40">
+    <div className="Header2 sticky top-0 w-full z-40">
       <MainNav1 />
     </div>
   );

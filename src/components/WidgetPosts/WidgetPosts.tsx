@@ -18,7 +18,7 @@ const WidgetPosts: FC<WidgetPostsProps> = ({
   posts = widgetPostsDemo,
 }) => {
   return (
-    <div className={`nc-WidgetPosts rounded-3xl overflow-hidden ${className}`}>
+    <div className={`WidgetPosts rounded-3xl overflow-hidden ${className}`}>
       <WidgetHeading1
         title="🎯 Popular Posts"
         viewAll={{ label: "View all", href: "/#" }}

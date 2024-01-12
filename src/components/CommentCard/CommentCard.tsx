@@ -16,7 +16,7 @@ const DEMO_COMMENTS = [
   {
     id: 1,
     author: null,
-    date: "May 20, 2021",
+    date: "Jan 24, 2024",
     content:
       "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
     like: { count: 96, isLiked: false },
@@ -25,7 +25,7 @@ const DEMO_COMMENTS = [
   {
     id: 3,
     author: null,
-    date: "May 20, 2021",
+    date: "Jan 24, 2024",
     content:
       "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
     like: { count: 66, isLiked: true },
@@ -33,7 +33,7 @@ const DEMO_COMMENTS = [
   {
     id: 4,
     author: null,
-    date: "May 20, 2021",
+    date: "Jan 24, 2024",
     content:
       "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
     like: { count: 45, isLiked: true },
@@ -149,7 +149,7 @@ const CommentCard: FC<CommentCardProps> = ({
 
   return (
     <>
-      <div className={`nc-CommentCard flex ${className}`}>
+      <div className={`CommentCard flex ${className}`}>
         <Avatar
           sizeClass={`h-6 w-6 text-base ${
             size === "large" ? "sm:text-lg sm:h-8 sm:w-8" : ""

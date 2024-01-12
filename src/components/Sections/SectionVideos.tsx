@@ -148,7 +148,7 @@ const SectionVideos: FC<SectionVideosProps> = ({
   };
 
   return (
-    <div className={`nc-SectionVideos ${className}`}>
+    <div className={`SectionVideos ${className}`}>
       <Heading
         desc="Check out our hottest videos. View more and share more new
           perspectives on just about any topic. Everyone’s welcome."

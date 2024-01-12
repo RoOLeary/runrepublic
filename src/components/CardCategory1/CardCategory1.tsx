@@ -18,7 +18,7 @@ const CardCategory1: FC<CardCategory1Props> = ({
   return (
     <Link
       href={href}
-      className={`nc-CardCategory1 flex items-center ${className}`}
+      className={`CardCategory1 flex items-center ${className}`}
     >
       <NcImage
         alt=""
@@ -34,7 +34,7 @@ const CardCategory1: FC<CardCategory1Props> = ({
         <h2
           className={`${
             size === "large" ? "text-lg" : "text-base"
-          } nc-card-title text-neutral-900 dark:text-neutral-100 text-sm sm:text-base font-medium sm:font-semibold`}
+          } card-title text-neutral-900 dark:text-neutral-100 text-sm sm:text-base font-medium sm:font-semibold`}
         >
           {name}
         </h2>

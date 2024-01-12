@@ -12,24 +12,24 @@ const FOUNDER_DEMO: Statistic[] = [
     id: "1",
     heading: "10 million",
     subHeading:
-      "Articles have been public around the world (as of Sept. 30, 2021)",
+      "Articles have been public around the world (as of Sept. 30, 2023)",
   },
   {
     id: "2",
     heading: "100,000",
-    subHeading: "Registered users account (as of Sept. 30, 2021)",
+    subHeading: "Registered users account (as of Sept. 30, 2023)",
   },
   {
     id: "3",
     heading: "220+",
     subHeading:
-      "Countries and regions have our presence (as of Sept. 30, 2021)",
+      "Countries and regions have our presence (as of Sept. 30, 2023)",
   },
 ];
 
 const SectionStatistic = ({}) => {
   return (
-    <div className={`nc-SectionStatistic relative`}>
+    <div className={`SectionStatistic relative`}>
       <Heading
         desc="We’re impartial and independent, and every day we create distinctive,
           world-class programmes and content"

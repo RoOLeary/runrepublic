@@ -68,7 +68,7 @@ const SectionMagazine6: FC<SectionMagazine6Props> = ({
             <div className="-my-5 md:-my-7 divide-y divide-neutral-200 dark:divide-neutral-700">
               {subPosts.map((post, i) => (
                 <div key={i} className="block py-5 lg:py-7">
-                  <h2 className="nc-card-title text-sm lg:text-base font-semibold">
+                  <h2 className="card-title text-sm lg:text-base font-semibold">
                     <Link href={post.href} className="line-clamp-2">
                       {post.title}
                     </Link>
@@ -87,7 +87,7 @@ const SectionMagazine6: FC<SectionMagazine6Props> = ({
   };
 
   return (
-    <div className={`nc-SectionMagazine6 ${className}`}>
+    <div className={`SectionMagazine6 ${className}`}>
       <HeaderFilter heading={heading} />
       {posts[0] && renderMain()}
     </div>

@@ -46,7 +46,7 @@ const SectionGridCategoryBox: React.FC<SectionGridCategoryBoxProps> = ({
   }
 
   return (
-    <div className={`nc-SectionGridCategoryBox relative ${className}`}>
+    <div className={`SectionGridCategoryBox relative ${className}`}>
       <Heading desc="Discover over 100 topics" isCenter={headingCenter}>
         Top trending topics
       </Heading>

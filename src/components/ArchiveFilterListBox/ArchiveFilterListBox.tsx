@@ -17,7 +17,7 @@ const ArchiveFilterListBox: FC<ArchiveFilterListBoxProps> = ({
 }) => {
   const [selected, setSelected] = useState(lists[0]);
   return (
-    <div className={`nc-ArchiveFilterListBox flex-shrink-0 ${className}`}>
+    <div className={`ArchiveFilterListBox flex-shrink-0 ${className}`}>
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative">
           <Listbox.Button as={"div"}>

@@ -15,7 +15,7 @@ const Card8: FC<Card8Props> = ({ className = "h-full", post }) => {
 
   return (
     <div
-      className={`nc-Card8 group relative rounded-3xl overflow-hidden z-0 ${className}`}
+      className={`Card8 group relative rounded-3xl overflow-hidden z-0 ${className}`}
     >
       <Link
         href={href}

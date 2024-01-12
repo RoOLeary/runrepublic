@@ -28,7 +28,7 @@ const Card11: FC<Card11Props> = ({
 
   return (
     <div
-      className={`nc-Card11 relative flex flex-col group rounded-3xl overflow-hidden bg-white dark:bg-neutral-900 ${className}`}
+      className={`Card11 relative flex flex-col group rounded-3xl overflow-hidden bg-white dark:bg-neutral-900 ${className}`}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
       //
@@ -51,7 +51,7 @@ const Card11: FC<Card11Props> = ({
         ) : (
           <span className="text-xs text-neutral-500">{date}</span>
         )}
-        <h3 className="nc-card-title block text-base font-semibold text-neutral-900 dark:text-neutral-100">
+        <h3 className="card-title block text-base font-semibold text-neutral-900 dark:text-neutral-100">
           <span className="line-clamp-2" title={title}>
             {title}
           </span>

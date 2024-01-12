@@ -17,7 +17,7 @@ const SingleHeader4: FC<SingleHeader4Props> = ({
 }) => {
   return (
     <>
-      <div className={`nc-SingleHeader4 ${className}`}>
+      <div className={`SingleHeader4 ${className}`}>
         <div className="max-w-5xl mx-auto space-y-5 dark">
           <CategoryBadgeList
             itemClass="!px-3"

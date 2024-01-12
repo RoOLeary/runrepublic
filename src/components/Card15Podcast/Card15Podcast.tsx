@@ -39,7 +39,7 @@ const Card15Podcast: FC<Card15PodcastProps> = ({
 
   return (
     <div
-      className={`nc-Card15Podcast relative flex group items-center p-3 rounded-3xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 ${className}`}
+      className={`Card15Podcast relative flex group items-center p-3 rounded-3xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 ${className}`}
     >
       <div className="w-1/4 flex-shrink-0">
         <Link
@@ -57,7 +57,7 @@ const Card15Podcast: FC<Card15PodcastProps> = ({
       </div>
 
       <div className="flex flex-col flex-grow ms-4">
-        <h2 className={`nc-card-title block font-semibold text-sm sm:text-lg`}>
+        <h2 className={`card-title block font-semibold text-sm sm:text-lg`}>
           <Link
             href={href}
             className={IS_AUDIO ? `line-clamp-1` : "line-clamp-2"}

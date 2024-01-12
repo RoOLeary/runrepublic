@@ -70,7 +70,7 @@ const SingleContent: FC<SingleContentProps> = ({}) => {
 
   return (
     <div className="relative">
-      <div className="nc-SingleContent space-y-10">
+      <div className="SingleContent space-y-10">
         {/* ENTRY CONTENT */}
         <div
           id="single-entry-content"

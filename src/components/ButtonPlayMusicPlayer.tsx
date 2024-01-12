@@ -84,7 +84,7 @@ const ButtonPlayMusicPlayer: FC<ButtonPlayMusicPlayerProps> = ({
 
   return (
     <div
-      className={`nc-ButtonPlayMusicPlayer select-none ${className}`}
+      className={`ButtonPlayMusicPlayer select-none ${className}`}
       onClick={handleClickButton}
     >
       {renderChildren ? (

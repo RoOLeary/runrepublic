@@ -7,8 +7,8 @@ export interface SkeletonProps {
 const Skeleton: FC<SkeletonProps> = ({ className = "" }) => {
   return (
     <span
-      className={`nc-Skeleton bg-neutral-400 inline-flex ${className}`}
-      data-nc-id="Skeleton"
+      className={`Skeleton bg-neutral-400 inline-flex ${className}`}
+      data-id="Skeleton"
     ></span>
   );
 };

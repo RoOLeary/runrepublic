@@ -6,7 +6,7 @@ export interface SingleCommentListsProps {}
 
 const SingleCommentLists: FC<SingleCommentListsProps> = ({}) => {
   return (
-    <ul className="nc-SingleCommentLists space-y-5">
+    <ul className="SingleCommentLists space-y-5">
       <CommentCard />
       <CommentCard />
       <CommentCard />

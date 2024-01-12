@@ -30,37 +30,37 @@ declare namespace __next_route_internal_types__ {
 
   type StaticRoutes = 
     | `/`
-    | `/about`
     | `/home-2`
     | `/home-4`
     | `/home-3`
-    | `/search-2`
-    | `/search`
-    | `/api/hello`
     | `/contact`
-    | `/forgot-pass`
-    | `/signup`
-    | `/subscription`
-    | `/login`
     | `/dashboard`
-    | `/dashboard/edit-profile`
     | `/dashboard/billing-address`
+    | `/dashboard/edit-profile`
+    | `/dashboard/posts`
     | `/dashboard/submit-post`
     | `/dashboard/subscription`
-    | `/dashboard/posts`
+    | `/forgot-pass`
+    | `/login`
+    | `/signup`
+    | `/subscription`
+    | `/search`
+    | `/search-2`
+    | `/about`
+    | `/api/hello`
   type DynamicRoutes<T extends string = string> = 
-    | `/author/${OptionalCatchAllSlug<T>}`
     | `/archive/${OptionalCatchAllSlug<T>}`
     | `/archive-3/${OptionalCatchAllSlug<T>}`
     | `/archive-2/${OptionalCatchAllSlug<T>}`
+    | `/single/${OptionalCatchAllSlug<T>}`
     | `/single-2/${OptionalCatchAllSlug<T>}`
     | `/single-audio/${OptionalCatchAllSlug<T>}`
-    | `/single/${OptionalCatchAllSlug<T>}`
     | `/single-video/${OptionalCatchAllSlug<T>}`
     | `/single-gallery/${OptionalCatchAllSlug<T>}`
     | `/single-3/${OptionalCatchAllSlug<T>}`
     | `/single-5/${OptionalCatchAllSlug<T>}`
     | `/single-4/${OptionalCatchAllSlug<T>}`
+    | `/author/${OptionalCatchAllSlug<T>}`
 
   type RouteImpl<T> = 
     | StaticRoutes
@@ -83,7 +83,7 @@ declare module 'next/link' {
   import type { LinkProps as OriginalLinkProps } from 'next/dist/client/link.js'
   import type { AnchorHTMLAttributes, DetailedHTMLProps } from 'react'
   import type { UrlObject } from 'url'
-  
+
   type LinkRestProps = Omit<
     Omit<
       DetailedHTMLProps<
@@ -96,12 +96,12 @@ declare module 'next/link' {
     'href'
   >
 
-  export type LinkProps<T> = LinkRestProps & {
+  export type LinkProps<RouteInferType> = LinkRestProps & {
     /**
      * The path or URL to navigate to. This is the only required prop. It can also be an object.
      * @see https://nextjs.org/docs/api-reference/next/link
      */
-    href: __next_route_internal_types__.RouteImpl<T> | UrlObject
+    href: __next_route_internal_types__.RouteImpl<RouteInferType> | UrlObject
   }
 
   export default function Link<RouteType>(props: LinkProps<RouteType>): JSX.Element
@@ -110,7 +110,7 @@ declare module 'next/link' {
 declare module 'next/navigation' {
   export * from 'next/dist/client/components/navigation.js'
 
-  import type { NavigateOptions, AppRouterInstance as OriginalAppRouterInstance } from 'next/dist/shared/lib/app-router-context.js'
+  import type { NavigateOptions, AppRouterInstance as OriginalAppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime.js'
   interface AppRouterInstance extends OriginalAppRouterInstance {
     /**
      * Navigate to the provided href.
