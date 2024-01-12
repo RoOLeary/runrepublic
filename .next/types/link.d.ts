@@ -32,35 +32,35 @@ declare namespace __next_route_internal_types__ {
     | `/home-2`
     | `/home-3`
     | `/home-4`
-    | `/search`
     | `/search-2`
-    | `/`
+    | `/search`
     | `/api/hello`
+    | `/`
     | `/about`
     | `/contact`
     | `/forgot-pass`
     | `/signup`
-    | `/subscription`
     | `/login`
-    | `/dashboard/subscription`
+    | `/subscription`
     | `/dashboard/submit-post`
-    | `/dashboard/billing-address`
-    | `/dashboard/posts`
-    | `/dashboard`
     | `/dashboard/edit-profile`
+    | `/dashboard/posts`
+    | `/dashboard/subscription`
+    | `/dashboard`
+    | `/dashboard/billing-address`
   type DynamicRoutes<T extends string = string> = 
-    | `/archive-2/${OptionalCatchAllSlug<T>}`
-    | `/archive/${OptionalCatchAllSlug<T>}`
     | `/archive-3/${OptionalCatchAllSlug<T>}`
+    | `/archive/${OptionalCatchAllSlug<T>}`
+    | `/archive-2/${OptionalCatchAllSlug<T>}`
     | `/author/${OptionalCatchAllSlug<T>}`
-    | `/single-2/${OptionalCatchAllSlug<T>}`
-    | `/single-audio/${OptionalCatchAllSlug<T>}`
     | `/single-video/${OptionalCatchAllSlug<T>}`
+    | `/single-audio/${OptionalCatchAllSlug<T>}`
     | `/single-gallery/${OptionalCatchAllSlug<T>}`
     | `/single-3/${OptionalCatchAllSlug<T>}`
     | `/single-5/${OptionalCatchAllSlug<T>}`
-    | `/single-4/${OptionalCatchAllSlug<T>}`
+    | `/single-2/${OptionalCatchAllSlug<T>}`
     | `/single/${OptionalCatchAllSlug<T>}`
+    | `/single-4/${OptionalCatchAllSlug<T>}`
 
   type RouteImpl<T> = 
     | StaticRoutes
