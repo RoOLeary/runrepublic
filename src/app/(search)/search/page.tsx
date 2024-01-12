@@ -56,7 +56,7 @@ const PageSearch = ({}) => {
     <div className={`PageSearch`}>
       {/* HEADER */}
       <div className="w-screen px-2 xl:max-w-screen-2xl mx-auto">
-        <div className="rounded-3xl md:rounded-[40px] relative aspect-w-16 aspect-h-9 lg:aspect-h-5 overflow-hidden z-0">
+        <div className="relative aspect-w-16 aspect-h-9 lg:aspect-h-5 overflow-hidden z-0">
           <NcImage
             alt="search"
             fill

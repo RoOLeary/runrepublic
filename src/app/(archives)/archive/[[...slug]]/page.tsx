@@ -32,19 +32,18 @@ const PageArchive = ({}) => {
     <div className={`PageArchive`}>
       {/* HEADER */}
       <div className="w-full px-2 xl:max-w-screen-2xl mx-auto">
-        <div className="relative aspect-w-16 aspect-h-13 sm:aspect-h-9 lg:aspect-h-8 xl:aspect-h-5 rounded-3xl md:rounded-[40px] overflow-hidden z-0">
+        <div className="relative aspect-w-16 aspect-h-13 sm:aspect-h-9 lg:aspect-h-8 xl:aspect-h-5 overflow-hidden z-0">
           <Image
             alt="archive"
             fill
-            src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            className="object-cover w-full h-full rounded-3xl md:rounded-[40px]"
+            src="https://images.unsplash.com/photo-1451187863213-d1bcbaae3fa3?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=875&ixid=MnwxfDB8MXxyYW5kb218MHx8dGVjaHx8fHx8fDE3MDUwOTk3NzI&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1240"
+            className="object-cover w-full h-full"
             sizes="(max-width: 1280px) 100vw, 1536px"
           />
           <div className="absolute inset-0 bg-black text-white bg-opacity-30 flex flex-col items-center justify-center">
             <h2 className="inline-block align-middle text-5xl font-semibold md:text-7xl ">
-              Garden
+              Latest Tech News
             </h2>
-            <span className="block mt-4 text-neutral-300">115 Articles</span>
           </div>
         </div>
       </div>
