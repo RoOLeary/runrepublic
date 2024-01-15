@@ -6,8 +6,8 @@ import Footer from "@/components/Footer/Footer";
 import SiteHeader from "./SiteHeader";
 
 export const metadata = {
-  title: "TECH SCENE | NL",
-  description: "All the latest from the Dutch Tech Scene",
+  title: "TECHSCENE | NL",
+  description: "All the latest from the NL Tech Scene",
 };
 
 const poppins = Poppins({

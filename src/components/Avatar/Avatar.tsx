@@ -47,7 +47,7 @@ const Avatar: FC<AvatarProps> = ({
           fill
           sizes="100px"
           className="absolute inset-0 w-full h-full object-cover"
-          src={url}
+          src={"https://ronan-oleary.com/assets/ro-bw.d434f415.png"}
           alt={name}
         />
       )}

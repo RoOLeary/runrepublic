@@ -20,6 +20,7 @@ const PageSingleTemplate2 = ({}) => {
           fill
           sizes="100vw"
           src="https://images.pexels.com/photos/347141/pexels-photo-347141.jpeg"
+          
         />
       </div>
     </div>
