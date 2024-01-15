@@ -29,10 +29,6 @@ declare namespace __next_route_internal_types__ {
     S extends `${string}${SearchOrHash}` ? never : S
 
   type StaticRoutes = 
-    | `/`
-    | `/home-2`
-    | `/home-3`
-    | `/home-4`
     | `/contact`
     | `/dashboard`
     | `/dashboard/billing-address`
@@ -44,14 +40,18 @@ declare namespace __next_route_internal_types__ {
     | `/login`
     | `/signup`
     | `/subscription`
+    | `/`
+    | `/home-2`
+    | `/home-3`
+    | `/home-4`
     | `/search`
     | `/search-2`
-    | `/about`
     | `/api/hello`
+    | `/about`
   type DynamicRoutes<T extends string = string> = 
     | `/archive/${OptionalCatchAllSlug<T>}`
-    | `/archive-3/${OptionalCatchAllSlug<T>}`
     | `/archive-2/${OptionalCatchAllSlug<T>}`
+    | `/archive-3/${OptionalCatchAllSlug<T>}`
     | `/single/${OptionalCatchAllSlug<T>}`
     | `/single-2/${OptionalCatchAllSlug<T>}`
     | `/single-audio/${OptionalCatchAllSlug<T>}`

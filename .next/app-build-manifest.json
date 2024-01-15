@@ -1,5 +1,10 @@
 {
   "pages": {
+    "/(home)/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(home)/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -10,66 +15,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
-    ],
-    "/(home)/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(home)/page.js"
-    ],
-    "/(singles)/(default)/single/[[...slug]]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(singles)/(default)/single/[[...slug]]/page.js"
-    ],
-    "/(singles)/(default)/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(singles)/(default)/layout.js"
-    ],
-    "/(singles)/(default)/single-audio/[[...slug]]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(singles)/(default)/single-audio/[[...slug]]/page.js"
-    ],
-    "/(archives)/archive/[[...slug]]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(archives)/archive/[[...slug]]/page.js"
-    ],
-    "/(archives)/archive-2/[[...slug]]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(archives)/archive-2/[[...slug]]/page.js"
-    ],
-    "/(singles)/(default)/single-2/[[...slug]]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(singles)/(default)/single-2/[[...slug]]/page.js"
-    ],
-    "/author/[[...slug]]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/author/[[...slug]]/page.js"
-    ],
-    "/(others)/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(others)/layout.js"
-    ],
-    "/(others)/dashboard/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(others)/dashboard/layout.js"
-    ],
-    "/(others)/dashboard/posts/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(others)/dashboard/posts/page.js"
-    ],
-    "/(others)/contact/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(others)/contact/page.js"
     ]
   }
 }

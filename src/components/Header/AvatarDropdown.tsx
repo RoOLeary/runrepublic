@@ -51,7 +51,7 @@ export default function AvatarDropdown() {
                 <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className="relative grid grid-cols-1 gap-6 bg-white dark:bg-neutral-800 py-7 px-6">
                     <div className="flex items-center">
-                      <Avatar imgUrl={avatarImgs[7]} sizeClass="w-12 h-12" />
+                      <Avatar imgUrl={'https://ronan-oleary.com/assets/ro-bw.d434f415.png'} sizeClass="w-12 h-12" />
 
                       <div className="flex-grow ms-3">
                         <h4 className="font-semibold">Ronan O'Leary</h4>
