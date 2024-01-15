@@ -29,7 +29,7 @@ const people = [
   },
   {
     id: 4,
-    title: "Heritage Museums & Gardens to Open with New Landscape",
+    title: "Heritage Museums & Startupss to Open with New Landscape",
     image:
       "https://images.unsplash.com/photo-1622960748096-1983e5f17824?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60",
     liveStatus: true,
