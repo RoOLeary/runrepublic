@@ -1,8 +1,8 @@
 "use client";
 
 import Heading from "@/components/Heading/Heading";
-import NcPlayIcon from "@/components/NcPlayIcon/NcPlayIcon";
-import NcPlayIcon2 from "@/components/NcPlayIcon2/NcPlayIcon2";
+import PlayIcon from "@/components/PlayIcon/PlayIcon";
+import PlayIcon2 from "@/components/PlayIcon2/PlayIcon2";
 import React, { FC, Fragment, useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import isSafariBrowser from "@/utils/isSafariBrowser";
@@ -92,7 +92,7 @@ const SectionVideos: FC<SectionVideosProps> = ({
                   onClick={() => setIsPlay(true)}
                   className="cursor-pointer absolute inset-0 flex items-center justify-center z-10"
                 >
-                  <NcPlayIcon />
+                  <PlayIcon />
                 </div>
                 <Image
                   className="object-cover transition-transform group-hover:scale-105 duration-300"
@@ -113,7 +113,7 @@ const SectionVideos: FC<SectionVideosProps> = ({
             width="100%"
             height="100%"
             light={video.thumbnail}
-            playIcon={<NcPlayIcon />}
+            playIcon={<PlayIcon />}
           />
         )}
       </div>
@@ -133,7 +133,7 @@ const SectionVideos: FC<SectionVideosProps> = ({
         key={String(index)}
       >
         <div className="absolute inset-0 flex items-center justify-center z-10">
-          <NcPlayIcon2 />
+          <PlayIcon2 />
         </div>
         <Image
           sizes="(max-width: 600px) 480px, 800px"

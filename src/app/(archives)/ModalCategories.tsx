@@ -3,7 +3,7 @@
 import React, { FC } from "react";
 import { TaxonomyType } from "@/data/types";
 import CardCategory1 from "@/components/CardCategory1/CardCategory1";
-import NcModal from "@/components/NcModal/NcModal";
+import Modal from "@/components/Modal/Modal";
 import Button from "@/components/Button/Button";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
@@ -24,7 +24,7 @@ const ModalCategories: FC<ModalCategoriesProps> = ({ categories }) => {
 
   return (
     <div className="ModalCategories">
-      <NcModal
+      <Modal
         renderTrigger={(openModal) => (
           <Button
             pattern="third"

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { FC, useEffect, useRef } from "react";
-import NcModal from "@/components/NcModal/NcModal";
+import Modal from "@/components/Modal/Modal";
 import ButtonPrimary from "@/components/Button/ButtonPrimary";
 import { PostAuthorType } from "@/data/types";
 import { DEMO_AUTHORS } from "@/data/authors";
@@ -67,7 +67,7 @@ const ModalHideAuthor: FC<ModalHideAuthorProps> = ({
   };
 
   return (
-    <NcModal
+    <Modal
       isOpenProp={show}
       onCloseModal={onCloseModalHideAuthor}
       contentExtraClass="max-w-screen-sm"

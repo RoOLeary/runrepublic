@@ -2,7 +2,7 @@
 
 import React, { FC, useState } from "react";
 import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import NcModal from "@/components/NcModal/NcModal";
+import Modal from "@/components/Modal/Modal";
 import { PlayIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Button from "../Button/Button";
@@ -58,7 +58,7 @@ const SectionHero2: FC<SectionHero2Props> = ({}) => {
           <div className="flex space-x-4 rtl:space-x-reverse mt-11">
             <ButtonPrimary href="/">Read more</ButtonPrimary>
 
-            <NcModal
+            <Modal
               isOpenProp={showVideo}
               onCloseModal={() => setShowVideo(false)}
               contentExtraClass="max-w-screen-lg 2xl:max-w-screen-xl"

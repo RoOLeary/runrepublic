@@ -2,7 +2,7 @@
 
 import React, { Suspense, useEffect, useState } from "react";
 import ReactPlayer from "react-player";
-import NcPlayIcon from "@/components/NcPlayIcon/NcPlayIcon";
+import PlayIcon from "@/components/PlayIcon/PlayIcon";
 import CategoryBadgeList from "@/components/CategoryBadgeList/CategoryBadgeList";
 import PostMeta2 from "@/components/PostMeta2/PostMeta2";
 import isSafariBrowser from "@/utils/isSafariBrowser";
@@ -34,7 +34,7 @@ const PageSv = ({}) => {
               alt="single"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <NcPlayIcon />
+              <PlayIcon />
             </div>
           </div>
         )}
@@ -51,7 +51,7 @@ const PageSv = ({}) => {
                 ? false
                 : "https://images.pexels.com/photos/326900/pexels-photo-326900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
             }
-            playIcon={<NcPlayIcon />}
+            playIcon={<PlayIcon />}
           />
         )}
       </div>

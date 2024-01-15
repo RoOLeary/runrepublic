@@ -1,7 +1,7 @@
 "use client";
 
 import React, { FC, useEffect, useRef } from "react";
-import NcModal from "@/components/NcModal/NcModal";
+import Modal from "@/components/Modal/Modal";
 import ButtonPrimary from "@/components/Button/ButtonPrimary";
 import ButtonSecondary from "@/components/Button/ButtonSecondary";
 import ButtonThird from "../Button/ButtonThird";
@@ -61,7 +61,7 @@ const ModalDeleteComment: FC<ModalDeleteCommentProps> = ({
   };
 
   return (
-    <NcModal
+    <Modal
       isOpenProp={show}
       onCloseModal={onCloseModalDeleteComment}
       contentExtraClass="max-w-screen-sm"

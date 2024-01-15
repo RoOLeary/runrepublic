@@ -1,17 +1,17 @@
 import React, { FC } from "react";
 
-export interface NcPlayIcon2Props {
+export interface PlayIcon2Props {
   className?: string;
   iconClass?: string;
 }
 
-const NcPlayIcon2: FC<NcPlayIcon2Props> = ({
+const PlayIcon2: FC<PlayIcon2Props> = ({
   className = "w-8 h-8 md:w-10 md:h-10",
   iconClass = "w-5 h-5",
 }) => {
   return (
     <div
-      className={`NcPlayIcon2 bg-white relative rounded-full shadow-inner ${className}`}
+      className={`PlayIcon2 bg-white relative rounded-full shadow-inner ${className}`}
     >
       <span className="absolute inset-0 flex items-center justify-center text-primary-500">
         <svg
@@ -34,4 +34,4 @@ const NcPlayIcon2: FC<NcPlayIcon2Props> = ({
   );
 };
 
-export default NcPlayIcon2;
+export default PlayIcon2;

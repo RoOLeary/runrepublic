@@ -1,13 +1,13 @@
 import React, { FC } from "react";
 
-export interface NcPlayIconProps {
+export interface PlayIconProps {
   className?: string;
 }
 
-const NcPlayIcon: FC<NcPlayIconProps> = ({ className = "" }) => {
+const PlayIcon: FC<PlayIconProps> = ({ className = "" }) => {
   return (
     <div
-      className={`NcPlayIcon bg-white bg-opacity-30 backdrop-filter backdrop-blur rounded-full w-20 h-20 p-3 lg:w-52 lg:h-52 lg:p-12 ${className}`}
+      className={`PlayIcon bg-white bg-opacity-30 backdrop-filter backdrop-blur rounded-full w-20 h-20 p-3 lg:w-52 lg:h-52 lg:p-12 ${className}`}
     >
       <div className="w-full h-full bg-white rounded-full text-primary-500 relative">
         <span className="absolute inset-0 flex items-center justify-center">
@@ -32,4 +32,4 @@ const NcPlayIcon: FC<NcPlayIconProps> = ({ className = "" }) => {
   );
 };
 
-export default NcPlayIcon;
+export default PlayIcon;
