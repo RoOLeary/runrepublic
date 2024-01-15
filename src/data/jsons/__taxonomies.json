@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "name": "Industrial",
+    "name": "Reviews",
     "href": "/archive/the-demo-archive-slug",
     "thumbnail": "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80",
     "count": 15,
@@ -49,7 +49,7 @@
   },
   {
     "id": 7,
-    "name": "Outdoors",
+    "name": "Gaming",
     "href": "/archive/the-demo-archive-slug",
     "thumbnail": "https://images.unsplash.com/photo-1498049794561-7780e7231661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     "count": 14,
@@ -57,7 +57,7 @@
   },
   {
     "id": 8,
-    "name": "Health",
+    "name": "Coding",
     "href": "/archive/the-demo-archive-slug",
     "thumbnail": "https://images.unsplash.com/photo-1512686096451-a15c19314d59?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80",
     "count": 4,
@@ -73,7 +73,7 @@
   },
   {
     "id": 10,
-    "name": "Industrial",
+    "name": "Reviews",
     "href": "/archive/the-demo-archive-slug",
     "thumbnail": "https://images.unsplash.com/photo-1512658740823-0ebb97b3b86e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     "count": 26,
@@ -81,7 +81,7 @@
   },
   {
     "id": 11,
-    "name": "Health",
+    "name": "Coding",
     "href": "/archive/the-demo-archive-slug",
     "thumbnail": "https://images.unsplash.com/photo-1616504132588-0eeeb5213fc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80",
     "count": 20,

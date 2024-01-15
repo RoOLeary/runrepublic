@@ -13,7 +13,7 @@ export interface HeaderFilterProps {
 }
 
 const HeaderFilter: FC<HeaderFilterProps> = ({
-  tabs = ["All items", "Startups", "Fitness", "Design"],
+  tabs = ["All items", "Startups", "SEO", "Design"],
   heading = "🎈 Latest Articles",
 }) => {
   const [tabActive, setTabActive] = useState<string>(tabs[0]);
