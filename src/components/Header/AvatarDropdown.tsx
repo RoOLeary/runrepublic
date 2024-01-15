@@ -54,7 +54,7 @@ export default function AvatarDropdown() {
                       <Avatar imgUrl={'https://ronan-oleary.com/assets/ro-bw.d434f415.png'} sizeClass="w-12 h-12" />
 
                       <div className="flex-grow ms-3">
-                        <h4 className="font-semibold">Ronan O'Leary</h4>
+                        <h4 className="font-semibold">Ronan O&apos;Leary</h4>
                         <p className="text-xs mt-0.5">Amsterdam, NL</p>
                       </div>
                     </div>
