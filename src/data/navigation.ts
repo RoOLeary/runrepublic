@@ -152,7 +152,7 @@ const OTHER_PAGE_CHILD: NavItemType[] = [
   {
     id: randomId(),
     href: "/archive/demo-slug" as Route,
-    name: "Category pages",
+    name: "Category/Archive pages",
     type: "DropDown",
     children: [
       {
