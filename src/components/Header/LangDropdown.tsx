@@ -4,13 +4,13 @@ import { Popover, Tab, Transition } from "@/app/headlessui";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import { FC, Fragment } from "react";
-import { headerCurrency } from "./CurrencyDropDown";
+import { headerCurrency } from "./CurrencyDropdown";
 
 export const headerLanguage = [
   {
     id: "English",
     name: "English",
-    description: "United State",
+    description: "United States",
     href: "##",
     active: true,
   },
@@ -46,7 +46,7 @@ export const headerLanguage = [
   },
 ];
 
-interface LangDropDownProps {
+interface LangDropdownProps {
   panelClassName?: string;
 }
 
@@ -54,7 +54,7 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-const LangDropDown: FC<LangDropDownProps> = ({ panelClassName = "" }) => {
+const LangDropdown: FC<LangDropdownProps> = ({ panelClassName = "" }) => {
   const renderLang = (close: () => void) => {
     return (
       <div className="grid gap-8 lg:grid-cols-2">
@@ -100,7 +100,7 @@ const LangDropDown: FC<LangDropDownProps> = ({ panelClassName = "" }) => {
   };
 
   return (
-    <div className="LangDropDown hidden md:block">
+    <div className="LangDropdown hidden md:block">
       <Popover className="relative">
         {({ open, close }) => (
           <>
@@ -177,4 +177,4 @@ const LangDropDown: FC<LangDropDownProps> = ({ panelClassName = "" }) => {
     </div>
   );
 };
-export default LangDropDown;
+export default LangDropdown;

@@ -7,9 +7,9 @@ import Avatar from "@/components/Avatar/Avatar";
 import SwitchDarkMode2 from "@/components/SwitchDarkMode/SwitchDarkMode2";
 import Link from "next/link";
 
-export default function AvatarDropDown() {
+export default function AvatarDropdown() {
   return (
-    <div className="AvatarDropDown ">
+    <div className="AvatarDropdown ">
       <Popover className="relative">
         {({ open, close }) => (
           <>

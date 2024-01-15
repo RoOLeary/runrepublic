@@ -36,7 +36,7 @@ const recentPosts = [
   },
 ];
 
-export default function TemplatesDropDown() {
+export default function TemplatesDropdown() {
   const renderMegaMenuNavlink = (item: NavItemType) => {
     return (
       <li key={item.id} className={`${item.isNew ? "menuIsNew" : ""}`}>
@@ -53,7 +53,7 @@ export default function TemplatesDropDown() {
   };
 
   return (
-    <div className="TemplatesDropDown hidden lg:block">
+    <div className="TemplatesDropdown hidden lg:block">
       <Popover className="">
         {({ open, close }) => (
           <>

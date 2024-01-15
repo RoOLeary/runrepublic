@@ -27,7 +27,7 @@ interface Props {
   className?: string;
 }
 
-const NotifyDropDown: FC<Props> = ({ className = "hidden sm:block" }) => {
+const NotifyDropdown: FC<Props> = ({ className = "hidden sm:block" }) => {
   return (
     <div className={className}>
       <Popover className="relative">
@@ -111,4 +111,4 @@ const NotifyDropDown: FC<Props> = ({ className = "hidden sm:block" }) => {
   );
 };
 
-export default NotifyDropDown;
+export default NotifyDropdown;

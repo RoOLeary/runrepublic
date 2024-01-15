@@ -6,13 +6,13 @@ import DropDown, { DropDownItem } from "@/components/DropDown/DropDown";
 import ModalReportItem from "@/components/ModalReportItem/ModalReportItem";
 import ModalHideAuthor from "./ModalHideAuthor";
 
-export interface AccountActionDropDownProps {
+export interface AccountActionDropdownProps {
   containerClassName?: string;
   iconClass?: string;
   DropDownPositon?: "up" | "down";
 }
 
-const AccountActionDropDown: FC<AccountActionDropDownProps> = ({
+const AccountActionDropdown: FC<AccountActionDropdownProps> = ({
   containerClassName = "h-8 w-8 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700",
   iconClass = "h-6 w-6",
   DropDownPositon = "down",
@@ -114,4 +114,4 @@ const AccountActionDropDown: FC<AccountActionDropDownProps> = ({
   );
 };
 
-export default AccountActionDropDown;
+export default AccountActionDropdown;

@@ -24,7 +24,7 @@ import VerifyIcon from "@/components/VerifyIcon";
 import FollowButton from "@/components/FollowButton";
 import DropDown from "@/components/DropDown/DropDown";
 import { SOCIALS_DATA } from "@/components/SocialsShare/SocialsShare";
-import AccountActionDropDown from "@/components/AccountActionDropDown/AccountActionDropDown";
+import AccountActionDropdown from "@/components/AccountActionDropdown/AccountActionDropdown";
 import Image from "next/image";
 
 const posts: PostDataType[] = DEMO_POSTS.filter((_, i) => i < 12);
@@ -121,7 +121,7 @@ const PageAuthor = ({}) => {
                 />
               </div>
 
-              <AccountActionDropDown containerClassName="h-10 w-10 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700" />
+              <AccountActionDropdown containerClassName="h-10 w-10 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700" />
             </div>
           </div>
         </div>
