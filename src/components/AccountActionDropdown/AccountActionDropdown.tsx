@@ -2,22 +2,22 @@
 
 import React, { FC, useState } from "react";
 import twFocusClass from "@/utils/twFocusClass";
-import NcDropDown, { NcDropDownItem } from "@/components/NcDropDown/NcDropDown";
+import DropDown, { DropDownItem } from "@/components/DropDown/DropDown";
 import ModalReportItem from "@/components/ModalReportItem/ModalReportItem";
 import ModalHideAuthor from "./ModalHideAuthor";
 
-export interface AccountActionDropdownProps {
+export interface AccountActionDropDownProps {
   containerClassName?: string;
   iconClass?: string;
-  dropdownPositon?: "up" | "down";
+  DropDownPositon?: "up" | "down";
 }
 
-const AccountActionDropdown: FC<AccountActionDropdownProps> = ({
+const AccountActionDropDown: FC<AccountActionDropDownProps> = ({
   containerClassName = "h-8 w-8 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700",
   iconClass = "h-6 w-6",
-  dropdownPositon = "down",
+  DropDownPositon = "down",
 }) => {
-  let actions: NcDropDownItem[] = [
+  let actions: DropDownItem[] = [
     {
       id: "copylink",
       name: "Copy link",
@@ -86,12 +86,12 @@ const AccountActionDropdown: FC<AccountActionDropdownProps> = ({
       });
     }
     return (
-      <NcDropDown
+      <DropDown
         className={`text-neutral-500 dark:text-neutral-400 flex items-center justify-center rounded-full ${containerClassName} ${twFocusClass()}`}
         triggerIconClass={iconClass}
         data={actions}
         panelMenusClass={
-          dropdownPositon === "up" ? "origin-bottom-right bottom-0" : undefined
+          DropDownPositon === "up" ? "origin-bottom-right bottom-0" : undefined
         }
         onClick={hanldeClickDropDown}
       />
@@ -114,4 +114,4 @@ const AccountActionDropdown: FC<AccountActionDropdownProps> = ({
   );
 };
 
-export default AccountActionDropdown;
+export default AccountActionDropDown;

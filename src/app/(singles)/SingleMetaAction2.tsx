@@ -4,8 +4,8 @@ import React, { FC } from "react";
 import PostActionDropdown from "@/components/PostActionDropdown/PostActionDropdown";
 import PostCardLikeAndComment from "@/components/PostCardLikeAndComment/PostCardLikeAndComment";
 import { SOCIALS_DATA } from "@/components/SocialsShare/SocialsShare";
-import NcDropDown from "@/components/NcDropDown/NcDropDown";
-import NcBookmark from "@/components/NcBookmark/NcBookmark";
+import DropDown from "@/components/DropDown/DropDown";
+import Bookmark from "@/components/Bookmark/Bookmark";
 
 export interface SingleMetaAction2Props {
   className?: string;
@@ -25,8 +25,8 @@ const SingleMetaAction2: FC<SingleMetaAction2Props> = ({ className = "" }) => {
           <div className="border-s border-neutral-200 dark:border-neutral-700 h-6" />
         </div>
 
-        <NcBookmark containerClassName="h-9 w-9 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-200" />
-        <NcDropDown
+        <Bookmark containerClassName="h-9 w-9 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-200" />
+        <DropDown
           className="flex-shrink-0 flex items-center justify-center focus:outline-none h-9 w-9 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-700 dark:text-neutral-200 rounded-full"
           renderTrigger={() => (
             <svg

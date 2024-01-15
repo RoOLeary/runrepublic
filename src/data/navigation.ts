@@ -153,7 +153,7 @@ const OTHER_PAGE_CHILD: NavItemType[] = [
     id: randomId(),
     href: "/archive/demo-slug" as Route,
     name: "Category pages",
-    type: "dropdown",
+    type: "DropDown",
     children: [
       {
         id: randomId(),
@@ -178,7 +178,7 @@ const OTHER_PAGE_CHILD: NavItemType[] = [
     id: randomId(),
     href: "/single/demo-slug" as Route,
     name: "Single pages",
-    type: "dropdown",
+    type: "DropDown",
     children: [
       {
         id: randomId(),
@@ -228,7 +228,7 @@ const OTHER_PAGE_CHILD: NavItemType[] = [
     id: randomId(),
     href: "/search",
     name: "Search Page",
-    type: "dropdown",
+    type: "DropDown",
     children: [
       {
         id: randomId(),
@@ -255,7 +255,7 @@ const OTHER_PAGE_CHILD: NavItemType[] = [
     id: randomId(),
     href: "/dashboard",
     name: "Dashboard Page",
-    type: "dropdown",
+    type: "DropDown",
     children: [
       {
         id: randomId(),
@@ -290,7 +290,7 @@ const OTHER_PAGE_CHILD: NavItemType[] = [
     id: randomId(),
     href: "/about",
     name: "Other Pages",
-    type: "dropdown",
+    type: "DropDown",
     children: [
       {
         id: randomId(),
@@ -331,7 +331,7 @@ export const NAVIGATION_MAIN: NavItemType[] = [
   //   id: randomId(),
   //   href: "/",
   //   name: "Homes",
-  //   type: "dropdown",
+  //   type: "DropDown",
   //   children: [
   //     { id: randomId(), href: "/", name: "Home page 1" },
   //     { id: randomId(), href: "/home-2", name: "Home page 2" },
@@ -356,7 +356,7 @@ export const NAVIGATION_MAIN: NavItemType[] = [
   //   id: randomId(),
   //   href: "/single/demo-slug" as Route,
   //   name: "Singles",
-  //   type: "dropdown",
+  //   type: "DropDown",
   //   children: [
   //     {
   //       id: randomId(),
@@ -427,7 +427,7 @@ export const NAVIGATION_MAIN: NavItemType[] = [
     id: randomId(),
     href: "/search",
     name: "Explore",
-    type: "dropdown",
+    type: "DropDown",
     children: OTHER_PAGE_CHILD,
   },
 ];

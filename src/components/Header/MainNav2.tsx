@@ -3,10 +3,10 @@
 import React, { FC } from "react";
 import Logo from "@/components/Logo/Logo";
 import MenuBar from "@/components/MenuBar/MenuBar";
-import LangDropdown from "./LangDropdown";
-import AvatarDropdown from "./AvatarDropdown";
-import TemplatesDropdown from "./TemplatesDropdown";
-import NotifyDropdown from "./NotifyDropdown";
+import LangDropDown from "./LangDropDown";
+import AvatarDropDown from "./AvatarDropDown";
+import TemplatesDropDown from "./TemplatesDropDown";
+import NotifyDropDown from "./NotifyDropDown";
 import SwitchDarkMode from "../SwitchDarkMode/SwitchDarkMode";
 import Input from "../Input/Input";
 import SearchModal from "./SearchModal";
@@ -74,11 +74,11 @@ const MainNav2: FC<MainNav2Props> = ({ className = "" }) => {
           </div>
 
           <div className="flex-1 flex items-center justify-end ">
-            <TemplatesDropdown />
-            <LangDropdown />
+            <TemplatesDropDown />
+            <LangDropDown />
             <SwitchDarkMode />
-            <NotifyDropdown className="hidden md:block" />
-            <AvatarDropdown />
+            <NotifyDropDown className="hidden md:block" />
+            <AvatarDropDown />
           </div>
         </div>
       </div>

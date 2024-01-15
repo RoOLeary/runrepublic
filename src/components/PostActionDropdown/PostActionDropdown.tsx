@@ -2,7 +2,7 @@
 
 import React, { FC, useState } from "react";
 import twFocusClass from "@/utils/twFocusClass";
-import NcDropDown from "@/components/NcDropDown/NcDropDown";
+import DropDown from "@/components/DropDown/DropDown";
 import ModalReportItem from "@/components/ModalReportItem/ModalReportItem";
 import ModalHideAuthor from "./ModalHideAuthor";
 import { useRouter } from "next/navigation";
@@ -10,13 +10,13 @@ import { useRouter } from "next/navigation";
 export interface PostActionDropdownProps {
   containerClassName?: string;
   iconClass?: string;
-  dropdownPositon?: "up" | "down";
+  DropDownPositon?: "up" | "down";
 }
 
 const PostActionDropdown: FC<PostActionDropdownProps> = ({
   containerClassName = "h-8 w-8 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700",
   iconClass = "h-[18px] w-[18px]",
-  dropdownPositon = "down",
+  DropDownPositon = "down",
 }) => {
   let actions = [
     {
@@ -101,12 +101,12 @@ const PostActionDropdown: FC<PostActionDropdownProps> = ({
       });
     }
     return (
-      <NcDropDown
+      <DropDown
         className={`text-neutral-500 dark:text-neutral-400 flex items-center justify-center rounded-full  ${containerClassName} ${twFocusClass()}`}
         triggerIconClass={iconClass}
         data={actions}
         panelMenusClass={
-          dropdownPositon === "up" ? "origin-bottom-right bottom-0" : undefined
+          DropDownPositon === "up" ? "origin-bottom-right bottom-0" : undefined
         }
         onClick={hanldeClickDropDown}
       />

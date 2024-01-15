@@ -4,24 +4,24 @@ import { EllipsisHorizontalIcon } from "@heroicons/react/24/solid";
 import React, { FC, Fragment, ReactNode } from "react";
 import { Menu, Transition } from "@headlessui/react";
 
-export interface NcDropDownItem {
+export interface DropDownItem {
   id: string;
   name: string;
   icon: string;
 }
 
-export interface NcDropDownProps {
+export interface DropDownProps {
   className?: string;
   panelMenusClass?: string;
   triggerIconClass?: string;
-  data: NcDropDownItem[];
+  data: DropDownItem[];
   renderTrigger?: () => ReactNode;
-  renderItem?: (item: NcDropDownItem) => JSX.Element;
+  renderItem?: (item: DropDownItem) => JSX.Element;
   title?: string;
-  onClick: (item: NcDropDownItem) => void;
+  onClick: (item: DropDownItem) => void;
 }
 
-const NcDropDown: FC<NcDropDownProps> = ({
+const DropDown: FC<DropDownProps> = ({
   className = `h-8 w-8 bg-neutral-100 dark:bg-neutral-800 rounded-full flex items-center justify-center }`,
   triggerIconClass = "h-6 w-6",
   panelMenusClass = "origin-top-right",
@@ -88,4 +88,4 @@ const NcDropDown: FC<NcDropDownProps> = ({
   );
 };
 
-export default NcDropDown;
+export default DropDown;

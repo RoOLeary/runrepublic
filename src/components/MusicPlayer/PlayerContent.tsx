@@ -4,7 +4,7 @@ import { Transition } from "@/app/headlessui";
 import { useMusicPlayer } from "@/hooks/useMusicPlayer";
 import Link from "next/link";
 import PostCardLikeAction from "../PostCardLikeAction/PostCardLikeAction";
-import NcBookmark from "../NcBookmark/NcBookmark";
+import Bookmark from "../Bookmark/Bookmark";
 import { PauseIcon, PlayIcon } from "@heroicons/react/24/solid";
 import {
   ChevronUpDownIcon,
@@ -128,7 +128,7 @@ const PlayerContent: FC<PlayerContentProps> = ({
         </Link>
         <div className="hidden xl:flex flex-shrink-0 px-6 space-x-2.5 rtl:space-x-reverse">
           <PostCardLikeAction />
-          <NcBookmark />
+          <Bookmark />
         </div>
       </div>
     );
@@ -648,7 +648,7 @@ const PlayerContent: FC<PlayerContentProps> = ({
         >
           <div className="flex flex-grow items-center justify-evenly text-neutral-500 dark:text-neutral-300 max-w-xs sm:max-w-sm md:max-w-md ">
             <div className="w-12 flex justify-center">
-              {post && <NcBookmark />}
+              {post && <Bookmark />}
             </div>
             {renderBackwards10S()}
             {renderButtonControl()}

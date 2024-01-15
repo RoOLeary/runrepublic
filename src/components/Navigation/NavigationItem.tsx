@@ -13,7 +13,7 @@ export interface NavItemType {
   href: Route;
   targetBlank?: boolean;
   children?: NavItemType[];
-  type?: "dropdown" | "megaMenu" | "none";
+  type?: "DropDown" | "megaMenu" | "none";
   isNew?: boolean;
 }
 
@@ -163,19 +163,19 @@ const NavigationItem: FC<NavigationItemProps> = ({ menuItem }) => {
   };
 
   // ===================== MENU DROPDOW =====================
-  const renderDropdownMenu = (menuDropdown: NavItemType) => {
-    const isHover = menuCurrentHovers.includes(menuDropdown.id);
+  const renderDropDownMenu = (menuDropDown: NavItemType) => {
+    const isHover = menuCurrentHovers.includes(menuDropDown.id);
     return (
       <Popover
         as="li"
-        className="menu-item menu-dropdown relative"
-        onMouseEnter={() => onMouseEnterMenu(menuDropdown.id)}
-        onMouseLeave={() => onMouseLeaveMenu(menuDropdown.id)}
+        className="menu-item menu-DropDown relative"
+        onMouseEnter={() => onMouseEnterMenu(menuDropDown.id)}
+        onMouseLeave={() => onMouseLeaveMenu(menuDropDown.id)}
       >
         {() => (
           <>
             <Popover.Button as={Fragment}>
-              {renderMainItem(menuDropdown)}
+              {renderMainItem(menuDropDown)}
             </Popover.Button>
             <Transition
               as={Fragment}
@@ -192,16 +192,16 @@ const NavigationItem: FC<NavigationItemProps> = ({ menuItem }) => {
                 className="sub-menu absolute transform z-10 w-56 top-full left-0"
               >
                 <ul className="rounded-2xl shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-white dark:ring-opacity-10 text-sm relative bg-white dark:bg-neutral-900 py-4 grid space-y-1">
-                  {menuDropdown.children?.map((i) => {
+                  {menuDropDown.children?.map((i) => {
                     if (i.type) {
-                      return renderDropdownMenuNavlinkHasChild(i);
+                      return renderDropDownMenuNavlinkHasChild(i);
                     } else {
                       return (
                         <li
                           key={i.id}
                           className={`px-2 ${i.isNew ? "menuIsNew" : ""}`}
                         >
-                          {renderDropdownMenuNavlink(i)}
+                          {renderDropDownMenuNavlink(i)}
                         </li>
                       );
                     }
@@ -215,20 +215,20 @@ const NavigationItem: FC<NavigationItemProps> = ({ menuItem }) => {
     );
   };
 
-  const renderDropdownMenuNavlinkHasChild = (item: NavItemType) => {
+  const renderDropDownMenuNavlinkHasChild = (item: NavItemType) => {
     const isHover = menuCurrentHovers.includes(item.id);
     return (
       <Popover
         as="li"
         key={item.id}
-        className="menu-item menu-dropdown relative px-2"
+        className="menu-item menu-DropDown relative px-2"
         onMouseEnter={() => onMouseEnterMenu(item.id)}
         onMouseLeave={() => onMouseLeaveMenu(item.id)}
       >
         {() => (
           <>
             <Popover.Button as={Fragment}>
-              {renderDropdownMenuNavlink(item)}
+              {renderDropDownMenuNavlink(item)}
             </Popover.Button>
             <Transition
               as={Fragment}
@@ -247,11 +247,11 @@ const NavigationItem: FC<NavigationItemProps> = ({ menuItem }) => {
                 <ul className="rounded-xl shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-white dark:ring-opacity-10 text-sm relative bg-white dark:bg-neutral-900 py-4 grid space-y-1">
                   {item.children?.map((i) => {
                     if (i.type) {
-                      return renderDropdownMenuNavlinkHasChild(i);
+                      return renderDropDownMenuNavlinkHasChild(i);
                     } else {
                       return (
                         <li key={i.id} className="px-2">
-                          {renderDropdownMenuNavlink(i)}
+                          {renderDropDownMenuNavlink(i)}
                         </li>
                       );
                     }
@@ -265,7 +265,7 @@ const NavigationItem: FC<NavigationItemProps> = ({ menuItem }) => {
     );
   };
 
-  const renderDropdownMenuNavlink = (item: NavItemType) => {
+  const renderDropDownMenuNavlink = (item: NavItemType) => {
     return (
       <Link
         className="flex items-center font-normal text-neutral-6000 dark:text-neutral-400 py-2 px-4 rounded-md hover:text-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
@@ -307,8 +307,8 @@ const NavigationItem: FC<NavigationItemProps> = ({ menuItem }) => {
   };
 
   switch (menuItem.type) {
-    case "dropdown":
-      return renderDropdownMenu(menuItem);
+    case "DropDown":
+      return renderDropDownMenu(menuItem);
     case "megaMenu":
       return renderMegaMenu(menuItem);
     default:

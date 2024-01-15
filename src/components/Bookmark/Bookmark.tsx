@@ -2,12 +2,12 @@
 
 import React, { FC, useState } from "react";
 
-export interface NcBookmarkProps {
+export interface BookmarkProps {
   containerClassName?: string;
   bookmarked?: boolean;
 }
 
-const NcBookmark: FC<NcBookmarkProps> = ({
+const Bookmark: FC<BookmarkProps> = ({
   containerClassName = "h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700",
   bookmarked = false,
 }) => {
@@ -15,7 +15,7 @@ const NcBookmark: FC<NcBookmarkProps> = ({
 
   return (
     <button
-      className={`NcBookmark relative rounded-full flex items-center justify-center ${containerClassName}`}
+      className={`Bookmark relative rounded-full flex items-center justify-center ${containerClassName}`}
       title="Save to reading list"
       onClick={() => setIsBookmarked(!isBookmarked)}
     >
@@ -37,4 +37,4 @@ const NcBookmark: FC<NcBookmarkProps> = ({
   );
 };
 
-export default NcBookmark;
+export default Bookmark;

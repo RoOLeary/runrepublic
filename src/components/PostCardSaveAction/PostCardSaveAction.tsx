@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import NcBookmark from "../NcBookmark/NcBookmark";
+import Bookmark from "../Bookmark/Bookmark";
 
 export interface PostCardSaveActionProps {
   className?: string;
@@ -22,7 +22,7 @@ const PostCardSaveAction: FC<PostCardSaveActionProps> = ({
         <span>{readingTime} min read</span>
       )}
 
-      <NcBookmark containerClassName={bookmarkClass} />
+      <Bookmark containerClassName={bookmarkClass} />
     </div>
   );
 };

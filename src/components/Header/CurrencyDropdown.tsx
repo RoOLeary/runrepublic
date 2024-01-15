@@ -50,9 +50,9 @@ export const headerCurrency = [
   },
 ];
 
-export default function CurrencyDropdown() {
+export default function CurrencyDropDown() {
   return (
-    <div className="CurrencyDropdown">
+    <div className="CurrencyDropDown">
       <Popover className="relative">
         {({ open, close }) => (
           <>

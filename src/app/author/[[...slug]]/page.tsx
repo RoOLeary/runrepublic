@@ -22,9 +22,9 @@ import { GlobeAltIcon, ShareIcon } from "@heroicons/react/24/outline";
 import { avatarImgs } from "@/contains/fakeData";
 import VerifyIcon from "@/components/VerifyIcon";
 import FollowButton from "@/components/FollowButton";
-import NcDropDown from "@/components/NcDropDown/NcDropDown";
+import DropDown from "@/components/DropDown/DropDown";
 import { SOCIALS_DATA } from "@/components/SocialsShare/SocialsShare";
-import AccountActionDropdown from "@/components/AccountActionDropdown/AccountActionDropdown";
+import AccountActionDropDown from "@/components/AccountActionDropDown/AccountActionDropDown";
 import Image from "next/image";
 
 const posts: PostDataType[] = DEMO_POSTS.filter((_, i) => i < 12);
@@ -113,7 +113,7 @@ const PageAuthor = ({}) => {
               />
 
               <div className="mx-2">
-                <NcDropDown
+                <DropDown
                   className="flex-shrink-0 flex items-center justify-center focus:outline-none h-10 w-10 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-700 dark:text-neutral-200 rounded-full"
                   renderTrigger={() => <ShareIcon className="h-5 w-5" />}
                   onClick={() => {}}
@@ -121,7 +121,7 @@ const PageAuthor = ({}) => {
                 />
               </div>
 
-              <AccountActionDropdown containerClassName="h-10 w-10 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700" />
+              <AccountActionDropDown containerClassName="h-10 w-10 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700" />
             </div>
           </div>
         </div>
