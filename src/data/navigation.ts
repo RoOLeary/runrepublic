@@ -408,13 +408,13 @@ export const NAVIGATION_MAIN: NavItemType[] = [
   {
     id: randomId(),
     href: "/archive-2/demo-slug" as Route,
-    name: "Dev",
+    name: "Tech",
   },
 
   {
     id: randomId(),
     href: "/archive-2/demo-slug" as Route,
-    name: "Cool Stuff",
+    name: "Reviews",
   },
   // {
   //   id: randomId(),
@@ -426,7 +426,7 @@ export const NAVIGATION_MAIN: NavItemType[] = [
   {
     id: randomId(),
     href: "/search",
-    name: "Explore",
+    name: "Examples",
     type: "DropDown",
     children: OTHER_PAGE_CHILD,
   },
