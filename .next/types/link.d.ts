@@ -50,8 +50,8 @@ declare namespace __next_route_internal_types__ {
     | `/api/hello`
   type DynamicRoutes<T extends string = string> = 
     | `/archive/${OptionalCatchAllSlug<T>}`
-    | `/archive-2/${OptionalCatchAllSlug<T>}`
     | `/archive-3/${OptionalCatchAllSlug<T>}`
+    | `/archive-2/${OptionalCatchAllSlug<T>}`
     | `/single/${OptionalCatchAllSlug<T>}`
     | `/single-2/${OptionalCatchAllSlug<T>}`
     | `/single-audio/${OptionalCatchAllSlug<T>}`
