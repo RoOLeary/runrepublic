@@ -40,7 +40,7 @@ const PageSv = ({}) => {
         )}
         {isRendered && (
           <ReactPlayer
-            url="https://www.youtube.com/watch?v=nOQyWbPO2Ds"
+            url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
             className="absolute inset-0"
             playing={isSafariBrowser() ? isPlay : true}
             width="100%"
