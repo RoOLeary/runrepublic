@@ -212,7 +212,7 @@ export default function AvatarDropdown() {
                           </svg>
                         </div>
                         <div className="ms-4">
-                          <p className="text-sm font-medium ">{"Dark theme"}</p>
+                          <p className="text-sm font-medium ">{"Dark mode"}</p>
                         </div>
                       </div>
                       <SwitchDarkMode2 />
