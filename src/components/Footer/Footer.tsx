@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-4 gap-5 col-span-2 md:col-span-4 lg:md:col-span-1 lg:flex lg:flex-col">
           <div className="col-span-2 md:col-span-1">
             {/* <Logo /> */}
-            <h2 className="font-semibold text-xl tracking-tighter">TECHSCENE</h2>
+            <h2 className="font-semibold text-xl tracking-tighter">RUN REPUBLIC</h2>
             {/* <Image alt="Logo" src="https://ronan-oleary.com/assets/ro-bw.d434f415.png" width="50" height="50" className="rounded-full" /> */}
           </div>
           <div className="col-span-2 flex items-center md:col-span-3">

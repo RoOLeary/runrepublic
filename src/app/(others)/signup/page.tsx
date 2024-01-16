@@ -70,7 +70,7 @@ const PageSignUp = ({}) => {
             </span>
             <Input
               type="email"
-              placeholder="example@example.com"
+              placeholder="example@runrepublic.com"
               className="mt-1"
             />
           </label>

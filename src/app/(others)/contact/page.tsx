@@ -13,7 +13,7 @@ const info = [
   },
   {
     title: "💌 EMAIL",
-    desc: "example@example.com",
+    desc: "example@runrepublic.com",
   },
   {
     title: "☎ PHONE",
@@ -63,7 +63,7 @@ const PageContact = ({}) => {
 
               <Input
                 type="email"
-                placeholder="example@example.com"
+                placeholder="example@runrepublic.com"
                 className="mt-1"
               />
             </label>

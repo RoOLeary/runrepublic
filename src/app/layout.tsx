@@ -6,7 +6,7 @@ import Footer from "@/components/Footer/Footer";
 import SiteHeader from "./SiteHeader";
 
 export const metadata = {
-  title: "TECHSCENE | NL",
+  title: "RUN REPUBLIC | NL",
   description: "All the latest from the NL Tech Scene",
 };
 

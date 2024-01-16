@@ -350,7 +350,7 @@ export const NAVIGATION_MAIN: NavItemType[] = [
     name: "Home",
   },
   // @ts-ignore
-  { id: randomId(), href: "/archive/demo-slug", name: "Latest" },
+  { id: randomId(), href: "/archive/demo-slug", name: "Find a Race" },
   // single pages ----------------
   // {
   //   id: randomId(),
@@ -408,14 +408,25 @@ export const NAVIGATION_MAIN: NavItemType[] = [
   {
     id: randomId(),
     href: "/archive-2/demo-slug" as Route,
-    name: "Tech",
+    name: "Marathons",
   },
 
   {
     id: randomId(),
     href: "/archive-2/demo-slug" as Route,
-    name: "Reviews",
+    name: "Nutrition & Diet",
   },
+  {
+    id: randomId(),
+    href: "/archive-2/demo-slug" as Route,
+    name: "Physio Corner",
+  },
+  // {
+  //   id: randomId(),
+  //   href: "/search",
+  //   name: "Training",
+  // },
+
   // {
   //   id: randomId(),
   //   href: "/search",
@@ -423,11 +434,10 @@ export const NAVIGATION_MAIN: NavItemType[] = [
   //   type: "megaMenu",
   //   children: MEGAMENU_TEMPLATES,
   // },
+ 
   {
     id: randomId(),
     href: "/search",
-    name: "Examples",
-    type: "DropDown",
-    children: OTHER_PAGE_CHILD,
+    name: "Contact",
   },
 ];
