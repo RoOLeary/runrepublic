@@ -6,8 +6,8 @@ import Footer from "@/components/Footer/Footer";
 import SiteHeader from "./SiteHeader";
 
 export const metadata = {
-  title: "RUN REPUBLIC | NL",
-  description: "All the latest from the NL Tech Scene",
+  title: "Run Republic - The Home of Running",
+  description: "Run Republic is the home of running; the perfect running blog, full of running advice and running tips. You can keep up to date easily!",
 };
 
 const poppins = Poppins({

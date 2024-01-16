@@ -18,6 +18,11 @@
 .z-max {
   z-index: 99999999;
 }
+
+.nav-z{
+  @apply relative;
+  z-index: 9;
+}
 //
 .PostCardCommentBtn,
 .PostCardLikeAction,

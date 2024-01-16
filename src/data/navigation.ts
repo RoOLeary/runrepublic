@@ -437,7 +437,7 @@ export const NAVIGATION_MAIN: NavItemType[] = [
  
   {
     id: randomId(),
-    href: "/search",
+    href: "/contact",
     name: "Contact",
   },
 ];
