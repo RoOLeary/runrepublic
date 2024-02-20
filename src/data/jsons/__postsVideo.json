@@ -146,7 +146,7 @@
   {
     "index": 212129,
     "id": "0991ab0b-696f-4d7f-2121afe7-9c624eb8c050",
-    "featuredImage": "https://images.unsplash.com/photo-1465310477141-6fb93167a273?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80",
+    "featuredImage": "/assets/images/marathon.jpg",
     "title": "Microsoft announces a five-year ",
     "desc": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
     "date": "Jan 24, 2024",
@@ -200,7 +200,7 @@
   {
     "index": 23232112,
     "id": "f92421ccfb-2122622-497d-8072-df373c73cbaa",
-    "featuredImage": "https://images.unsplash.com/photo-1587381420844-7bc5f4feec02?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    "featuredImage": "/assets/images/runner-mountains.jpg",
     "title": "Xbox connects people to help ",
     "desc": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     "date": "Jan 24, 2024",

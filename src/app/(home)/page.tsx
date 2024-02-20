@@ -21,6 +21,12 @@ const PageHome = () => {
        
           <SectionMagazine10 posts={MAGAZINE1_POSTS} />
 
+          <SectionMagazine2
+            className="pt-8 lg:pt-16 pb-8"
+            heading="Latest Articles"
+            posts={MAGAZINE2_POSTS}
+          />
+
           <SectionMagazine9
             gapClassName="gap-6"
             className="pt-12 lg:pt-10"
@@ -29,11 +35,7 @@ const PageHome = () => {
 
           {/* <SectionAds className="pt-16 lg:pt-24" /> */}
 
-          <SectionMagazine2
-            className="pt-16 lg:pt-24"
-            heading="Latest Articles"
-            posts={MAGAZINE2_POSTS}
-          />
+         
 
           {/* === SECTION 11 === */}
           <SectionMagazine11 className="py-16 lg:py-24" />

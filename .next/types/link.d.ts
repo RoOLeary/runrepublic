@@ -33,8 +33,6 @@ declare namespace __next_route_internal_types__ {
     | `/home-2`
     | `/home-3`
     | `/home-4`
-    | `/search-2`
-    | `/search`
     | `/contact`
     | `/dashboard`
     | `/dashboard/billing-address`
@@ -46,6 +44,8 @@ declare namespace __next_route_internal_types__ {
     | `/login`
     | `/signup`
     | `/subscription`
+    | `/search`
+    | `/search-2`
     | `/about`
     | `/api/hello`
   type DynamicRoutes<T extends string = string> = 
@@ -57,9 +57,9 @@ declare namespace __next_route_internal_types__ {
     | `/single-audio/${OptionalCatchAllSlug<T>}`
     | `/single-gallery/${OptionalCatchAllSlug<T>}`
     | `/single-video/${OptionalCatchAllSlug<T>}`
-    | `/single-4/${OptionalCatchAllSlug<T>}`
     | `/single-3/${OptionalCatchAllSlug<T>}`
     | `/single-5/${OptionalCatchAllSlug<T>}`
+    | `/single-4/${OptionalCatchAllSlug<T>}`
     | `/author/${OptionalCatchAllSlug<T>}`
 
   type RouteImpl<T> = 
