@@ -46,7 +46,7 @@ const PageHome = () => {
               className="py-16 lg:py-24"
               posts={DEMO_POSTS_NEWS.filter((_, i) => i > 7 && i < 18)}
               postCardName="card4"
-              gridClass="sm:grid-cols-2"
+              gridClass="sm:grid-cols-2 "
             />
           </div>
         </div>
