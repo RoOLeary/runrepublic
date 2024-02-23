@@ -1,8 +1,9 @@
-import React, { FC } from "react";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import ButtonSecondary from "@/components/Button/ButtonSecondary";
-import Textarea from "@/components/Textarea/Textarea";
-import Button from "@/components/Button/Button";
+import type { FC } from 'react';
+import React from 'react';
+
+import Button from '@/components/Button/Button';
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import Textarea from '@/components/Textarea/Textarea';
 
 export interface SingleCommentFormProps {
   className?: string;
@@ -14,11 +15,11 @@ export interface SingleCommentFormProps {
 }
 
 const SingleCommentForm: FC<SingleCommentFormProps> = ({
-  className = "mt-5",
+  className = 'mt-5',
   onClickSubmit,
   onClickCancel,
   textareaRef,
-  defaultValue = "",
+  defaultValue = '',
   rows = 4,
 }) => {
   return (
@@ -26,7 +27,7 @@ const SingleCommentForm: FC<SingleCommentFormProps> = ({
       <Textarea
         placeholder="Add to discussion"
         ref={textareaRef}
-        required={true}
+        required
         defaultValue={defaultValue}
         rows={rows}
       />

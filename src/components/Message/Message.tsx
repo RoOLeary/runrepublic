@@ -1,25 +1,26 @@
-import React from "react";
+import React from 'react';
+
 export interface MessageProps {
-  type?: "success" | "error" | "warning" | "info";
+  type?: 'success' | 'error' | 'warning' | 'info';
   children: React.ReactNode;
 }
 const Message: React.FC<MessageProps> = ({
-  children = "This is a SUCCESS message",
-  type = "success",
+  children = 'This is a SUCCESS message',
+  type = 'success',
 }) => {
-  let color = "";
+  let color = '';
   switch (type) {
-    case "success":
-      color += " text-status-success bg-status-successBg";
+    case 'success':
+      color += ' text-status-success bg-status-successBg';
       break;
-    case "error":
-      color += " text-status-error bg-status-errorBg";
+    case 'error':
+      color += ' text-status-error bg-status-errorBg';
       break;
-    case "warning":
-      color += " text-status-warning bg-status-warningBg";
+    case 'warning':
+      color += ' text-status-warning bg-status-warningBg';
       break;
-    case "info":
-      color += " text-status-info bg-status-infoBg";
+    case 'info':
+      color += ' text-status-info bg-status-infoBg';
       break;
     default:
       break;

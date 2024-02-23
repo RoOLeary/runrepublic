@@ -1,5 +1,6 @@
-"use client";
-import React, { useState } from "react";
+'use client';
+
+import React, { useState } from 'react';
 
 const LikeSaveBtns = () => {
   const [isLiked, setIsLiked] = useState(false);
@@ -30,8 +31,8 @@ const LikeSaveBtns = () => {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className={`h-5 w-5 ${isLiked ? "text-red-500" : ""}`}
-            fill={isLiked ? "currentColor" : `none`}
+            className={`h-5 w-5 ${isLiked ? 'text-red-500' : ''}`}
+            fill={isLiked ? 'currentColor' : `none`}
             viewBox="0 0 24 24"
             stroke="currentColor"
           >

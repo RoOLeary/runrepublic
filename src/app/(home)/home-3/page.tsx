@@ -1,23 +1,24 @@
-import React from "react";
-import { DEMO_CATEGORIES } from "@/data/taxonomies";
-import { DEMO_POSTS, DEMO_POSTS_AUDIO } from "@/data/posts";
-import SectionHero from "@/components/SectionHero/SectionHero";
-import rightImg from "@/images/hero-right.png";
-import Vector1 from "@/images/Vector1.png";
-import SectionSubscribe2 from "@/components/SectionSubscribe2/SectionSubscribe2";
-import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
-import SectionSliderNewAuthors from "@/components/SectionSliderNewAthors/SectionSliderNewAuthors";
-import { DEMO_AUTHORS } from "@/data/authors";
-import SectionBecomeAnAuthor from "@/components/SectionBecomeAnAuthor/SectionBecomeAnAuthor";
-import SectionGridCategoryBox from "@/components/SectionGridCategoryBox/SectionGridCategoryBox";
-import Image from "next/image";
-import SectionMagazine5 from "@/components/Sections/SectionMagazine5";
-import SectionSliderPosts from "@/components/Sections/SectionSliderPosts";
-import SectionAds from "@/components/Sections/SectionAds";
-import SectionMagazine8 from "@/components/Sections/SectionMagazine8";
-import SectionMagazine9 from "@/components/Sections/SectionMagazine9";
-import SectionVideos from "@/components/Sections/SectionVideos";
-import SectionLatestPosts from "@/components/Sections/SectionLatestPosts";
+import Image from 'next/image';
+import React from 'react';
+
+import BackgroundSection from '@/components/BackgroundSection/BackgroundSection';
+import SectionBecomeAnAuthor from '@/components/SectionBecomeAnAuthor/SectionBecomeAnAuthor';
+import SectionGridCategoryBox from '@/components/SectionGridCategoryBox/SectionGridCategoryBox';
+import SectionHero from '@/components/SectionHero/SectionHero';
+import SectionAds from '@/components/Sections/SectionAds';
+import SectionLatestPosts from '@/components/Sections/SectionLatestPosts';
+import SectionMagazine5 from '@/components/Sections/SectionMagazine5';
+import SectionMagazine8 from '@/components/Sections/SectionMagazine8';
+import SectionMagazine9 from '@/components/Sections/SectionMagazine9';
+import SectionSliderPosts from '@/components/Sections/SectionSliderPosts';
+import SectionVideos from '@/components/Sections/SectionVideos';
+import SectionSliderNewAuthors from '@/components/SectionSliderNewAthors/SectionSliderNewAuthors';
+import SectionSubscribe2 from '@/components/SectionSubscribe2/SectionSubscribe2';
+import { DEMO_AUTHORS } from '@/data/authors';
+import { DEMO_POSTS, DEMO_POSTS_AUDIO } from '@/data/posts';
+import { DEMO_CATEGORIES } from '@/data/taxonomies';
+import rightImg from '@/images/hero-right.png';
+import Vector1 from '@/images/Vector1.png';
 
 // DEMO DATA
 const POSTS = DEMO_POSTS;

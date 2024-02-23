@@ -1,25 +1,28 @@
-"use client";
+'use client';
 
-import React, { FC } from "react";
-import Logo from "@/components/Logo/Logo";
-import MenuBar from "@/components/MenuBar/MenuBar";
-import LangDropdown from "./LangDropdown";
-import AvatarDropdown from "./AvatarDropdown";
-import TemplatesDropdown from "./TemplatesDropdown";
-import NotifyDropDown from "./NotifyDropdown";
-import SwitchDarkMode from "../SwitchDarkMode/SwitchDarkMode";
-import Input from "../Input/Input";
-import SearchModal from "./SearchModal";
+import type { FC } from 'react';
+import React from 'react';
+
+import Logo from '@/components/Logo/Logo';
+import MenuBar from '@/components/MenuBar/MenuBar';
+
+import Input from '../Input/Input';
+import SwitchDarkMode from '../SwitchDarkMode/SwitchDarkMode';
+import AvatarDropdown from './AvatarDropdown';
+import LangDropdown from './LangDropdown';
+import NotifyDropDown from './NotifyDropdown';
+import SearchModal from './SearchModal';
+import TemplatesDropdown from './TemplatesDropdown';
 
 export interface MainNav2Props {
   className?: string;
 }
 
-const MainNav2: FC<MainNav2Props> = ({ className = "" }) => {
+const MainNav2: FC<MainNav2Props> = ({ className = '' }) => {
   const renderSearchForm = () => {
     return (
       <div className="relative group">
-        <div className="absolute inset-0"></div>
+        <div className="absolute inset-0" />
         <Input
           type="search"
           placeholder="Search items"
@@ -50,7 +53,7 @@ const MainNav2: FC<MainNav2Props> = ({ className = "" }) => {
             />
           </svg>
         </span>
-        <div className="absolute inset-0"></div>
+        <div className="absolute inset-0" />
       </div>
     );
   };
@@ -66,7 +69,7 @@ const MainNav2: FC<MainNav2Props> = ({ className = "" }) => {
           <div className="flex lg:flex-1 items-center rtl:space-x-reverse space-x-3 sm:space-x-8">
             <Logo />
 
-            <div className="hidden md:block h-10 border-s border-slate-200 dark:border-slate-700"></div>
+            <div className="hidden md:block h-10 border-s border-slate-200 dark:border-slate-700" />
 
             <div className="hidden sm:block flex-grow max-w-xs">
               <SearchModal renderTrigger={renderSearchForm} />

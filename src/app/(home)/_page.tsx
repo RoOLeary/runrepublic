@@ -1,29 +1,30 @@
-import React from "react";
-import SectionLargeSlider from "@/app/(home)/SectionLargeSlider";
-import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
-import SectionSliderNewAuthors from "@/components/SectionSliderNewAthors/SectionSliderNewAuthors";
+import React from 'react';
+
+import SectionLargeSlider from '@/app/(home)/SectionLargeSlider';
+import BackgroundSection from '@/components/BackgroundSection/BackgroundSection';
+import SectionBecomeAnAuthor from '@/components/SectionBecomeAnAuthor/SectionBecomeAnAuthor';
+import SectionGridAuthorBox from '@/components/SectionGridAuthorBox/SectionGridAuthorBox';
+import SectionAds from '@/components/Sections/SectionAds';
+import SectionGridPosts from '@/components/Sections/SectionGridPosts';
+import SectionLatestPosts from '@/components/Sections/SectionLatestPosts';
+import SectionMagazine1 from '@/components/Sections/SectionMagazine1';
+import SectionMagazine2 from '@/components/Sections/SectionMagazine2';
+import SectionMagazine7 from '@/components/Sections/SectionMagazine7';
+import SectionMagazine8 from '@/components/Sections/SectionMagazine8';
+import SectionMagazine9 from '@/components/Sections/SectionMagazine9';
+import SectionSliderPosts from '@/components/Sections/SectionSliderPosts';
+import SectionVideos from '@/components/Sections/SectionVideos';
+import SectionSliderNewAuthors from '@/components/SectionSliderNewAthors/SectionSliderNewAuthors';
+import SectionSliderNewCategories from '@/components/SectionSliderNewCategories/SectionSliderNewCategories';
+import SectionSubscribe2 from '@/components/SectionSubscribe2/SectionSubscribe2';
+import { DEMO_AUTHORS } from '@/data/authors';
 import {
   DEMO_POSTS,
   DEMO_POSTS_AUDIO,
   DEMO_POSTS_GALLERY,
   DEMO_POSTS_VIDEO,
-} from "@/data/posts";
-import { DEMO_CATEGORIES } from "@/data/taxonomies";
-import { DEMO_AUTHORS } from "@/data/authors";
-import SectionSliderNewCategories from "@/components/SectionSliderNewCategories/SectionSliderNewCategories";
-import SectionSliderPosts from "@/components/Sections/SectionSliderPosts";
-import SectionMagazine1 from "@/components/Sections/SectionMagazine1";
-import SectionAds from "@/components/Sections/SectionAds";
-import SectionMagazine7 from "@/components/Sections/SectionMagazine7";
-import SectionGridPosts from "@/components/Sections/SectionGridPosts";
-import SectionMagazine8 from "@/components/Sections/SectionMagazine8";
-import SectionMagazine9 from "@/components/Sections/SectionMagazine9";
-import SectionGridAuthorBox from "@/components/SectionGridAuthorBox/SectionGridAuthorBox";
-import SectionBecomeAnAuthor from "@/components/SectionBecomeAnAuthor/SectionBecomeAnAuthor";
-import SectionSubscribe2 from "@/components/SectionSubscribe2/SectionSubscribe2";
-import SectionVideos from "@/components/Sections/SectionVideos";
-import SectionLatestPosts from "@/components/Sections/SectionLatestPosts";
-import SectionMagazine2 from "@/components/Sections/SectionMagazine2";
+} from '@/data/posts';
+import { DEMO_CATEGORIES } from '@/data/taxonomies';
 
 //
 const MAGAZINE1_POSTS = DEMO_POSTS.filter((_, i) => i >= 8 && i < 16);
@@ -126,7 +127,7 @@ const PageHome = ({}) => {
             heading="More design articles"
             subHeading="Over 1118 articles "
             posts={DEMO_POSTS.filter(
-              (p, i) => i > 3 && i < 25 && p.postType === "standard"
+              (p, i) => i > 3 && i < 25 && p.postType === 'standard',
             )}
           />
         </div>

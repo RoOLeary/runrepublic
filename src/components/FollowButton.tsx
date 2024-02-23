@@ -1,7 +1,10 @@
-import { PlusCircleIcon } from "@heroicons/react/24/solid";
-import React, { FC } from "react";
-import Button, { ButtonProps } from "./Button/Button";
-import ButtonPrimary from "./Button/ButtonPrimary";
+import { PlusCircleIcon } from '@heroicons/react/24/solid';
+import type { FC } from 'react';
+import React from 'react';
+
+import type { ButtonProps } from './Button/Button';
+import Button from './Button/Button';
+import ButtonPrimary from './Button/ButtonPrimary';
 
 export interface FollowButtonProps extends ButtonProps {
   isFollowing?: boolean;

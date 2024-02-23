@@ -1,10 +1,11 @@
-import React, { FC } from "react";
-import NcImage from "@/components/NcImage/NcImage";
-import SingleHeader from "@/app/(singles)/SingleHeader";
+import React from 'react';
+
+import SingleHeader from '@/app/(singles)/SingleHeader';
+import NcImage from '@/components/NcImage/NcImage';
 
 const PageSingleTemplate2 = ({}) => {
   return (
-    <div className={`pt-8 lg:pt-16`}>
+    <div className="pt-8 lg:pt-16">
       {/* SINGLE HEADER */}
       <header className="container rounded-xl">
         <div className="max-w-screen-md mx-auto">
@@ -20,7 +21,6 @@ const PageSingleTemplate2 = ({}) => {
           fill
           sizes="100vw"
           src="https://images.pexels.com/photos/347141/pexels-photo-347141.jpeg"
-          
         />
       </div>
     </div>

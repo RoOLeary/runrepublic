@@ -1,11 +1,14 @@
-"use client";
+'use client';
 
-import React, { FC, useState } from "react";
-import Heading from "@/components/Heading/Heading";
-import Nav from "@/components/Nav/Nav";
-import NavItem from "@/components/NavItem/NavItem";
-import Button from "../Button/Button";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import type { FC } from 'react';
+import React, { useState } from 'react';
+
+import Heading from '@/components/Heading/Heading';
+import Nav from '@/components/Nav/Nav';
+import NavItem from '@/components/NavItem/NavItem';
+
+import Button from '../Button/Button';
 
 export interface HeaderFilterProps {
   tabs?: string[];
@@ -13,8 +16,8 @@ export interface HeaderFilterProps {
 }
 
 const HeaderFilter: FC<HeaderFilterProps> = ({
-  tabs = ["All items", "Startups", "SEO", "Design"],
-  heading = "🎈 Latest Articles",
+  tabs = ['All items', 'Startups', 'SEO', 'Design'],
+  heading = '🎈 Latest Articles',
 }) => {
   const [tabActive, setTabActive] = useState<string>(tabs[0]);
 

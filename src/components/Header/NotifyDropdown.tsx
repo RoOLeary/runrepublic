@@ -1,25 +1,27 @@
-import { Popover, Transition } from "@/app/headlessui";
-import Avatar from "@/components/Avatar/Avatar";
-import { FC, Fragment } from "react";
+import type { FC } from 'react';
+import { Fragment } from 'react';
+
+import { Popover, Transition } from '@/app/headlessui';
+import Avatar from '@/components/Avatar/Avatar';
 
 const solutions = [
   {
-    name: "Eden Tuan",
-    description: "Mentioned you in a comment",
-    time: "3 minutes ago",
-    href: "##",
+    name: 'Eden Tuan',
+    description: 'Mentioned you in a comment',
+    time: '3 minutes ago',
+    href: '##',
   },
   {
-    name: "Leo Messi",
-    description: "Create your own targeted content",
-    time: "1 minute ago",
-    href: "##",
+    name: 'Leo Messi',
+    description: 'Create your own targeted content',
+    time: '1 minute ago',
+    href: '##',
   },
   {
-    name: "Leo Kante",
-    description: "Keep track of your growth",
-    time: "3 minutes ago",
-    href: "##",
+    name: 'Leo Kante',
+    description: 'Keep track of your growth',
+    time: '3 minutes ago',
+    href: '##',
   },
 ];
 
@@ -27,7 +29,7 @@ interface Props {
   className?: string;
 }
 
-const NotifyDropdown: FC<Props> = ({ className = "hidden sm:block" }) => {
+const NotifyDropdown: FC<Props> = ({ className = 'hidden sm:block' }) => {
   return (
     <div className={className}>
       <Popover className="relative">
@@ -35,11 +37,11 @@ const NotifyDropdown: FC<Props> = ({ className = "hidden sm:block" }) => {
           <>
             <Popover.Button
               className={`
-                ${open ? "" : "text-opacity-90"}
+                ${open ? '' : 'text-opacity-90'}
                  group  p-3 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded-full inline-flex items-center text-base font-medium hover:text-opacity-100
                   focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 relative`}
             >
-              <span className="w-2 h-2 bg-blue-500 absolute top-2 end-2 rounded-full"></span>
+              <span className="w-2 h-2 bg-blue-500 absolute top-2 end-2 rounded-full" />
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M12 6.43994V9.76994"
@@ -97,7 +99,7 @@ const NotifyDropdown: FC<Props> = ({ className = "hidden sm:block" }) => {
                             {item.time}
                           </p>
                         </div>
-                        <span className="absolute right-1 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-blue-500"></span>
+                        <span className="absolute right-1 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-blue-500" />
                       </a>
                     ))}
                   </div>

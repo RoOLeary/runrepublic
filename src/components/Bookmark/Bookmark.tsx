@@ -1,6 +1,7 @@
-"use client";
+'use client';
 
-import React, { FC, useState } from "react";
+import type { FC } from 'react';
+import React, { useState } from 'react';
 
 export interface BookmarkProps {
   containerClassName?: string;
@@ -8,7 +9,7 @@ export interface BookmarkProps {
 }
 
 const Bookmark: FC<BookmarkProps> = ({
-  containerClassName = "h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700",
+  containerClassName = 'h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700',
   bookmarked = false,
 }) => {
   const [isBookmarked, setIsBookmarked] = useState(bookmarked);
@@ -23,7 +24,7 @@ const Bookmark: FC<BookmarkProps> = ({
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        fill={isBookmarked ? "currentColor" : "none"}
+        fill={isBookmarked ? 'currentColor' : 'none'}
         stroke="currentColor"
         className="w-[18px] h-[18px]"
       >

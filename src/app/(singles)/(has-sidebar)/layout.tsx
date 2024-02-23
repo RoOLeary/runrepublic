@@ -1,11 +1,13 @@
-import React, { ReactNode } from "react";
-import { Sidebar } from "../Sidebar";
-import SingleContent from "../SingleContent";
-import SingleRelatedPosts from "../SingleRelatedPosts";
+import type { ReactNode } from 'react';
+import React from 'react';
+
+import { Sidebar } from '../Sidebar';
+import SingleContent from '../SingleContent';
+import SingleRelatedPosts from '../SingleRelatedPosts';
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className={`relative`}>
+    <div className="relative">
       {children}
 
       <div className="container flex flex-col my-10 lg:flex-row ">

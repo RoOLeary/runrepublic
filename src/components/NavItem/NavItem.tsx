@@ -1,4 +1,5 @@
-import React, { FC, ReactNode } from "react";
+import type { FC, ReactNode } from 'react';
+import React from 'react';
 
 export interface NavItemProps {
   className?: string;
@@ -10,8 +11,8 @@ export interface NavItemProps {
 }
 
 const NavItem: FC<NavItemProps> = ({
-  className = "px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize",
-  radius = "rounded-full",
+  className = 'px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize',
+  radius = 'rounded-full',
   children,
   onClick = () => {},
   isActive = false,
@@ -23,8 +24,8 @@ const NavItem: FC<NavItemProps> = ({
       <button
         className={`flex items-center justify-center font-medium ${className} ${radius} ${
           isActive
-            ? "bg-neutral-900 text-neutral-50 dark:bg-neutral-100 dark:text-black"
-            : "text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+            ? 'bg-neutral-900 text-neutral-50 dark:bg-neutral-100 dark:text-black'
+            : 'text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800'
         } `}
         onClick={onClick}
       >

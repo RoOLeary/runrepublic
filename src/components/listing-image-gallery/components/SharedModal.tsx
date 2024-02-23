@@ -4,15 +4,17 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
   XMarkIcon,
-} from "@heroicons/react/24/outline";
-import { AnimatePresence, motion, MotionConfig } from "framer-motion";
-import Image from "next/image";
-import { useState } from "react";
-import { useSwipeable } from "react-swipeable";
-import { variants } from "@/utils/animationVariants";
-import { range } from "../utils/range";
-import type { ListingGalleryImage } from "../utils/types";
-import Twitter from "./Icons/Twitter";
+} from '@heroicons/react/24/outline';
+import { AnimatePresence, motion, MotionConfig } from 'framer-motion';
+import Image from 'next/image';
+import { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
+
+import { variants } from '@/utils/animationVariants';
+
+import { range } from '../utils/range';
+import type { ListingGalleryImage } from '../utils/types';
+import Twitter from './Icons/Twitter';
 
 interface SharedModalProps {
   index: number;
@@ -35,8 +37,8 @@ export default function SharedModal({
 }: SharedModalProps) {
   const [loaded, setLoaded] = useState(false);
 
-  let filteredImages = images?.filter((img: ListingGalleryImage) =>
-    range(index - 15, index + 15).includes(img.id)
+  const filteredImages = images?.filter((img: ListingGalleryImage) =>
+    range(index - 15, index + 15).includes(img.id),
   );
 
   const handlers = useSwipeable({
@@ -53,14 +55,14 @@ export default function SharedModal({
     trackMouse: true,
   });
 
-  let currentImage = images ? images[index] : currentPhoto;
+  const currentImage = images ? images[index] : currentPhoto;
 
-  const isRtl = document.querySelector("html")?.getAttribute("dir") === "rtl";
+  const isRtl = document.querySelector('html')?.getAttribute('dir') === 'rtl';
 
   return (
     <MotionConfig
       transition={{
-        x: { type: "spring", stiffness: 300, damping: 30 },
+        x: { type: 'spring', stiffness: 300, damping: 30 },
         opacity: { duration: 0.2 },
       }}
     >
@@ -82,7 +84,7 @@ export default function SharedModal({
                 className="absolute"
               >
                 <Image
-                  src={currentImage?.url || ""}
+                  src={currentImage?.url || ''}
                   width={navigation ? 1280 : 1920}
                   height={navigation ? 853 : 1280}
                   priority
@@ -106,7 +108,7 @@ export default function SharedModal({
                   {index > 0 && (
                     <button
                       className="absolute start-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-none"
-                      style={{ transform: "translate3d(0, 0, 0)" }}
+                      style={{ transform: 'translate3d(0, 0, 0)' }}
                       onClick={() => changePhotoId(index - 1)}
                     >
                       <ChevronLeftIcon className="h-6 w-6 rtl:rotate-180" />
@@ -115,7 +117,7 @@ export default function SharedModal({
                   {index + 1 < images.length && (
                     <button
                       className="absolute end-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-none"
-                      style={{ transform: "translate3d(0, 0, 0)" }}
+                      style={{ transform: 'translate3d(0, 0, 0)' }}
                       onClick={() => changePhotoId(index + 1)}
                     >
                       <ChevronRightIcon className="h-6 w-6 rtl:rotate-180" />
@@ -126,7 +128,7 @@ export default function SharedModal({
               <div className="absolute top-0 end-0 flex items-center gap-2 p-3 text-white">
                 {navigation ? (
                   <a
-                    href={"#"}
+                    href="#"
                     className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
                     target="_blank"
                     title="Open fullsize version"
@@ -171,23 +173,23 @@ export default function SharedModal({
                   {filteredImages.map(({ id, url }) => (
                     <motion.button
                       initial={{
-                        width: "0%",
+                        width: '0%',
                         x: `${(index - 1) * (isRtl ? 100 : -100)}%`,
                       }}
                       animate={{
                         scale: id === index ? 1.25 : 1,
-                        width: "100%",
+                        width: '100%',
                         x: `${index * (isRtl ? 100 : -100)}%`,
                       }}
-                      exit={{ width: "0%" }}
+                      exit={{ width: '0%' }}
                       onClick={() => changePhotoId(id)}
                       key={id}
                       className={`${
                         id === index
-                          ? "z-20 rounded-md shadow shadow-black/50"
-                          : "z-10"
-                      } ${id === 0 ? "rounded-s-md" : ""} ${
-                        id === images.length - 1 ? "rounded-e-md" : ""
+                          ? 'z-20 rounded-md shadow shadow-black/50'
+                          : 'z-10'
+                      } ${id === 0 ? 'rounded-s-md' : ''} ${
+                        id === images.length - 1 ? 'rounded-e-md' : ''
                       } relative inline-block w-full shrink-0 transform-gpu overflow-hidden focus:outline-none`}
                     >
                       <Image
@@ -196,10 +198,10 @@ export default function SharedModal({
                         height={120}
                         className={`${
                           id === index
-                            ? "brightness-110 hover:brightness-110"
-                            : "brightness-50 contrast-125 hover:brightness-75"
+                            ? 'brightness-110 hover:brightness-110'
+                            : 'brightness-50 contrast-125 hover:brightness-75'
                         } h-full transform object-cover transition`}
-                        src={url || ""}
+                        src={url || ''}
                       />
                     </motion.button>
                   ))}

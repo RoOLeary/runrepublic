@@ -1,28 +1,27 @@
-import React, { FC } from "react";
-import NcImage from "@/components/NcImage/NcImage";
-import { Transition } from "@/app/headlessui";
-import { useMusicPlayer } from "@/hooks/useMusicPlayer";
-import Link from "next/link";
-import PostCardLikeAction from "../PostCardLikeAction/PostCardLikeAction";
-import Bookmark from "../Bookmark/Bookmark";
-import { PauseIcon, PlayIcon } from "@heroicons/react/24/solid";
-import {
-  ChevronUpDownIcon,
-  ChevronUpIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { ChevronUpIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { PauseIcon, PlayIcon } from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import { Transition } from '@/app/headlessui';
+import NcImage from '@/components/NcImage/NcImage';
+import { useMusicPlayer } from '@/hooks/useMusicPlayer';
+
+import Bookmark from '../Bookmark/Bookmark';
+import PostCardLikeAction from '../PostCardLikeAction/PostCardLikeAction';
 
 export interface PlayerContentProps {
   isError: boolean;
   handleSeekMouseUp: (
     e:
       | React.MouseEvent<HTMLInputElement, MouseEvent>
-      | React.TouchEvent<HTMLInputElement>
+      | React.TouchEvent<HTMLInputElement>,
   ) => void;
   handleSeekMouseDown: (
     e:
       | React.MouseEvent<HTMLInputElement, MouseEvent>
-      | React.TouchEvent<HTMLInputElement>
+      | React.TouchEvent<HTMLInputElement>,
   ) => void;
   handleSeekChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleVolumeChange: (e: number) => void;
@@ -76,13 +75,13 @@ const PlayerContent: FC<PlayerContentProps> = ({
   //
 
   const getConvertTime = (sec: number) => {
-    let minutes = Math.floor(sec / 60);
+    const minutes = Math.floor(sec / 60);
     let seconds = `${sec - minutes * 60}`;
 
     if (Number(seconds) < 10) {
-      seconds = "0" + seconds;
+      seconds = `0${seconds}`;
     }
-    return minutes + ":" + seconds;
+    return `${minutes}:${seconds}`;
   };
 
   const handleClickToggle = () => {
@@ -96,10 +95,10 @@ const PlayerContent: FC<PlayerContentProps> = ({
 
   const renderLeft = () => {
     const {
-      href = "/",
-      featuredImage = "",
+      href = '/',
+      featuredImage = '',
       categories = [],
-      title = "",
+      title = '',
     } = post || {};
     return (
       <div className="mr-2 flex items-center flex-grow lg:flex-shrink-0 lg:basis-52 overflow-hidden">
@@ -112,7 +111,7 @@ const PlayerContent: FC<PlayerContentProps> = ({
             fill
             sizes="3rem"
             containerClassName={`absolute start-0 w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 transition-transform animation-spin rounded-full ${
-              playing ? "playing" : ""
+              playing ? 'playing' : ''
             }`}
             src={featuredImage}
             className="object-cover w-full h-full rounded-full shadow-md"
@@ -152,14 +151,14 @@ const PlayerContent: FC<PlayerContentProps> = ({
         />
         <div
           className="absolute start-0 top-1/2 h-0.5 min-w-0 transform -translate-y-1/2 transition-all rounded-full bg-primary-500/30  will-change-contents"
-          style={{ width: loaded * 100 + "%" }}
-        ></div>
+          style={{ width: `${loaded * 100}%` }}
+        />
         <div
           className="absolute h-0.5 min-w-0 start-0 top-1/2 transform -translate-y-1/2 rounded-full bg-primary-500 z-0"
           // 12px la kich thuoc cua num' chuot
-          style={{ width: `calc(${played * 100 + "%"} - 12px)` }}
+          style={{ width: `calc(${`${played * 100}%`} - 12px)` }}
         >
-          <span className="absolute -end-3 top-1/2 transform -translate-y-1/2 w-3 h-3 rounded-full bg-primary-500"></span>
+          <span className="absolute -end-3 top-1/2 transform -translate-y-1/2 w-3 h-3 rounded-full bg-primary-500" />
         </div>
       </div>
     );
@@ -200,14 +199,14 @@ const PlayerContent: FC<PlayerContentProps> = ({
               strokeLinejoin="round"
               strokeWidth="1.5"
               d="M15.25 6.75V17.25"
-            ></path>
+            />
             <path
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="1.5"
               d="M8.75 6.75V17.25"
-            ></path>
+            />
           </svg>
         ) : (
           <svg
@@ -221,7 +220,7 @@ const PlayerContent: FC<PlayerContentProps> = ({
               strokeLinejoin="round"
               strokeWidth="1.5"
               d="M18.25 12L5.75 5.75V18.25L18.25 12Z"
-            ></path>
+            />
           </svg>
         )}
       </div>
@@ -405,7 +404,7 @@ const PlayerContent: FC<PlayerContentProps> = ({
             }
           }}
         >
-          {`${playbackRate === 1.5 ? 1.5 : playbackRate + `.0`}x`}
+          {`${playbackRate === 1.5 ? 1.5 : `${playbackRate}.0`}x`}
         </button>
       </div>
     );
@@ -414,7 +413,7 @@ const PlayerContent: FC<PlayerContentProps> = ({
   const renderContentCenter = () => {
     return (
       <div className="flex flex-grow items-center text-neutral-500 dark:text-neutral-300 justify-evenly max-w-xs xl:max-w-md">
-        {<div className="w-12"></div>}
+        <div className="w-12" />
         {renderBackwards10S()}
         {renderButtonControl()}
         {renderForwards15S()}
@@ -542,18 +541,18 @@ const PlayerContent: FC<PlayerContentProps> = ({
               handleSetMuted(false);
             }}
           />
-          <div className="absolute start-0 top-1/2 h-0.5 min-w-0 w-full -translate-y-1/2 rounded-full bg-neutral-300 dark:bg-neutral-500"></div>
+          <div className="absolute start-0 top-1/2 h-0.5 min-w-0 w-full -translate-y-1/2 rounded-full bg-neutral-300 dark:bg-neutral-500" />
           <div
             className={`absolute h-0.5 min-w-0 start-0 top-1/2 -translate-y-1/2 rounded-full ${
-              !volume || muted ? "bg-neutral-400" : "bg-primary-500"
+              !volume || muted ? 'bg-neutral-400' : 'bg-primary-500'
             }`}
-            style={{ width: volume * 100 + "%" }}
+            style={{ width: `${volume * 100}%` }}
           >
             <span
               className={`absolute -end-1 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full ${
-                !volume || muted ? "bg-neutral-400" : "bg-primary-500"
+                !volume || muted ? 'bg-neutral-400' : 'bg-primary-500'
               }`}
-            ></span>
+            />
           </div>
         </div>
       </div>
@@ -586,78 +585,74 @@ const PlayerContent: FC<PlayerContentProps> = ({
   };
 
   return (
-    <>
-      <Transition
-        className="relative bg-white dark:bg-neutral-800 w-full flex flex-col px-2 sm:px-3 z-0 - google-shadow"
-        show={!!post && !!post.audioUrl}
-        enter="transition-transform duration-150"
-        enterFrom="translate-y-full"
-        enterTo="translate-y-0"
-        leave="transition-transform duration-150"
-        leaveFrom="translate-y-0"
-        leaveTo="translate-y-full"
+    <Transition
+      className="relative bg-white dark:bg-neutral-800 w-full flex flex-col px-2 sm:px-3 z-0 - google-shadow"
+      show={!!post && !!post.audioUrl}
+      enter="transition-transform duration-150"
+      enterFrom="translate-y-full"
+      enterTo="translate-y-0"
+      leave="transition-transform duration-150"
+      leaveFrom="translate-y-0"
+      leaveTo="translate-y-full"
+    >
+      {/* BUTTON TOGGLE CONTENT ON MOBILE */}
+      <button
+        className="w-[26px] h-6 flex lg:hidden items-center justify-center absolute z-20 right-0 -top-3"
+        onClick={() => setIsShowContentOnMobile(!isShowContentOnMobile)}
       >
-        {/* BUTTON TOGGLE CONTENT ON MOBILE */}
-        <button
-          className="w-[26px] h-6 flex lg:hidden items-center justify-center absolute z-20 right-0 -top-3"
-          onClick={() => setIsShowContentOnMobile(!isShowContentOnMobile)}
-        >
-          <div className="w-6 h-6 bg-white dark:bg-neutral-800 flex items-center justify-center  rounded-full - google-shadow">
-            <ChevronUpIcon
-              className={`w-4 h-4 ${isShowContentOnMobile ? "rotate-180" : ""}`}
-            />
-          </div>
-        </button>
+        <div className="w-6 h-6 bg-white dark:bg-neutral-800 flex items-center justify-center  rounded-full - google-shadow">
+          <ChevronUpIcon
+            className={`w-4 h-4 ${isShowContentOnMobile ? 'rotate-180' : ''}`}
+          />
+        </div>
+      </button>
 
-        {renderDurationTime()}
+      {renderDurationTime()}
 
-        <div className="h-16 sm:h-20 w-full flex justify-between">
-          {/* LEFT */}
-          {renderLeft()}
+      <div className="h-16 sm:h-20 w-full flex justify-between">
+        {/* LEFT */}
+        {renderLeft()}
 
-          {/* CENTER */}
-          <div className="hidden lg:flex flex-grow px-5 items-center justify-center">
-            {isError ? (
-              <span className="flex ps-2 text-xs lg:text-sm text-red-500">
-                This track not found or not supported.
-              </span>
-            ) : (
-              renderContentCenter()
-            )}
-          </div>
-
-          {/* RENDER RIGHT */}
-          <div className="ms-2 flex-shrink-0 lg:basis-52 lg:flex-grow flex items-center justify-end">
-            {renderVolumn()}
-            {renderTiming()}
-            {renderButtonControlMobile()}
-            {renderClose()}
-          </div>
+        {/* CENTER */}
+        <div className="hidden lg:flex flex-grow px-5 items-center justify-center">
+          {isError ? (
+            <span className="flex ps-2 text-xs lg:text-sm text-red-500">
+              This track not found or not supported.
+            </span>
+          ) : (
+            renderContentCenter()
+          )}
         </div>
 
-        <Transition
-          className="h-16 flex lg:hidden justify-center border-t border-neutral-300 dark:border-neutral-700 transition-all z-0 "
-          enter="duration-150"
-          enterFrom="-mb-16"
-          enterTo="mb-0"
-          leave="duration-150"
-          leaveFrom="mb-0"
-          leaveTo="-mb-16"
-          as="div"
-          show={isShowContentOnMobile}
-        >
-          <div className="flex flex-grow items-center justify-evenly text-neutral-500 dark:text-neutral-300 max-w-xs sm:max-w-sm md:max-w-md ">
-            <div className="w-12 flex justify-center">
-              {post && <Bookmark />}
-            </div>
-            {renderBackwards10S()}
-            {renderButtonControl()}
-            {renderForwards15S()}
-            {rederSpeed()}
-          </div>
-        </Transition>
+        {/* RENDER RIGHT */}
+        <div className="ms-2 flex-shrink-0 lg:basis-52 lg:flex-grow flex items-center justify-end">
+          {renderVolumn()}
+          {renderTiming()}
+          {renderButtonControlMobile()}
+          {renderClose()}
+        </div>
+      </div>
+
+      <Transition
+        className="h-16 flex lg:hidden justify-center border-t border-neutral-300 dark:border-neutral-700 transition-all z-0 "
+        enter="duration-150"
+        enterFrom="-mb-16"
+        enterTo="mb-0"
+        leave="duration-150"
+        leaveFrom="mb-0"
+        leaveTo="-mb-16"
+        as="div"
+        show={isShowContentOnMobile}
+      >
+        <div className="flex flex-grow items-center justify-evenly text-neutral-500 dark:text-neutral-300 max-w-xs sm:max-w-sm md:max-w-md ">
+          <div className="w-12 flex justify-center">{post && <Bookmark />}</div>
+          {renderBackwards10S()}
+          {renderButtonControl()}
+          {renderForwards15S()}
+          {rederSpeed()}
+        </div>
       </Transition>
-    </>
+    </Transition>
   );
 };
 

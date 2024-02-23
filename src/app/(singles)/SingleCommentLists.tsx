@@ -1,6 +1,8 @@
-import React, { FC } from "react";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import CommentCard from "@/components/CommentCard/CommentCard";
+import type { FC } from 'react';
+import React from 'react';
+
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import CommentCard from '@/components/CommentCard/CommentCard';
 
 export interface SingleCommentListsProps {}
 

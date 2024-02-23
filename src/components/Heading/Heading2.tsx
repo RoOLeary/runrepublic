@@ -1,4 +1,5 @@
-import React, { HTMLAttributes } from "react";
+import type { HTMLAttributes } from 'react';
+import React from 'react';
 
 export interface Heading2Props extends HTMLAttributes<HTMLHeadingElement> {
   emoji?: string;
@@ -6,8 +7,8 @@ export interface Heading2Props extends HTMLAttributes<HTMLHeadingElement> {
 
 const Heading2: React.FC<Heading2Props> = ({
   children,
-  emoji = "",
-  className = "justify-center",
+  emoji = '',
+  className = 'justify-center',
   ...args
 }) => {
   return (

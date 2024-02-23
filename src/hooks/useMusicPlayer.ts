@@ -1,7 +1,8 @@
-"use client";
+'use client';
 
-import { PostDataType } from "@/data/types";
-import { createGlobalState } from "react-hooks-global-state";
+import { createGlobalState } from 'react-hooks-global-state';
+
+import type { PostDataType } from '@/data/types';
 
 const initialState: {
   playing: boolean;
@@ -30,16 +31,16 @@ const initialState: {
 const { useGlobalState } = createGlobalState(initialState);
 
 export const useMusicPlayer = () => {
-  const [playbackRate, setplaybackRate] = useGlobalState("playbackRate");
-  const [duration, setDuration] = useGlobalState("duration");
-  const [loaded, setLoaded] = useGlobalState("loaded");
-  const [played, setPlayed] = useGlobalState("played");
-  const [muted, setMuted] = useGlobalState("muted");
-  const [volume, setVolume] = useGlobalState("volume");
-  const [playing, setPlaying] = useGlobalState("playing");
-  const [postData, setPostData] = useGlobalState("postData");
-  const [loadedSeconds, setLoadedSeconds] = useGlobalState("loadedSeconds");
-  const [playedSeconds, setPlayedSeconds] = useGlobalState("playedSeconds");
+  const [playbackRate, setplaybackRate] = useGlobalState('playbackRate');
+  const [duration, setDuration] = useGlobalState('duration');
+  const [loaded, setLoaded] = useGlobalState('loaded');
+  const [played, setPlayed] = useGlobalState('played');
+  const [muted, setMuted] = useGlobalState('muted');
+  const [volume, setVolume] = useGlobalState('volume');
+  const [playing, setPlaying] = useGlobalState('playing');
+  const [postData, setPostData] = useGlobalState('postData');
+  const [loadedSeconds, setLoadedSeconds] = useGlobalState('loadedSeconds');
+  const [playedSeconds, setPlayedSeconds] = useGlobalState('playedSeconds');
 
   return {
     duration,

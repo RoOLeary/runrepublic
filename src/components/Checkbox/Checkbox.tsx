@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+import type { FC } from 'react';
+import React from 'react';
 
 export interface CheckboxProps {
   label?: string;
@@ -6,7 +7,7 @@ export interface CheckboxProps {
   name: string;
 }
 
-const Checkbox: FC<CheckboxProps> = ({ subLabel = "", label = "", name }) => {
+const Checkbox: FC<CheckboxProps> = ({ subLabel = '', label = '', name }) => {
   return (
     <div className="flex items-start">
       <div className="flex items-center h-5">

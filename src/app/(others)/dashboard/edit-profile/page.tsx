@@ -1,7 +1,8 @@
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import Input from "@/components/Input/Input";
-import Label from "@/components/Label/Label";
-import React from "react";
+import React from 'react';
+
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import Input from '@/components/Input/Input';
+import Label from '@/components/Label/Label';
 
 const DashboardEditProfile = () => {
   return (

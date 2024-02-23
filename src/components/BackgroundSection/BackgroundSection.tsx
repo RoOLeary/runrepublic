@@ -1,11 +1,12 @@
-import React, { FC } from "react";
+import type { FC } from 'react';
+import React from 'react';
 
 export interface BackgroundSectionProps {
   className?: string;
 }
 
 const BackgroundSection: FC<BackgroundSectionProps> = ({
-  className = "bg-neutral-100 dark:bg-black dark:bg-opacity-20",
+  className = 'bg-neutral-100 dark:bg-black dark:bg-opacity-20',
 }) => {
   return (
     <div

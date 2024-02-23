@@ -1,27 +1,28 @@
-import React from "react";
-import facebookSvg from "@/images/Facebook.svg";
-import twitterSvg from "@/images/Twitter.svg";
-import googleSvg from "@/images/Google.svg";
-import Input from "@/components/Input/Input";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import NcLink from "@/components/NcLink/NcLink";
-import Heading2 from "@/components/Heading/Heading2";
-import Image from "next/image";
+import Image from 'next/image';
+import React from 'react';
+
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import Heading2 from '@/components/Heading/Heading2';
+import Input from '@/components/Input/Input';
+import NcLink from '@/components/NcLink/NcLink';
+import facebookSvg from '@/images/Facebook.svg';
+import googleSvg from '@/images/Google.svg';
+import twitterSvg from '@/images/Twitter.svg';
 
 const loginSocials = [
   {
-    name: "Continue with Facebook",
-    href: "#",
+    name: 'Continue with Facebook',
+    href: '#',
     icon: facebookSvg,
   },
   {
-    name: "Continue with Twitter",
-    href: "#",
+    name: 'Continue with Twitter',
+    href: '#',
     icon: twitterSvg,
   },
   {
-    name: "Continue with Google",
-    href: "#",
+    name: 'Continue with Google',
+    href: '#',
     icon: googleSvg,
   },
 ];
@@ -60,7 +61,7 @@ const PageSignUp = ({}) => {
           <span className="relative z-10 inline-block px-4 font-medium text-sm bg-white dark:text-neutral-400 dark:bg-neutral-900">
             OR
           </span>
-          <div className="absolute left-0 w-full top-1/2 transform -translate-y-1/2 border border-neutral-100 dark:border-neutral-800"></div>
+          <div className="absolute left-0 w-full top-1/2 transform -translate-y-1/2 border border-neutral-100 dark:border-neutral-800" />
         </div>
         {/* FORM */}
         <form className="grid grid-cols-1 gap-6" action="#" method="post">

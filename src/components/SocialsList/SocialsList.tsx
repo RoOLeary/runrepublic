@@ -1,8 +1,8 @@
-import {
-  SocialType,
-  SOCIALS_DATA,
-} from "@/components/SocialsShare/SocialsShare";
-import React, { FC } from "react";
+import type { FC } from 'react';
+import React from 'react';
+
+import type { SocialType } from '@/components/SocialsShare/SocialsShare';
+import { SOCIALS_DATA } from '@/components/SocialsShare/SocialsShare';
 
 export interface SocialsListProps {
   className?: string;
@@ -15,8 +15,8 @@ const socialsDemo: SocialType[] = SOCIALS_DATA;
 export const SOCIALS_2 = socialsDemo;
 
 const SocialsList: FC<SocialsListProps> = ({
-  className = "",
-  itemClass = "block",
+  className = '',
+  itemClass = 'block',
   socials = socialsDemo,
 }) => {
   return (
@@ -32,7 +32,7 @@ const SocialsList: FC<SocialsListProps> = ({
           rel="noopener noreferrer"
           title={item.name}
         >
-          <div dangerouslySetInnerHTML={{ __html: item.icon || "" }}></div>
+          <div dangerouslySetInnerHTML={{ __html: item.icon || '' }} />
         </a>
       ))}
     </nav>

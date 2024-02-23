@@ -1,4 +1,5 @@
-import React, { HTMLAttributes, ReactNode } from "react";
+import type { HTMLAttributes, ReactNode } from 'react';
+import React from 'react';
 
 export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   fontClass?: string;
@@ -8,8 +9,8 @@ export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
 
 const Heading: React.FC<HeadingProps> = ({
   children,
-  desc = "Discover the most outstanding articles in all topics of life. ",
-  className = "mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50",
+  desc = 'Discover the most outstanding articles in all topics of life. ',
+  className = 'mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50',
   isCenter = false,
   ...args
 }) => {
@@ -19,11 +20,11 @@ const Heading: React.FC<HeadingProps> = ({
     >
       <div
         className={
-          isCenter ? "text-center w-full max-w-2xl mx-auto " : "max-w-2xl"
+          isCenter ? 'text-center w-full max-w-2xl mx-auto ' : 'max-w-2xl'
         }
       >
         <h2
-          className={`text-2xl md:text-3xl lg:text-4xl font-semibold`}
+          className="text-2xl md:text-3xl lg:text-4xl font-semibold"
           {...args}
         >
           {children || `Section Heading`}

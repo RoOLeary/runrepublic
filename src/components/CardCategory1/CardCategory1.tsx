@@ -1,20 +1,22 @@
-import React, { FC } from "react";
-import NcImage from "@/components/NcImage/NcImage";
-import { TaxonomyType } from "@/data/types";
-import Link from "next/link";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import NcImage from '@/components/NcImage/NcImage';
+import type { TaxonomyType } from '@/data/types';
 
 export interface CardCategory1Props {
   className?: string;
   taxonomy: TaxonomyType;
-  size?: "large" | "normal";
+  size?: 'large' | 'normal';
 }
 
 const CardCategory1: FC<CardCategory1Props> = ({
-  className = "",
-  size = "normal",
+  className = '',
+  size = 'normal',
   taxonomy,
 }) => {
-  const { count, name, href = "/", thumbnail } = taxonomy;
+  const { count, name, href = '/', thumbnail } = taxonomy;
   return (
     <Link
       href={href}
@@ -23,9 +25,9 @@ const CardCategory1: FC<CardCategory1Props> = ({
       <NcImage
         alt=""
         containerClassName={`relative flex-shrink-0 ${
-          size === "large" ? "w-20 h-20" : "w-12 h-12"
+          size === 'large' ? 'w-20 h-20' : 'w-12 h-12'
         } rounded-lg me-4 overflow-hidden`}
-        src={thumbnail || ""}
+        src={thumbnail || ''}
         fill
         className="object-cover"
         sizes="80px"
@@ -33,14 +35,14 @@ const CardCategory1: FC<CardCategory1Props> = ({
       <div>
         <h2
           className={`${
-            size === "large" ? "text-lg" : "text-base"
+            size === 'large' ? 'text-lg' : 'text-base'
           } card-title text-neutral-900 dark:text-neutral-100 text-sm sm:text-base font-medium sm:font-semibold`}
         >
           {name}
         </h2>
         <span
           className={`${
-            size === "large" ? "text-sm" : "text-xs"
+            size === 'large' ? 'text-sm' : 'text-xs'
           } block mt-[2px] text-neutral-500 dark:text-neutral-400`}
         >
           {count} Articles

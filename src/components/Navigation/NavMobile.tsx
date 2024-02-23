@@ -1,16 +1,17 @@
-"use client";
+'use client';
 
-import React from "react";
-import ButtonClose from "@/components/ButtonClose/ButtonClose";
-import Logo from "@/components/Logo/Logo";
-import { Disclosure } from "@/app/headlessui";
-import { NavItemType } from "./NavigationItem";
-import { NAVIGATION_MAIN } from "@/data/navigation";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import SocialsList from "@/components/SocialsList/SocialsList";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import SwitchDarkMode from "@/components/SwitchDarkMode/SwitchDarkMode";
-import Link from "next/link";
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import React from 'react';
+
+import { Disclosure } from '@/app/headlessui';
+import ButtonClose from '@/components/ButtonClose/ButtonClose';
+import Logo from '@/components/Logo/Logo';
+import SocialsList from '@/components/SocialsList/SocialsList';
+import SwitchDarkMode from '@/components/SwitchDarkMode/SwitchDarkMode';
+import { NAVIGATION_MAIN } from '@/data/navigation';
+
+import type { NavItemType } from './NavigationItem';
 
 export interface NavMobileProps {
   data?: NavItemType[];
@@ -20,10 +21,10 @@ export interface NavMobileProps {
 const NavMobile = ({
   data = NAVIGATION_MAIN,
   onClickClose,
-}:NavMobileProps): React.JSX.Element => {
+}: NavMobileProps): React.JSX.Element => {
   const _renderMenuChild = (
     item: NavItemType,
-    itemClass = " pl-3 text-neutral-900 dark:text-neutral-200 font-medium "
+    itemClass = ' pl-3 text-neutral-900 dark:text-neutral-200 font-medium ',
   ) => {
     return (
       <ul className="nav-mobile-sub-menu ps-6 pb-1 text-base">
@@ -36,7 +37,7 @@ const NavMobile = ({
               className={`flex text-sm rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 mt-0.5 pe-4 ${itemClass}`}
             >
               <span
-                className={`py-2.5 ${!i.children ? "block w-full" : ""}`}
+                className={`py-2.5 ${!i.children ? 'block w-full' : ''}`}
                 onClick={onClickClose}
               >
                 {i.name}
@@ -62,7 +63,7 @@ const NavMobile = ({
               <Disclosure.Panel>
                 {_renderMenuChild(
                   i,
-                  "ps-3 text-slate-600 dark:text-slate-400 "
+                  'ps-3 text-slate-600 dark:text-slate-400 ',
                 )}
               </Disclosure.Panel>
             )}
@@ -86,7 +87,7 @@ const NavMobile = ({
           }}
         >
           <span
-            className={!item.children ? "block w-full" : ""}
+            className={!item.children ? 'block w-full' : ''}
             onClick={onClickClose}
           >
             {item.name}

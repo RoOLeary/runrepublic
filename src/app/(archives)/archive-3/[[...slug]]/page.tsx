@@ -1,30 +1,32 @@
-import React from "react";
-import ModalCategories from "../../ModalCategories";
-import ModalTags from "../../ModalTags";
-import { DEMO_POSTS_VIDEO } from "@/data/posts";
-import { DEMO_CATEGORIES, DEMO_TAGS } from "@/data/taxonomies";
-import { DEMO_AUTHORS } from "@/data/authors";
-import Pagination from "@/components/Pagination/Pagination";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import ArchiveFilterListBox from "@/components/ArchiveFilterListBox/ArchiveFilterListBox";
-import SectionSubscribe2 from "@/components/SectionSubscribe2/SectionSubscribe2";
-import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
-import SectionGridCategoryBox from "@/components/SectionGridCategoryBox/SectionGridCategoryBox";
-import ButtonSecondary from "@/components/Button/ButtonSecondary";
-import SectionSliderNewAuthors from "@/components/SectionSliderNewAthors/SectionSliderNewAuthors";
-import Card10V2 from "@/components/Card10/Card10V2";
+import React from 'react';
+
+import ArchiveFilterListBox from '@/components/ArchiveFilterListBox/ArchiveFilterListBox';
+import BackgroundSection from '@/components/BackgroundSection/BackgroundSection';
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import ButtonSecondary from '@/components/Button/ButtonSecondary';
+import Card10V2 from '@/components/Card10/Card10V2';
+import Pagination from '@/components/Pagination/Pagination';
+import SectionGridCategoryBox from '@/components/SectionGridCategoryBox/SectionGridCategoryBox';
+import SectionSliderNewAuthors from '@/components/SectionSliderNewAthors/SectionSliderNewAuthors';
+import SectionSubscribe2 from '@/components/SectionSubscribe2/SectionSubscribe2';
+import { DEMO_AUTHORS } from '@/data/authors';
+import { DEMO_POSTS_VIDEO } from '@/data/posts';
+import { DEMO_CATEGORIES, DEMO_TAGS } from '@/data/taxonomies';
+
+import ModalCategories from '../../ModalCategories';
+import ModalTags from '../../ModalTags';
 
 const PageArchiveVideo = ({}) => {
   const FILTERS = [
-    { name: "Most Recent" },
-    { name: "Curated by Admin" },
-    { name: "Most Appreciated" },
-    { name: "Most Discussed" },
-    { name: "Most Viewed" },
+    { name: 'Most Recent' },
+    { name: 'Curated by Admin' },
+    { name: 'Most Appreciated' },
+    { name: 'Most Discussed' },
+    { name: 'Most Viewed' },
   ];
 
   return (
-    <div className={`PageArchiveVideo`}>
+    <div className="PageArchiveVideo">
       <div className="dark bg-neutral-900/95 text-white">
         <div className="container py-16 lg:py-28 ">
           {/* HEADER */}
@@ -38,7 +40,7 @@ const PageArchiveVideo = ({}) => {
               <ModalCategories categories={DEMO_CATEGORIES} />
               <ModalTags tags={DEMO_TAGS} />
             </div>
-            <div className="block my-4 border-b w-full border-neutral-500 sm:hidden"></div>
+            <div className="block my-4 border-b w-full border-neutral-500 sm:hidden" />
             <div className="flex justify-end">
               <ArchiveFilterListBox lists={FILTERS} />
             </div>

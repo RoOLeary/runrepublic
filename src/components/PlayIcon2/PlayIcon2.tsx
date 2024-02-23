@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+import type { FC } from 'react';
+import React from 'react';
 
 export interface PlayIcon2Props {
   className?: string;
@@ -6,8 +7,8 @@ export interface PlayIcon2Props {
 }
 
 const PlayIcon2: FC<PlayIcon2Props> = ({
-  className = "w-8 h-8 md:w-10 md:h-10",
-  iconClass = "w-5 h-5",
+  className = 'w-8 h-8 md:w-10 md:h-10',
+  iconClass = 'w-5 h-5',
 }) => {
   return (
     <div
@@ -27,7 +28,7 @@ const PlayIcon2: FC<PlayIcon2Props> = ({
             strokeLinejoin="round"
             strokeWidth="1"
             d="M18.25 12L5.75 5.75V18.25L18.25 12Z"
-          ></path>
+          />
         </svg>
       </span>
     </div>

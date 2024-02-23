@@ -1,13 +1,16 @@
-"use client";
+'use client';
 
-import React, { FC } from "react";
-import { PostDataType } from "@/data/types";
-import GallerySlider from "./GallerySlider";
-import MediaVideo from "./MediaVideo";
-import PostTypeFeaturedIcon from "@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
-import MediaAudio from "./MediaAudio";
-import Link from "next/link";
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import PostTypeFeaturedIcon from '@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon';
+import type { PostDataType } from '@/data/types';
+
+import GallerySlider from './GallerySlider';
+import MediaAudio from './MediaAudio';
+import MediaVideo from './MediaVideo';
 
 export interface PostFeaturedMediaProps {
   className?: string;
@@ -16,14 +19,14 @@ export interface PostFeaturedMediaProps {
 }
 
 const PostFeaturedMedia: FC<PostFeaturedMediaProps> = ({
-  className = "w-full h-full",
+  className = 'w-full h-full',
   post,
   isHover = false,
 }) => {
   const { featuredImage, postType, videoUrl, galleryImgs, audioUrl, id, href } =
     post;
 
-  const isPostMedia = () => postType === "video" || postType === "audio";
+  const isPostMedia = () => postType === 'video' || postType === 'audio';
 
   const renderGallerySlider = () => {
     if (!galleryImgs) return null;
@@ -40,17 +43,17 @@ const PostFeaturedMedia: FC<PostFeaturedMediaProps> = ({
 
   const renderContent = () => {
     // GALLERY
-    if (postType === "gallery") {
+    if (postType === 'gallery') {
       return renderGallerySlider();
     }
 
     // VIDEO
-    if (postType === "video" && !!videoUrl && isHover) {
+    if (postType === 'video' && !!videoUrl && isHover) {
       return <MediaVideo isHover videoUrl={videoUrl} />;
     }
 
     // AUDIO
-    if (postType === "audio" && !!audioUrl) {
+    if (postType === 'audio' && !!audioUrl) {
       return <MediaAudio post={post} />;
     }
 
@@ -67,7 +70,7 @@ const PostFeaturedMedia: FC<PostFeaturedMediaProps> = ({
 
   return (
     <div className={`PostFeaturedMedia relative ${className}`}>
-      {postType !== "gallery" && (
+      {postType !== 'gallery' && (
         <Image
           alt="featured"
           fill
@@ -77,13 +80,13 @@ const PostFeaturedMedia: FC<PostFeaturedMediaProps> = ({
         />
       )}
       {renderContent()}
-      {postType !== "gallery" && (
+      {postType !== 'gallery' && (
         <Link
           href={href}
           className={`block absolute inset-0 ${
-            !postType || postType === "standard"
-              ? "bg-black/20 transition-opacity opacity-0 group-hover:opacity-100"
-              : ""
+            !postType || postType === 'standard'
+              ? 'bg-black/20 transition-opacity opacity-0 group-hover:opacity-100'
+              : ''
           }`}
         />
       )}

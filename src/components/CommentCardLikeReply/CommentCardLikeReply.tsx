@@ -1,8 +1,10 @@
-"use client";
+'use client';
 
-import React, { FC, useState } from "react";
-import convertNumbThousand from "@/utils/convertNumbThousand";
-import twFocusClass from "@/utils/twFocusClass";
+import type { FC } from 'react';
+import React, { useState } from 'react';
+
+import convertNumbThousand from '@/utils/convertNumbThousand';
+import twFocusClass from '@/utils/twFocusClass';
 
 export interface CommentCardLikeReplyProps {
   className?: string;
@@ -12,7 +14,7 @@ export interface CommentCardLikeReplyProps {
 }
 
 const CommentCardLikeReply: FC<CommentCardLikeReplyProps> = ({
-  className = "",
+  className = '',
   likeCount,
   isLiked: likedProps,
   onClickReply = () => {},
@@ -25,15 +27,15 @@ const CommentCardLikeReply: FC<CommentCardLikeReplyProps> = ({
         <button
           className={`min-w-[68px] flex items-center rounded-full leading-none px-3 h-8 text-xs ${twFocusClass()} ${
             isLiked
-              ? "text-rose-600 bg-rose-50"
-              : "text-neutral-700 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-800 hover:bg-rose-50 hover:text-rose-600 dark:hover:text-rose-500"
+              ? 'text-rose-600 bg-rose-50'
+              : 'text-neutral-700 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-800 hover:bg-rose-50 hover:text-rose-600 dark:hover:text-rose-500'
           }`}
           onClick={() => setIsLiked(!isLiked)}
           title="Liked"
         >
           <svg
             className="h-5 w-5 me-1"
-            fill={isLiked ? "currentColor" : "none"}
+            fill={isLiked ? 'currentColor' : 'none'}
             viewBox="0 0 24 24"
           >
             <path
@@ -44,14 +46,14 @@ const CommentCardLikeReply: FC<CommentCardLikeReplyProps> = ({
               strokeWidth={1.5}
               d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403 10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z"
               clipRule="evenodd"
-            ></path>
+            />
           </svg>
 
           <span
             className={`${
               isLiked
-                ? "text-rose-600"
-                : "text-neutral-900 dark:text-neutral-200"
+                ? 'text-rose-600'
+                : 'text-neutral-900 dark:text-neutral-200'
             }`}
           >
             {convertNumbThousand(likeCount)}

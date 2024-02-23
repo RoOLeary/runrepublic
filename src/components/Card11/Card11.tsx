@@ -1,13 +1,15 @@
-"use client";
+'use client';
 
-import React, { FC, useState } from "react";
-import PostCardSaveAction from "@/components/PostCardSaveAction/PostCardSaveAction";
-import { PostDataType } from "@/data/types";
-import CategoryBadgeList from "@/components/CategoryBadgeList/CategoryBadgeList";
-import PostCardLikeAndComment from "@/components/PostCardLikeAndComment/PostCardLikeAndComment";
-import PostCardMeta from "@/components/PostCardMeta/PostCardMeta";
-import PostFeaturedMedia from "@/components/PostFeaturedMedia/PostFeaturedMedia";
-import Link from "next/link";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React, { useState } from 'react';
+
+import CategoryBadgeList from '@/components/CategoryBadgeList/CategoryBadgeList';
+import PostCardLikeAndComment from '@/components/PostCardLikeAndComment/PostCardLikeAndComment';
+import PostCardMeta from '@/components/PostCardMeta/PostCardMeta';
+import PostCardSaveAction from '@/components/PostCardSaveAction/PostCardSaveAction';
+import PostFeaturedMedia from '@/components/PostFeaturedMedia/PostFeaturedMedia';
+import type { PostDataType } from '@/data/types';
 
 export interface Card11Props {
   className?: string;
@@ -17,10 +19,10 @@ export interface Card11Props {
 }
 
 const Card11: FC<Card11Props> = ({
-  className = "h-full",
+  className = 'h-full',
   post,
   hiddenAuthor = false,
-  ratio = "aspect-w-4 aspect-h-3",
+  ratio = 'aspect-w-4 aspect-h-3',
 }) => {
   const { title, href, categories, date } = post;
 
@@ -40,7 +42,7 @@ const Card11: FC<Card11Props> = ({
           <PostFeaturedMedia post={post} isHover={isHover} />
         </div>
       </div>
-      <Link href={href} className="absolute inset-0"></Link>
+      <Link href={href} className="absolute inset-0" />
       <span className="absolute top-3 inset-x-3 z-10">
         <CategoryBadgeList categories={categories} />
       </span>

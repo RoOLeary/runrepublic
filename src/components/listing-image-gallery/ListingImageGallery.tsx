@@ -1,25 +1,29 @@
-"use client";
+'use client';
 
-import "./styles/index.css";
-import Image from "next/image";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { FC, Fragment, useEffect, useRef } from "react";
-import Modal from "./components/Modal";
-import type { ListingGalleryImage } from "./utils/types";
-import { useLastViewedPhoto } from "./utils/useLastViewedPhoto";
-import { ArrowSmallLeftIcon } from "@heroicons/react/24/outline";
-import { Dialog, Transition } from "@headlessui/react";
-import LikeSaveBtns from "@/components/LikeSaveBtns";
-import { Route } from "next";
+import './styles/index.css';
+
+import { Dialog, Transition } from '@headlessui/react';
+import { ArrowSmallLeftIcon } from '@heroicons/react/24/outline';
+import type { Route } from 'next';
+import Image from 'next/image';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import type { FC } from 'react';
+import { Fragment, useEffect, useRef } from 'react';
+
+import LikeSaveBtns from '@/components/LikeSaveBtns';
+
+import Modal from './components/Modal';
+import type { ListingGalleryImage } from './utils/types';
+import { useLastViewedPhoto } from './utils/useLastViewedPhoto';
 
 export const getNewParam = ({
-  paramName = "photoId",
+  paramName = 'photoId',
   value,
 }: {
   paramName?: string;
   value: string | number;
 }) => {
-  let params = new URLSearchParams(document.location.search);
+  const params = new URLSearchParams(document.location.search);
   params.set(paramName, String(value));
   return params.toString();
 };
@@ -32,7 +36,7 @@ interface Props {
 
 const ListingImageGallery: FC<Props> = ({ images, onClose, isShowModal }) => {
   const searchParams = useSearchParams();
-  const photoId = searchParams?.get("photoId");
+  const photoId = searchParams?.get('photoId');
   const router = useRouter();
   const [lastViewedPhoto, setLastViewedPhoto] = useLastViewedPhoto();
 
@@ -41,7 +45,7 @@ const ListingImageGallery: FC<Props> = ({ images, onClose, isShowModal }) => {
   useEffect(() => {
     // This effect keeps track of the last viewed photo in the modal to keep the index page in sync when the user navigates back
     if (lastViewedPhoto && !photoId) {
-      lastViewedPhotoRef.current?.scrollIntoView({ block: "center" });
+      lastViewedPhotoRef.current?.scrollIntoView({ block: 'center' });
       setLastViewedPhoto(null);
     }
   }, [photoId, lastViewedPhoto, setLastViewedPhoto]);
@@ -59,8 +63,8 @@ const ListingImageGallery: FC<Props> = ({ images, onClose, isShowModal }) => {
             onClose={() => {
               // @ts-ignore
               setLastViewedPhoto(photoId);
-              let params = new URLSearchParams(document.location.search);
-              params.delete("photoId");
+              const params = new URLSearchParams(document.location.search);
+              params.delete('photoId');
               router.push(`${thisPathname}/?${params.toString()}` as Route);
             }}
           />
@@ -81,7 +85,7 @@ const ListingImageGallery: FC<Props> = ({ images, onClose, isShowModal }) => {
                 alt="chisfis listing gallery "
                 className="transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110 focus:outline-none"
                 style={{
-                  transform: "translate3d(0, 0, 0)",
+                  transform: 'translate3d(0, 0, 0)',
                 }}
                 src={url}
                 width={720}
@@ -96,51 +100,49 @@ const ListingImageGallery: FC<Props> = ({ images, onClose, isShowModal }) => {
   };
 
   return (
-    <>
-      <Transition appear show={isShowModal} as={Fragment}>
-        <Dialog as="div" className="relative z-40" onClose={handleClose}>
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <div className="fixed inset-0 bg-white" />
-          </Transition.Child>
+    <Transition appear show={isShowModal} as={Fragment}>
+      <Dialog as="div" className="relative z-40" onClose={handleClose}>
+        <Transition.Child
+          as={Fragment}
+          enter="ease-out duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in duration-200"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="fixed inset-0 bg-white" />
+        </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
-            <div className="sticky z-10 top-0 p-4 xl:px-10 flex items-center justify-between bg-white">
-              <button
-                className="focus:outline-none focus:ring-0 w-10 h-10 rounded-full flex items-center justify-center hover:bg-neutral-100"
-                onClick={handleClose}
-              >
-                <ArrowSmallLeftIcon className="w-6 h-6" />
-              </button>
-              <LikeSaveBtns />
-            </div>
-
-            <div className="flex min-h-full items-center justify-center sm:p-4 pt-0 text-center">
-              <Transition.Child
-                as={Fragment}
-                enter="ease-out duration-300"
-                enterFrom="opacity-0 translate-y-5"
-                enterTo="opacity-100 translate-y-0"
-                leave="ease-in duration-200"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-5"
-              >
-                <Dialog.Panel className="w-full max-w-screen-lg mx-auto transform p-4 pt-0 text-left transition-all ">
-                  {renderContent()}
-                </Dialog.Panel>
-              </Transition.Child>
-            </div>
+        <div className="fixed inset-0 overflow-y-auto">
+          <div className="sticky z-10 top-0 p-4 xl:px-10 flex items-center justify-between bg-white">
+            <button
+              className="focus:outline-none focus:ring-0 w-10 h-10 rounded-full flex items-center justify-center hover:bg-neutral-100"
+              onClick={handleClose}
+            >
+              <ArrowSmallLeftIcon className="w-6 h-6" />
+            </button>
+            <LikeSaveBtns />
           </div>
-        </Dialog>
-      </Transition>
-    </>
+
+          <div className="flex min-h-full items-center justify-center sm:p-4 pt-0 text-center">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 translate-y-5"
+              enterTo="opacity-100 translate-y-0"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-5"
+            >
+              <Dialog.Panel className="w-full max-w-screen-lg mx-auto transform p-4 pt-0 text-left transition-all ">
+                {renderContent()}
+              </Dialog.Panel>
+            </Transition.Child>
+          </div>
+        </div>
+      </Dialog>
+    </Transition>
   );
 };
 

@@ -1,12 +1,15 @@
-import React, { FC } from "react";
-import NavigationItem from "./NavigationItem";
-import { NAVIGATION_MAIN } from "@/data/navigation";
+import type { FC } from 'react';
+import React from 'react';
+
+import { NAVIGATION_MAIN } from '@/data/navigation';
+
+import NavigationItem from './NavigationItem';
 
 interface Props {
   className?: string;
 }
 
-const Navigation: FC<Props> = ({ className = "flex" }) => {
+const Navigation: FC<Props> = ({ className = 'flex' }) => {
   return (
     <ul className={`Navigation items-center nav-z ${className}`}>
       {NAVIGATION_MAIN.map((item) => (

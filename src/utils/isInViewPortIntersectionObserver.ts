@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable no-underscore-dangle */
 export interface InviewPortType {
   distanceFromEnd: number;
   callback: () => boolean;
@@ -11,7 +13,7 @@ const checkInViewIntersectionObserver = ({
 }: InviewPortType) => {
   const _funCallback: IntersectionObserverCallback = (
     entries: IntersectionObserverEntry[],
-    observer: IntersectionObserver
+    observer: IntersectionObserver,
   ) => {
     entries.map((entry: IntersectionObserverEntry) => {
       if (entry.isIntersecting) {
@@ -24,9 +26,9 @@ const checkInViewIntersectionObserver = ({
   };
 
   // _checkBrowserSupport-----
-  if (typeof window.IntersectionObserver === "undefined") {
+  if (typeof window.IntersectionObserver === 'undefined') {
     console.error(
-      "window.IntersectionObserver === undefined! => Your Browser is Notsupport"
+      'window.IntersectionObserver === undefined! => Your Browser is Notsupport',
     );
     return;
   }

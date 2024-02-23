@@ -1,22 +1,22 @@
-import React, { FC } from "react";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
-import dogPng from "@/images/dog.png";
+import Image from 'next/image';
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import dogPng from '@/images/dog.png';
 
 export interface CardCategory3Props {
   className?: string;
 }
 
-const CardCategory3: FC<CardCategory3Props> = ({ className = "" }) => {
+const CardCategory3: FC<CardCategory3Props> = ({ className = '' }) => {
   return (
     <Link
-      href={"/archive/demo-slug"}
+      href="/archive/demo-slug"
       className={`CardCategory3 block ${className}`}
     >
-      <div
-        className={`relative w-full aspect-w-16 aspect-h-11 sm:aspect-h-9 h-0 rounded-2xl overflow-hidden group bg-sky-100`}
-      >
+      <div className="relative w-full aspect-w-16 aspect-h-11 sm:aspect-h-9 h-0 rounded-2xl overflow-hidden group bg-sky-100">
         <div>
           <div className="absolute inset-5 sm:inset-8">
             <Image
@@ -26,17 +26,15 @@ const CardCategory3: FC<CardCategory3Props> = ({ className = "" }) => {
             />
           </div>
         </div>
-        <span className="opacity-0 group-hover:opacity-40 absolute inset-0 bg-black/10 transition-opacity"></span>
+        <span className="opacity-0 group-hover:opacity-40 absolute inset-0 bg-black/10 transition-opacity" />
 
         <div>
           <div className="absolute inset-5 sm:inset-8 flex flex-col">
             <div className="max-w-xs">
-              <span className={`block mb-2 text-sm text-slate-700`}>
+              <span className="block mb-2 text-sm text-slate-700">
                 Sponsored
               </span>
-              <h2
-                className={`text-xl md:text-2xl text-slate-900 font-semibold`}
-              >
+              <h2 className="text-xl md:text-2xl text-slate-900 font-semibold">
                 Up to <br /> 80% off retail
               </h2>
             </div>

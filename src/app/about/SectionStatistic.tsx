@@ -1,5 +1,6 @@
-import React, { FC } from "react";
-import Heading from "@/components/Heading/Heading";
+import React from 'react';
+
+import Heading from '@/components/Heading/Heading';
 
 export interface Statistic {
   id: string;
@@ -9,27 +10,27 @@ export interface Statistic {
 
 const FOUNDER_DEMO: Statistic[] = [
   {
-    id: "1",
-    heading: "10 million",
+    id: '1',
+    heading: '10 million',
     subHeading:
-      "Articles have been public around the world (as of Sept. 30, 2023)",
+      'Articles have been public around the world (as of Sept. 30, 2023)',
   },
   {
-    id: "2",
-    heading: "100,000",
-    subHeading: "Registered users account (as of Sept. 30, 2023)",
+    id: '2',
+    heading: '100,000',
+    subHeading: 'Registered users account (as of Sept. 30, 2023)',
   },
   {
-    id: "3",
-    heading: "220+",
+    id: '3',
+    heading: '220+',
     subHeading:
-      "Countries and regions have our presence (as of Sept. 30, 2023)",
+      'Countries and regions have our presence (as of Sept. 30, 2023)',
   },
 ];
 
 const SectionStatistic = ({}) => {
   return (
-    <div className={`SectionStatistic relative`}>
+    <div className="SectionStatistic relative">
       <Heading
         desc="We’re impartial and independent, and every day we create distinctive,
           world-class programmes and content"

@@ -1,8 +1,10 @@
-import React, { FC } from "react";
-import NcImage from "@/components/NcImage/NcImage";
-import { TaxonomyType, TwMainColor } from "@/data/types";
-import Badge from "@/components/Badge/Badge";
-import Link from "next/link";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import Badge from '@/components/Badge/Badge';
+import NcImage from '@/components/NcImage/NcImage';
+import type { TaxonomyType, TwMainColor } from '@/data/types';
 
 export interface CardCategory2Props {
   className?: string;
@@ -11,11 +13,11 @@ export interface CardCategory2Props {
 }
 
 const CardCategory2: FC<CardCategory2Props> = ({
-  className = "",
+  className = '',
   taxonomy,
   index,
 }) => {
-  const { count, name, href = "/", thumbnail, color } = taxonomy;
+  const { count, name, href = '/', thumbnail, color } = taxonomy;
   return (
     <Link
       href={href}
@@ -29,18 +31,16 @@ const CardCategory2: FC<CardCategory2Props> = ({
         />
       )}
       <NcImage
-        containerClassName={`relative flex-shrink-0 w-20 h-20 rounded-full shadow-lg overflow-hidden z-0`}
-        src={thumbnail || ""}
+        containerClassName="relative flex-shrink-0 w-20 h-20 rounded-full shadow-lg overflow-hidden z-0"
+        src={thumbnail || ''}
         fill
         sizes="80px"
         alt="categories"
         className="object-cover "
       />
       <div className="mt-3">
-        <h2 className={`text-base font-semibold`}>{name}</h2>
-        <span
-          className={`block mt-1 text-sm text-neutral-500 dark:text-neutral-400`}
-        >
+        <h2 className="text-base font-semibold">{name}</h2>
+        <span className="block mt-1 text-sm text-neutral-500 dark:text-neutral-400">
           {count} Articles
         </span>
       </div>

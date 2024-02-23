@@ -1,6 +1,9 @@
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import Image, { StaticImageData } from "next/image";
-import React, { FC, ReactNode } from "react";
+import type { StaticImageData } from 'next/image';
+import Image from 'next/image';
+import type { FC, ReactNode } from 'react';
+import React from 'react';
+
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
 
 export interface SectionHeroProps {
   className?: string;
@@ -11,7 +14,7 @@ export interface SectionHeroProps {
 }
 
 const SectionHero: FC<SectionHeroProps> = ({
-  className = "",
+  className = '',
   rightImg,
   heading,
   subHeading,

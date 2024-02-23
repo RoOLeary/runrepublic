@@ -1,11 +1,14 @@
-"use client";
+'use client';
 
-import React, { FC } from "react";
-import { PostDataType } from "@/data/types";
-import Link from "next/link";
-import ButtonPlayMusicPlayer from "../ButtonPlayMusicPlayer";
-import Image from "next/image";
-import { PauseIcon, PlayIcon } from "@heroicons/react/24/solid";
+import { PauseIcon, PlayIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import type { PostDataType } from '@/data/types';
+
+import ButtonPlayMusicPlayer from '../ButtonPlayMusicPlayer';
 
 export interface Card15PodcastProps {
   className?: string;
@@ -13,17 +16,17 @@ export interface Card15PodcastProps {
 }
 
 const Card15Podcast: FC<Card15PodcastProps> = ({
-  className = "h-full",
+  className = 'h-full',
   post,
 }) => {
   const { title, href, featuredImage, postType, date } = post;
-  const IS_AUDIO = postType === "audio";
+  const IS_AUDIO = postType === 'audio';
 
-  const renderDefaultBtnListen = (state?: "playing") => {
+  const renderDefaultBtnListen = (state?: 'playing') => {
     return (
       <div className="inline-flex items-center mt-3 pe-4 py-0.5 hover:ps-0.5 cursor-pointer rounded-full transition-all hover:bg-primary-50 dark:hover:bg-neutral-900">
         <span className="w-8 h-8 flex items-center justify-center rounded-full bg-primary-50 dark:bg-neutral-800 text-primary-6000 dark:text-primary-200">
-          {state === "playing" ? (
+          {state === 'playing' ? (
             <PauseIcon className="w-5 h-5" />
           ) : (
             <PlayIcon className="w-5 h-5 rtl:rotate-180" />
@@ -31,7 +34,7 @@ const Card15Podcast: FC<Card15PodcastProps> = ({
         </span>
 
         <span className="ms-3 text-xs sm:text-sm font-medium">
-          {state === "playing" ? "Now playing" : "Listen now"}
+          {state === 'playing' ? 'Now playing' : 'Listen now'}
         </span>
       </div>
     );
@@ -57,10 +60,10 @@ const Card15Podcast: FC<Card15PodcastProps> = ({
       </div>
 
       <div className="flex flex-col flex-grow ms-4">
-        <h2 className={`card-title block font-semibold text-sm sm:text-lg`}>
+        <h2 className="card-title block font-semibold text-sm sm:text-lg">
           <Link
             href={href}
-            className={IS_AUDIO ? `line-clamp-1` : "line-clamp-2"}
+            className={IS_AUDIO ? `line-clamp-1` : 'line-clamp-2'}
             title={title}
           >
             {title}
@@ -74,7 +77,7 @@ const Card15Podcast: FC<Card15PodcastProps> = ({
           <ButtonPlayMusicPlayer
             post={post}
             renderDefaultBtn={() => renderDefaultBtnListen()}
-            renderPlayingBtn={() => renderDefaultBtnListen("playing")}
+            renderPlayingBtn={() => renderDefaultBtnListen('playing')}
           />
         )}
       </div>

@@ -1,17 +1,18 @@
-import React, { FC } from "react";
-import { PostDataType } from "@/data/types";
-import NcImage from "@/components/NcImage/NcImage";
-import ButtonSecondary from "@/components/Button/ButtonSecondary";
-import Card5 from "@/components/Card5/Card5";
-import Button from "@/components/Button/ButtonSecondary";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import type { FC } from 'react';
+import React from 'react';
+
+import ButtonSecondary from '@/components/Button/ButtonSecondary';
+import Card5 from '@/components/Card5/Card5';
+import NcImage from '@/components/NcImage/NcImage';
+import type { PostDataType } from '@/data/types';
 
 export interface SectionHero3Props {
   posts: PostDataType[];
   className?: string;
 }
 
-const SectionHero3: FC<SectionHero3Props> = ({ posts, className = "" }) => {
+const SectionHero3: FC<SectionHero3Props> = ({ posts, className = '' }) => {
   const renderMain = () => {
     const { featuredImage, title, desc, href } = posts[0];
     return (
@@ -23,7 +24,7 @@ const SectionHero3: FC<SectionHero3Props> = ({ posts, className = "" }) => {
           fill
           sizes="(max-width: 1024px) 100vw, 1280px"
         />
-        <span className="absolute inset-0 rounded-[40px] bg-black bg-opacity-50"></span>
+        <span className="absolute inset-0 rounded-[40px] bg-black bg-opacity-50" />
         <div className="absolute inset-0 p-5 md:p-14 xl:p-20 2xl:p-28">
           <div className="max-w-2xl">
             <h2 className="text-xl sm:text-3xl lg:text-4xl font-semibold text-white">

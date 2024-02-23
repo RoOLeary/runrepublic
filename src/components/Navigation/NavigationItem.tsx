@@ -1,11 +1,14 @@
-"use client";
+'use client';
 
-import { Popover, Transition } from "@/app/headlessui";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import React, { FC, Fragment, useState } from "react";
-import { Route } from "@/routers/types";
-import Link from "next/link";
-import NcImage from "../NcImage/NcImage";
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import type { FC } from 'react';
+import React, { Fragment, useState } from 'react';
+
+import { Popover, Transition } from '@/app/headlessui';
+import type { Route } from '@/routers/types';
+
+import NcImage from '../NcImage/NcImage';
 
 export interface NavItemType {
   id: string;
@@ -13,7 +16,7 @@ export interface NavItemType {
   href: Route;
   targetBlank?: boolean;
   children?: NavItemType[];
-  type?: "DropDown" | "megaMenu" | "none";
+  type?: 'DropDown' | 'megaMenu' | 'none';
   isNew?: boolean;
 }
 
@@ -24,27 +27,27 @@ export interface NavigationItemProps {
 const recentPosts = [
   {
     id: 1,
-    title: "Boost your conversion rate",
-    href: "/single-gallery/demo-slug",
-    date: "Mar 16, 2023",
-    datetime: "2023-03-16",
-    category: { title: "Marketing", href: "/archive/demo-slug" },
+    title: 'Boost your conversion rate',
+    href: '/single-gallery/demo-slug',
+    date: 'Mar 16, 2023',
+    datetime: '2023-03-16',
+    category: { title: 'Marketing', href: '/archive/demo-slug' },
     imageUrl:
-      "https://images.unsplash.com/photo-1678720175173-f57e293022e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0MjJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      'https://images.unsplash.com/photo-1678720175173-f57e293022e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0MjJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
     description:
-      "Et et dolore officia quis nostrud esse aute cillum irure do esse. Eiusmod ad deserunt cupidatat est magna Lorem.",
+      'Et et dolore officia quis nostrud esse aute cillum irure do esse. Eiusmod ad deserunt cupidatat est magna Lorem.',
   },
   {
     id: 2,
-    title: "How to use search engine optimization to drive sales",
-    href: "/single-gallery/demo-slug",
-    date: "Mar 10, 2023",
-    datetime: "2023-03-10",
-    category: { title: "Sales", href: "/archive/demo-slug" },
+    title: 'How to use search engine optimization to drive sales',
+    href: '/single-gallery/demo-slug',
+    date: 'Mar 10, 2023',
+    datetime: '2023-03-10',
+    category: { title: 'Sales', href: '/archive/demo-slug' },
     imageUrl:
-      "https://images.unsplash.com/photo-1678846912726-667eda5a850f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyODh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      'https://images.unsplash.com/photo-1678846912726-667eda5a850f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyODh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
     description:
-      "Optio cum necessitatibus dolor voluptatum provident commodi et.",
+      'Optio cum necessitatibus dolor voluptatum provident commodi et.',
   },
 ];
 
@@ -70,9 +73,7 @@ const NavigationItem: FC<NavigationItemProps> = ({ menuItem }) => {
     }
 
     return (
-      <li
-        className={`menu-item flex-shrink-0 menu-megamenu menu-megamenu--large`}
-      >
+      <li className="menu-item flex-shrink-0 menu-megamenu menu-megamenu--large">
         {renderMainItem(menu)}
 
         <div className="invisible sub-menu absolute top-full inset-x-0 transform z-50">
@@ -149,7 +150,7 @@ const NavigationItem: FC<NavigationItemProps> = ({ menuItem }) => {
 
   const renderMegaMenuNavlink = (item: NavItemType) => {
     return (
-      <li key={item.id} className={`${item.isNew ? "menuIsNew" : ""}`}>
+      <li key={item.id} className={`${item.isNew ? 'menuIsNew' : ''}`}>
         <Link
           className="font-normal text-slate-600 hover:text-black dark:text-slate-400 dark:hover:text-white "
           href={{
@@ -195,16 +196,15 @@ const NavigationItem: FC<NavigationItemProps> = ({ menuItem }) => {
                   {menuDropDown.children?.map((i) => {
                     if (i.type) {
                       return renderDropDownMenuNavlinkHasChild(i);
-                    } else {
-                      return (
-                        <li
-                          key={i.id}
-                          className={`px-2 ${i.isNew ? "menuIsNew" : ""}`}
-                        >
-                          {renderDropDownMenuNavlink(i)}
-                        </li>
-                      );
                     }
+                    return (
+                      <li
+                        key={i.id}
+                        className={`px-2 ${i.isNew ? 'menuIsNew' : ''}`}
+                      >
+                        {renderDropDownMenuNavlink(i)}
+                      </li>
+                    );
                   })}
                 </ul>
               </Popover.Panel>
@@ -248,13 +248,12 @@ const NavigationItem: FC<NavigationItemProps> = ({ menuItem }) => {
                   {item.children?.map((i) => {
                     if (i.type) {
                       return renderDropDownMenuNavlinkHasChild(i);
-                    } else {
-                      return (
-                        <li key={i.id} className="px-2">
-                          {renderDropDownMenuNavlink(i)}
-                        </li>
-                      );
                     }
+                    return (
+                      <li key={i.id} className="px-2">
+                        {renderDropDownMenuNavlink(i)}
+                      </li>
+                    );
                   })}
                 </ul>
               </Popover.Panel>
@@ -307,9 +306,9 @@ const NavigationItem: FC<NavigationItemProps> = ({ menuItem }) => {
   };
 
   switch (menuItem.type) {
-    case "DropDown":
+    case 'DropDown':
       return renderDropDownMenu(menuItem);
-    case "megaMenu":
+    case 'megaMenu':
       return renderMegaMenu(menuItem);
     default:
       return (

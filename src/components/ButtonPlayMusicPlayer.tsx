@@ -1,13 +1,15 @@
-"use client";
+'use client';
 
 // ** Tat ca cac component nao goi truc tiep ButtonPlayMusicPlayer thi can phai co use client
 
-import React, { FC, ReactNode } from "react";
-import iconPlaying from "@/images/icon-playing.gif";
-import PostTypeFeaturedIcon from "@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
-import { PostDataType } from "@/data/types";
-import { useMusicPlayer } from "@/hooks/useMusicPlayer";
-import Image from "next/image";
+import Image from 'next/image';
+import type { FC, ReactNode } from 'react';
+import React from 'react';
+
+import PostTypeFeaturedIcon from '@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon';
+import type { PostDataType } from '@/data/types';
+import { useMusicPlayer } from '@/hooks/useMusicPlayer';
+import iconPlaying from '@/images/icon-playing.gif';
 
 export interface ButtonPlayMusicPlayerProps {
   className?: string;
@@ -20,7 +22,7 @@ export interface ButtonPlayMusicPlayerProps {
 // ** Tat ca cac component nao goi truc tiep ButtonPlayMusicPlayer thi can phai co use client **
 
 const ButtonPlayMusicPlayer: FC<ButtonPlayMusicPlayerProps> = ({
-  className = "",
+  className = '',
   post,
   renderChildren,
   renderDefaultBtn,

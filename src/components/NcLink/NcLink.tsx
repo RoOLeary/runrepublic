@@ -1,6 +1,8 @@
-import { Route } from "@/routers/types";
-import Link from "next/link";
-import React, { FC, ReactNode } from "react";
+import Link from 'next/link';
+import type { FC, ReactNode } from 'react';
+import React from 'react';
+
+import type { Route } from '@/routers/types';
 
 export interface NcLinkProps {
   className?: string;
@@ -10,8 +12,8 @@ export interface NcLinkProps {
 }
 
 const NcLink: FC<NcLinkProps> = ({
-  className = "font-medium",
-  colorClass = "text-primary-6000 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-6000",
+  className = 'font-medium',
+  colorClass = 'text-primary-6000 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-6000',
   children,
   href,
 }) => {

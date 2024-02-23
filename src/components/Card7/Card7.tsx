@@ -1,12 +1,14 @@
-import React, { FC } from "react";
-import PostCardSaveAction from "@/components/PostCardSaveAction/PostCardSaveAction";
-import { PostDataType } from "@/data/types";
-import CardAuthor2 from "@/components/CardAuthor2/CardAuthor2";
-import PostCardLikeAndComment from "@/components/PostCardLikeAndComment/PostCardLikeAndComment";
-import CategoryBadgeList from "@/components/CategoryBadgeList/CategoryBadgeList";
-import PostTypeFeaturedIcon from "@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
-import Link from "next/link";
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import CardAuthor2 from '@/components/CardAuthor2/CardAuthor2';
+import CategoryBadgeList from '@/components/CategoryBadgeList/CategoryBadgeList';
+import PostCardLikeAndComment from '@/components/PostCardLikeAndComment/PostCardLikeAndComment';
+import PostCardSaveAction from '@/components/PostCardSaveAction/PostCardSaveAction';
+import PostTypeFeaturedIcon from '@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon';
+import type { PostDataType } from '@/data/types';
 
 export interface Card7Props {
   className?: string;
@@ -16,10 +18,10 @@ export interface Card7Props {
 }
 
 const Card7: FC<Card7Props> = ({
-  className = "h-full",
-  ratio = "aspect-w-6 aspect-h-7 sm:aspect-h-8",
+  className = 'h-full',
+  ratio = 'aspect-w-6 aspect-h-7 sm:aspect-h-8',
   post,
-  hoverClass = "",
+  hoverClass = '',
 }) => {
   const {
     title,
@@ -54,11 +56,11 @@ const Card7: FC<Card7Props> = ({
           wrapSize="w-7 h-7"
           iconSize="w-4 h-4"
         />
-        <span className="absolute inset-0 bg-neutral-900 bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+        <span className="absolute inset-0 bg-neutral-900 bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity" />
       </Link>
 
       <div className="absolute bottom-3 inset-x-3 p-4 bg-white dark:bg-neutral-900 flex flex-col flex-grow rounded-3xl group-hover:shadow-2xl transition-shadow">
-        <Link href={href} className="absolute inset-0"></Link>
+        <Link href={href} className="absolute inset-0" />
         <div className="space-y-2.5 mb-3">
           <CategoryBadgeList categories={categories} />
           <h2 className="block text-base font-semibold text-neutral-900 dark:text-neutral-100 ">

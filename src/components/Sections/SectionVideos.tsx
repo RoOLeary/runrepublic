@@ -1,12 +1,14 @@
-"use client";
+'use client';
 
-import Heading from "@/components/Heading/Heading";
-import PlayIcon from "@/components/PlayIcon/PlayIcon";
-import PlayIcon2 from "@/components/PlayIcon2/PlayIcon2";
-import React, { FC, Fragment, useEffect, useState } from "react";
-import ReactPlayer from "react-player";
-import isSafariBrowser from "@/utils/isSafariBrowser";
-import Image from "next/image";
+import Image from 'next/image';
+import type { FC } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
+import ReactPlayer from 'react-player';
+
+import Heading from '@/components/Heading/Heading';
+import PlayIcon from '@/components/PlayIcon/PlayIcon';
+import PlayIcon2 from '@/components/PlayIcon2/PlayIcon2';
+import isSafariBrowser from '@/utils/isSafariBrowser';
 
 export interface VideoType {
   id: string;
@@ -21,40 +23,40 @@ export interface SectionVideosProps {
 
 const VIDEOS_DEMO: VideoType[] = [
   {
-    id: "iItiK76LJPY",
-    title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
+    id: 'iItiK76LJPY',
+    title: 'Magical Scotland - 4K Scenic Relaxation Film with Calming Music',
     thumbnail:
-      "https://images.unsplash.com/photo-1444464666168-49d633b86797?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80",
+      'https://images.unsplash.com/photo-1444464666168-49d633b86797?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80',
   },
   {
-    id: "a5V6gdu5ih8",
-    title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
+    id: 'a5V6gdu5ih8',
+    title: 'Magical Scotland - 4K Scenic Relaxation Film with Calming Music',
     thumbnail:
-      "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+      'https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80',
   },
   {
-    id: "MuB7HHeuNbc",
-    title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
+    id: 'MuB7HHeuNbc',
+    title: 'Magical Scotland - 4K Scenic Relaxation Film with Calming Music',
     thumbnail:
-      "https://images.unsplash.com/photo-1551946581-f7a62cd2f00b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=330&q=80",
+      'https://images.unsplash.com/photo-1551946581-f7a62cd2f00b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=330&q=80',
   },
   {
-    id: "eEaZvEZye84",
-    title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
+    id: 'eEaZvEZye84',
+    title: 'Magical Scotland - 4K Scenic Relaxation Film with Calming Music',
     thumbnail:
-      "https://images.unsplash.com/photo-1487875961445-47a00398c267?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80",
+      'https://images.unsplash.com/photo-1487875961445-47a00398c267?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80',
   },
   {
-    id: "YK4u38DDlJY",
-    title: "Magical Scotland - 4K Scenic Relaxation Film with Calming Music",
+    id: 'YK4u38DDlJY',
+    title: 'Magical Scotland - 4K Scenic Relaxation Film with Calming Music',
     thumbnail:
-      "https://images.unsplash.com/photo-1576359877473-d92bc837facc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80",
+      'https://images.unsplash.com/photo-1576359877473-d92bc837facc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80',
   },
 ];
 
 const SectionVideos: FC<SectionVideosProps> = ({
   videos = VIDEOS_DEMO,
-  className = "",
+  className = '',
 }) => {
   const [isPlay, setIsPlay] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(0);
@@ -74,12 +76,12 @@ const SectionVideos: FC<SectionVideosProps> = ({
         title={video.title}
       >
         {isSafariBrowser() ? (
-          <Fragment>
+          <>
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${video.id}`}
               style={{
                 opacity: isPlay ? 1 : 0,
-                display: isPlay ? "block" : "none",
+                display: isPlay ? 'block' : 'none',
               }}
               playing={isPlay}
               controls
@@ -87,7 +89,7 @@ const SectionVideos: FC<SectionVideosProps> = ({
               height="100%"
             />
             {!isPlay && (
-              <Fragment>
+              <>
                 <div
                   onClick={() => setIsPlay(true)}
                   className="cursor-pointer absolute inset-0 flex items-center justify-center z-10"
@@ -102,13 +104,13 @@ const SectionVideos: FC<SectionVideosProps> = ({
                   fill
                   sizes="(max-width: 600px) 480px, 800px"
                 />
-              </Fragment>
+              </>
             )}
-          </Fragment>
+          </>
         ) : (
           <ReactPlayer
             url={`https://www.youtube.com/watch?v=${video.id}`}
-            playing={true}
+            playing
             controls
             width="100%"
             height="100%"
@@ -157,7 +159,7 @@ const SectionVideos: FC<SectionVideosProps> = ({
       </Heading>
 
       <div className="flex flex-col relative sm:pr-4 sm:py-4 md:pr-6 md:py-6 xl:pr-14 xl:py-14 lg:flex-row">
-        <div className="absolute -top-4 -bottom-4 -right-4 w-2/3 rounded-3xl bg-primary-100/40 z-0 sm:rounded-[50px] md:top-0 md:bottom-0 md:right-0 xl:w-1/2 dark:bg-neutral-800/40"></div>
+        <div className="absolute -top-4 -bottom-4 -right-4 w-2/3 rounded-3xl bg-primary-100/40 z-0 sm:rounded-[50px] md:top-0 md:bottom-0 md:right-0 xl:w-1/2 dark:bg-neutral-800/40" />
         <div className="flex-grow relative pb-2 sm:pb-4 lg:pb-0 lg:pr-5 xl:pr-6">
           {isRendered && renderMainVideo()}
         </div>

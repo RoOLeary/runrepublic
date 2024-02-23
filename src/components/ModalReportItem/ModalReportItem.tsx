@@ -1,13 +1,15 @@
-"use client";
+'use client';
 
-import React, { FC, useEffect, useRef, useState } from "react";
-import Modal from "@/components/Modal/Modal";
-import Textarea from "@/components/Textarea/Textarea";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import ButtonSecondary from "@/components/Button/ButtonSecondary";
-import { RadioGroup } from "@/app/headlessui";
-import twFocusClass from "@/utils/twFocusClass";
-import ButtonThird from "../Button/ButtonThird";
+import type { FC } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+
+import { RadioGroup } from '@/app/headlessui';
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import Modal from '@/components/Modal/Modal';
+import Textarea from '@/components/Textarea/Textarea';
+import twFocusClass from '@/utils/twFocusClass';
+
+import ButtonThird from '../Button/ButtonThird';
 
 export interface ProblemPlan {
   name: string;
@@ -21,10 +23,10 @@ export interface ModalReportItemProps {
 }
 
 const problemPlansDemo = [
-  { name: "Violence", id: "Violence", label: "Violence" },
-  { name: "Trouble", id: "Trouble", label: "Trouble" },
-  { name: "Spam", id: "Spam", label: "Spam" },
-  { name: "Other", id: "Other", label: "Other" },
+  { name: 'Violence', id: 'Violence', label: 'Violence' },
+  { name: 'Trouble', id: 'Trouble', label: 'Trouble' },
+  { name: 'Spam', id: 'Spam', label: 'Spam' },
+  { name: 'Other', id: 'Other', label: 'Other' },
 ];
 
 const ModalReportItem: FC<ModalReportItemProps> = ({
@@ -76,14 +78,13 @@ const ModalReportItem: FC<ModalReportItemProps> = ({
                 key={plan.name}
                 value={plan}
                 className={({ checked }) => {
-                  return (
-                    `${
-                      checked
-                        ? "bg-primary-6000 text-white dark:bg-primary-700"
-                        : "bg-white border-t border-neutral-50 "
-                    } relative shadow-lg rounded-lg px-3 py-3 cursor-pointer flex sm:px-5 sm:py-4 focus:outline-none ` +
-                    twFocusClass(true)
-                  );
+                  return `${
+                    checked
+                      ? 'bg-primary-6000 text-white dark:bg-primary-700'
+                      : 'bg-white border-t border-neutral-50 '
+                  } relative shadow-lg rounded-lg px-3 py-3 cursor-pointer flex sm:px-5 sm:py-4 focus:outline-none ${twFocusClass(
+                    true,
+                  )}`;
                 }}
               >
                 {({ checked }) => (
@@ -93,7 +94,7 @@ const ModalReportItem: FC<ModalReportItemProps> = ({
                         <RadioGroup.Label
                           as="p"
                           className={`font-medium line-clamp-1 ${
-                            checked ? "text-white" : "text-neutral-900"
+                            checked ? 'text-white' : 'text-neutral-900'
                           }`}
                         >
                           {plan.label}
@@ -125,7 +126,7 @@ const ModalReportItem: FC<ModalReportItemProps> = ({
             placeholder="..."
             className="mt-3"
             ref={textareaRef}
-            required={true}
+            required
             rows={4}
             id="report-message"
           />

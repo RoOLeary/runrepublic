@@ -1,20 +1,21 @@
-import React from "react";
-import { DEMO_CATEGORIES } from "@/data/taxonomies";
-import { DEMO_POSTS, DEMO_POSTS_AUDIO } from "@/data/posts";
-import SectionSubscribe2 from "@/components/SectionSubscribe2/SectionSubscribe2";
-import SectionSliderNewAuthors from "@/components/SectionSliderNewAthors/SectionSliderNewAuthors";
-import { DEMO_AUTHORS } from "@/data/authors";
-import SectionSliderNewCategories from "@/components/SectionSliderNewCategories/SectionSliderNewCategories";
-import Card16Podcast from "@/components/Card16Podcast/Card16Podcast";
-import Card15Podcast from "@/components/Card15Podcast/Card15Podcast";
-import Heading from "@/components/Heading/Heading";
-import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
-import SectionHero3 from "@/components/Sections/SectionHero3";
-import SectionSliderPosts from "@/components/Sections/SectionSliderPosts";
-import SectionAds from "@/components/Sections/SectionAds";
-import SectionVideos from "@/components/Sections/SectionVideos";
-import SectionLatestPosts from "@/components/Sections/SectionLatestPosts";
-import SectionMagazine4 from "@/components/Sections/SectionMagazine4";
+import React from 'react';
+
+import BackgroundSection from '@/components/BackgroundSection/BackgroundSection';
+import Card15Podcast from '@/components/Card15Podcast/Card15Podcast';
+import Card16Podcast from '@/components/Card16Podcast/Card16Podcast';
+import Heading from '@/components/Heading/Heading';
+import SectionAds from '@/components/Sections/SectionAds';
+import SectionHero3 from '@/components/Sections/SectionHero3';
+import SectionLatestPosts from '@/components/Sections/SectionLatestPosts';
+import SectionMagazine4 from '@/components/Sections/SectionMagazine4';
+import SectionSliderPosts from '@/components/Sections/SectionSliderPosts';
+import SectionVideos from '@/components/Sections/SectionVideos';
+import SectionSliderNewAuthors from '@/components/SectionSliderNewAthors/SectionSliderNewAuthors';
+import SectionSliderNewCategories from '@/components/SectionSliderNewCategories/SectionSliderNewCategories';
+import SectionSubscribe2 from '@/components/SectionSubscribe2/SectionSubscribe2';
+import { DEMO_AUTHORS } from '@/data/authors';
+import { DEMO_POSTS, DEMO_POSTS_AUDIO } from '@/data/posts';
+import { DEMO_CATEGORIES } from '@/data/taxonomies';
 
 // DEMO DATA
 const POSTS = DEMO_POSTS;

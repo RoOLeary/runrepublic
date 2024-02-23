@@ -1,8 +1,10 @@
-"use client";
+'use client';
 
-import React, { FC, useEffect, useRef } from "react";
-import Modal from "@/components/Modal/Modal";
-import SingleCommentForm from "@/app/(singles)/SingleCommentForm";
+import type { FC } from 'react';
+import React, { useEffect, useRef } from 'react';
+
+import SingleCommentForm from '@/app/(singles)/SingleCommentForm';
+import Modal from '@/components/Modal/Modal';
 
 export interface ModalEditCommentProps {
   show: boolean;
@@ -23,7 +25,7 @@ const ModalEditComment: FC<ModalEditCommentProps> = ({
           (element as HTMLTextAreaElement).focus();
           (element as HTMLTextAreaElement).setSelectionRange(
             (element as HTMLTextAreaElement).value.length,
-            (element as HTMLTextAreaElement).value.length
+            (element as HTMLTextAreaElement).value.length,
           );
         }
       }, 400);
@@ -36,9 +38,7 @@ const ModalEditComment: FC<ModalEditCommentProps> = ({
         className="mt-0"
         onClickCancel={onCloseModalEditComment}
         onClickSubmit={onCloseModalEditComment}
-        defaultValue={
-          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi consequuntur perferendis maxime quia, quisquam eveniet asperiores fuga laudantium necessitatibus assumenda!"
-        }
+        defaultValue="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi consequuntur perferendis maxime quia, quisquam eveniet asperiores fuga laudantium necessitatibus assumenda!"
         textareaRef={textareaRef}
         rows={8}
       />

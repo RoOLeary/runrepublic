@@ -1,20 +1,22 @@
-import React, { FC } from "react";
-import Card3 from "@/components/Card3/Card3";
-import Heading from "@/components/Heading/Heading";
-import WidgetTags from "@/components/WidgetTags/WidgetTags";
-import { DEMO_POSTS } from "@/data/posts";
-import { PostDataType } from "@/data/types";
-import WidgetCategories from "@/components/WidgetCategories/WidgetCategories";
-import WidgetAuthors from "@/components/WidgetAuthors/WidgetAuthors";
-import WidgetPosts from "@/components/WidgetPosts/WidgetPosts";
-import Pagination from "@/components/Pagination/Pagination";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import Card4 from "@/components/Card4/Card4";
-import Card7 from "@/components/Card7/Card7";
-import Card9 from "@/components/Card9/Card9";
-import Card10 from "@/components/Card10/Card10";
-import Card11 from "@/components/Card11/Card11";
-import Card14 from "@/components/Card14/Card14";
+import type { FC } from 'react';
+import React from 'react';
+
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import Card3 from '@/components/Card3/Card3';
+import Card4 from '@/components/Card4/Card4';
+import Card7 from '@/components/Card7/Card7';
+import Card9 from '@/components/Card9/Card9';
+import Card10 from '@/components/Card10/Card10';
+import Card11 from '@/components/Card11/Card11';
+import Card14 from '@/components/Card14/Card14';
+import Heading from '@/components/Heading/Heading';
+import Pagination from '@/components/Pagination/Pagination';
+import WidgetAuthors from '@/components/WidgetAuthors/WidgetAuthors';
+import WidgetCategories from '@/components/WidgetCategories/WidgetCategories';
+import WidgetPosts from '@/components/WidgetPosts/WidgetPosts';
+import WidgetTags from '@/components/WidgetTags/WidgetTags';
+import { DEMO_POSTS } from '@/data/posts';
+import type { PostDataType } from '@/data/types';
 
 // THIS IS DEMO FOR MAIN DEMO
 // OTHER DEMO WILL PASS PROPS
@@ -26,40 +28,40 @@ export interface SectionLatestPostsProps {
   className?: string;
   heading?: string;
   postCardName?:
-    | "card3"
-    | "card4"
-    | "card7"
-    | "card9"
-    | "card10"
-    | "card11"
-    | "card14";
+    | 'card3'
+    | 'card4'
+    | 'card7'
+    | 'card9'
+    | 'card10'
+    | 'card11'
+    | 'card14';
 }
 
 const SectionLatestPosts: FC<SectionLatestPostsProps> = ({
   posts = postsDemo,
-  postCardName = "card3",
-  heading = "Latest Articles 🎈",
-  gridClass = "",
-  className = "",
+  postCardName = 'card3',
+  heading = 'Latest Articles 🎈',
+  gridClass = '',
+  className = '',
 }) => {
   const renderCard = (post: PostDataType, index: number) => {
     switch (postCardName) {
-      case "card3":
+      case 'card3':
         return (
           // <Card3 key={index} className="p-3 sm:p-5 2xl:p-6 " post={post} />
           <Card3 key={index} className="py-3" post={post} />
         );
-      case "card4":
+      case 'card4':
         return <Card4 key={index} post={post} />;
-      case "card7":
+      case 'card7':
         return <Card7 key={index} post={post} ratio="aspect-w-5 aspect-h-5" />;
-      case "card9":
+      case 'card9':
         return <Card9 key={index} post={post} />;
-      case "card10":
+      case 'card10':
         return <Card10 key={index} post={post} />;
-      case "card11":
+      case 'card11':
         return <Card11 key={index} post={post} />;
-      case "card14":
+      case 'card14':
         return <Card14 key={index} post={post} />;
       default:
         return null;

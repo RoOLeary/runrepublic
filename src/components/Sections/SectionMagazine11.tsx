@@ -1,21 +1,23 @@
-import Badge from "@/components/Badge/Badge";
-import Card18 from "@/components/Card18/Card18";
-import Heading from "@/components/Heading/Heading";
-import { DEMO_POSTS_NEWS } from "@/data/posts";
-import { DEMO_CATEGORIES } from "@/data/taxonomies";
-import { PostDataType, TaxonomyType, TwMainColor } from "@/data/types";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import Link from "next/link";
-import React, { FC } from "react";
+import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import Badge from '@/components/Badge/Badge';
+import Card18 from '@/components/Card18/Card18';
+import Heading from '@/components/Heading/Heading';
+import { DEMO_POSTS_NEWS } from '@/data/posts';
+import { DEMO_CATEGORIES } from '@/data/taxonomies';
+import type { PostDataType, TaxonomyType, TwMainColor } from '@/data/types';
 
 const postsDemo1: PostDataType[] = DEMO_POSTS_NEWS.filter(
-  (_, i) => i > 0 && i < 6
+  (_, i) => i > 0 && i < 6,
 );
 const postsDemo2: PostDataType[] = DEMO_POSTS_NEWS.filter(
-  (_, i) => i > 5 && i < 11
+  (_, i) => i > 5 && i < 11,
 );
 const postsDemo3: PostDataType[] = DEMO_POSTS_NEWS.filter(
-  (_, i) => i > 11 && i < 17
+  (_, i) => i > 11 && i < 17,
 );
 
 export interface SectionMagazine11Props {
@@ -26,15 +28,15 @@ export interface SectionMagazine11Props {
 
 const SectionMagazine11: FC<SectionMagazine11Props> = ({
   posts = [postsDemo1, postsDemo2, postsDemo3],
-  className = "",
+  className = '',
   categories = [DEMO_CATEGORIES[0], DEMO_CATEGORIES[7], DEMO_CATEGORIES[4]],
 }) => {
   const renderListByCat = (
     category: TaxonomyType,
-    listPosts: PostDataType[]
+    listPosts: PostDataType[],
   ) => {
     return (
-      <div key={category.id} className={`flex flex-col space-y-4`}>
+      <div key={category.id} className="flex flex-col space-y-4">
         <div className="flex items-center justify-between">
           <Badge
             className="uppercase tracking-wide rounded-none px-4 py-1.5"
@@ -61,7 +63,7 @@ const SectionMagazine11: FC<SectionMagazine11Props> = ({
                 <h2 className="card-title flex items-start font-medium space-x-4 rtl:space-x-reverse">
                   <Badge
                     className="w-2.5 h-2.5 !p-0 rounded flex-shrink-0 mt-2"
-                    name={""}
+                    name=""
                     color={category.color as TwMainColor}
                   />
                   <Link href={post.href} title={post.title} className="flex">
@@ -77,7 +79,7 @@ const SectionMagazine11: FC<SectionMagazine11Props> = ({
 
   return (
     <div className={`SectionMagazine11 relative ${className}`}>
-      <Heading desc={"Click on music icon and enjoy music or podcast"}>
+      <Heading desc="Click on music icon and enjoy music or podcast">
         Listen to audio live
       </Heading>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-4 md:gap-7">

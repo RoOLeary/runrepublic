@@ -1,16 +1,17 @@
-import { Route } from "@/routers/types";
-import __taxonomies from "./jsons/__taxonomies.json";
-import { TaxonomyType } from "./types";
+import type { Route } from '@/routers/types';
+
+import __taxonomies from './jsons/__taxonomies.json';
+import type { TaxonomyType } from './types';
 
 const DEMO_CATEGORIES: TaxonomyType[] = __taxonomies.map((item) => ({
   ...item,
-  taxonomy: "category",
+  taxonomy: 'category',
   href: item.href as Route,
 }));
 
 const DEMO_TAGS: TaxonomyType[] = __taxonomies.map((item) => ({
   ...item,
-  taxonomy: "tag",
+  taxonomy: 'tag',
   href: item.href as Route,
 }));
 

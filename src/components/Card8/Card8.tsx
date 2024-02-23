@@ -1,16 +1,18 @@
-import React, { FC } from "react";
-import { PostDataType } from "@/data/types";
-import CategoryBadgeList from "@/components/CategoryBadgeList/CategoryBadgeList";
-import PostTypeFeaturedIcon from "@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
-import Link from "next/link";
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import CategoryBadgeList from '@/components/CategoryBadgeList/CategoryBadgeList';
+import PostTypeFeaturedIcon from '@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon';
+import type { PostDataType } from '@/data/types';
 
 export interface Card8Props {
   className?: string;
   post: PostDataType;
 }
 
-const Card8: FC<Card8Props> = ({ className = "h-full", post }) => {
+const Card8: FC<Card8Props> = ({ className = 'h-full', post }) => {
   const { title, href, featuredImage, desc, categories, postType } = post;
 
   return (
@@ -38,13 +40,11 @@ const Card8: FC<Card8Props> = ({ className = "h-full", post }) => {
       <Link
         href={href}
         className="absolute inset-x-0 bottom-0 top-1/3 hover:top-5 bg-gradient-to-t from-black opacity-60 group-hover:opacity-70 transition-opacity"
-      ></Link>
+      />
       <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 flex flex-col">
         <Link href={href} className="absolute inset-0" />
         <CategoryBadgeList categories={categories} />
-        <h2
-          className={`mt-3 relative block font-semibold text-neutral-50 text-lg sm:text-2xl`}
-        >
+        <h2 className="mt-3 relative block font-semibold text-neutral-50 text-lg sm:text-2xl">
           <Link href={href} className="line-clamp-3" title={title}>
             {title}
           </Link>

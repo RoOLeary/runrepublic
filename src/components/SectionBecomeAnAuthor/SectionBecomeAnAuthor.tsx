@@ -1,7 +1,10 @@
-import React, { FC } from "react";
-import rightImgDemo from "@/images/BecomeAnAuthorImg.png";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import Image, { StaticImageData } from "next/image";
+import type { StaticImageData } from 'next/image';
+import Image from 'next/image';
+import type { FC } from 'react';
+import React from 'react';
+
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import rightImgDemo from '@/images/BecomeAnAuthorImg.png';
 
 export interface SectionBecomeAnAuthorProps {
   className?: string;
@@ -9,7 +12,7 @@ export interface SectionBecomeAnAuthorProps {
 }
 
 const SectionBecomeAnAuthor: FC<SectionBecomeAnAuthorProps> = ({
-  className = "",
+  className = '',
   rightImg = rightImgDemo,
 }) => {
   return (

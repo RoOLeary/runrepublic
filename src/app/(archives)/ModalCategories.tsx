@@ -1,11 +1,13 @@
-"use client";
+'use client';
 
-import React, { FC } from "react";
-import { TaxonomyType } from "@/data/types";
-import CardCategory1 from "@/components/CardCategory1/CardCategory1";
-import Modal from "@/components/Modal/Modal";
-import Button from "@/components/Button/Button";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
+import type { FC } from 'react';
+import React from 'react';
+
+import Button from '@/components/Button/Button';
+import CardCategory1 from '@/components/CardCategory1/CardCategory1';
+import Modal from '@/components/Modal/Modal';
+import type { TaxonomyType } from '@/data/types';
 
 export interface ModalCategoriesProps {
   categories: TaxonomyType[];

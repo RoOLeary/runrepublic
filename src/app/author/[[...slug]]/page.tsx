@@ -1,41 +1,42 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { DEMO_POSTS } from "@/data/posts";
-import { PostDataType } from "@/data/types";
-import Pagination from "@/components/Pagination/Pagination";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import { DEMO_AUTHORS } from "@/data/authors";
-import { DEMO_CATEGORIES } from "@/data/taxonomies";
-import Nav from "@/components/Nav/Nav";
-import NavItem from "@/components/NavItem/NavItem";
-import SocialsList from "@/components/SocialsList/SocialsList";
-import ArchiveFilterListBox from "@/components/ArchiveFilterListBox/ArchiveFilterListBox";
-import SectionSubscribe2 from "@/components/SectionSubscribe2/SectionSubscribe2";
-import Card11 from "@/components/Card11/Card11";
-import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
-import SectionGridCategoryBox from "@/components/SectionGridCategoryBox/SectionGridCategoryBox";
-import ButtonSecondary from "@/components/Button/ButtonSecondary";
-import SectionSliderNewAuthors from "@/components/SectionSliderNewAthors/SectionSliderNewAuthors";
-import NcImage from "@/components/NcImage/NcImage";
-import { GlobeAltIcon, ShareIcon } from "@heroicons/react/24/outline";
-import { avatarImgs } from "@/contains/fakeData";
-import VerifyIcon from "@/components/VerifyIcon";
-import FollowButton from "@/components/FollowButton";
-import DropDown from "@/components/DropDown/DropDown";
-import { SOCIALS_DATA } from "@/components/SocialsShare/SocialsShare";
-import AccountActionDropdown from "@/components/AccountActionDropdown/AccountActionDropdown";
-import Image from "next/image";
+import { GlobeAltIcon, ShareIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
+import React, { useState } from 'react';
+
+import AccountActionDropdown from '@/components/AccountActionDropdown/AccountActionDropdown';
+import ArchiveFilterListBox from '@/components/ArchiveFilterListBox/ArchiveFilterListBox';
+import BackgroundSection from '@/components/BackgroundSection/BackgroundSection';
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import ButtonSecondary from '@/components/Button/ButtonSecondary';
+import Card11 from '@/components/Card11/Card11';
+import DropDown from '@/components/DropDown/DropDown';
+import FollowButton from '@/components/FollowButton';
+import Nav from '@/components/Nav/Nav';
+import NavItem from '@/components/NavItem/NavItem';
+import NcImage from '@/components/NcImage/NcImage';
+import Pagination from '@/components/Pagination/Pagination';
+import SectionGridCategoryBox from '@/components/SectionGridCategoryBox/SectionGridCategoryBox';
+import SectionSliderNewAuthors from '@/components/SectionSliderNewAthors/SectionSliderNewAuthors';
+import SectionSubscribe2 from '@/components/SectionSubscribe2/SectionSubscribe2';
+import SocialsList from '@/components/SocialsList/SocialsList';
+import { SOCIALS_DATA } from '@/components/SocialsShare/SocialsShare';
+import VerifyIcon from '@/components/VerifyIcon';
+import { avatarImgs } from '@/contains/fakeData';
+import { DEMO_AUTHORS } from '@/data/authors';
+import { DEMO_POSTS } from '@/data/posts';
+import { DEMO_CATEGORIES } from '@/data/taxonomies';
+import type { PostDataType } from '@/data/types';
 
 const posts: PostDataType[] = DEMO_POSTS.filter((_, i) => i < 12);
 const FILTERS = [
-  { name: "Most Recent" },
-  { name: "Curated by Admin" },
-  { name: "Most Appreciated" },
-  { name: "Most Discussed" },
-  { name: "Most Viewed" },
+  { name: 'Most Recent' },
+  { name: 'Curated by Admin' },
+  { name: 'Most Appreciated' },
+  { name: 'Most Discussed' },
+  { name: 'Most Viewed' },
 ];
-const TABS = ["Articles", "Favorites", "Saved"];
+const TABS = ['Articles', 'Favorites', 'Saved'];
 
 const PageAuthor = ({}) => {
   const [tabActive, setTabActive] = useState<string>(TABS[0]);
@@ -143,7 +144,7 @@ const PageAuthor = ({}) => {
                 </NavItem>
               ))}
             </Nav>
-            <div className="block my-4 border-b w-full border-neutral-300 dark:border-neutral-500 sm:hidden"></div>
+            <div className="block my-4 border-b w-full border-neutral-300 dark:border-neutral-500 sm:hidden" />
             <div className="flex justify-end">
               <ArchiveFilterListBox lists={FILTERS} />
             </div>

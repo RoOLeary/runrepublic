@@ -1,15 +1,18 @@
-import React, { FC } from "react";
-import { SectionMagazine1Props } from "./SectionMagazine1";
-import HeaderFilter from "./HeaderFilter";
-import Card2 from "@/components/Card2/Card2";
-import Card9 from "@/components/Card9/Card9";
+import type { FC } from 'react';
+import React from 'react';
+
+import Card2 from '@/components/Card2/Card2';
+import Card9 from '@/components/Card9/Card9';
+
+import HeaderFilter from './HeaderFilter';
+import type { SectionMagazine1Props } from './SectionMagazine1';
 
 export interface SectionMagazine3Props extends SectionMagazine1Props {}
 
 const SectionMagazine3: FC<SectionMagazine3Props> = ({
   posts,
-  heading = "Latest Articles 🎈 ",
-  className = "",
+  heading = 'Latest Articles 🎈 ',
+  className = '',
 }) => {
   return (
     <div className={`SectionMagazine3 ${className}`}>

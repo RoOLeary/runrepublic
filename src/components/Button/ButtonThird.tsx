@@ -1,7 +1,10 @@
-"use client";
+'use client';
 
-import React, { FC } from "react";
-import Button, { ButtonProps } from "./Button";
+import type { FC } from 'react';
+import React from 'react';
+
+import type { ButtonProps } from './Button';
+import Button from './Button';
 
 export interface Props extends ButtonProps {}
 

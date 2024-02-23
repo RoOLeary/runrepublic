@@ -1,31 +1,33 @@
-import React, { FC } from "react";
-import Avatar from "@/components/Avatar/Avatar";
-import { PostDataType } from "@/data/types";
-import { DEMO_POSTS } from "@/data/posts";
-import Link from "next/link";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
 
-const metaDemo: PostMeta2Props["meta"] = DEMO_POSTS[0];
+import Avatar from '@/components/Avatar/Avatar';
+import { DEMO_POSTS } from '@/data/posts';
+import type { PostDataType } from '@/data/types';
+
+const metaDemo: PostMeta2Props['meta'] = DEMO_POSTS[0];
 
 export interface PostMeta2Props {
   className?: string;
-  meta?: Pick<PostDataType, "date" | "author" | "categories" | "readingTime">;
+  meta?: Pick<PostDataType, 'date' | 'author' | 'categories' | 'readingTime'>;
   hiddenCategories?: boolean;
-  size?: "large" | "normal";
+  size?: 'large' | 'normal';
   avatarRounded?: string;
 }
 
 const PostMeta2: FC<PostMeta2Props> = ({
-  className = "leading-none",
+  className = 'leading-none',
   meta = metaDemo,
   hiddenCategories = false,
-  size = "normal",
+  size = 'normal',
   avatarRounded,
 }) => {
   const { date, author, categories, readingTime } = meta;
   return (
     <div
       className={`PostMeta2 flex items-center flex-wrap text-neutral-700 text-left dark:text-neutral-200 ${
-        size === "normal" ? "text-xs" : "text-sm"
+        size === 'normal' ? 'text-xs' : 'text-sm'
       } ${className}`}
     >
       <Link
@@ -35,9 +37,9 @@ const PostMeta2: FC<PostMeta2Props> = ({
         <Avatar
           radius={avatarRounded}
           sizeClass={
-            size === "normal"
-              ? "h-6 w-6 text-sm"
-              : "h-10 w-10 sm:h-11 sm:w-11 text-xl"
+            size === 'normal'
+              ? 'h-6 w-6 text-sm'
+              : 'h-10 w-10 sm:h-11 sm:w-11 text-xl'
           }
           imgUrl={author.avatar}
           userName={author.displayName}

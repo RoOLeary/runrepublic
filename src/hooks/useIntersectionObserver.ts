@@ -1,4 +1,6 @@
-import { RefObject, useEffect, useState } from "react";
+/* eslint-disable consistent-return */
+import type { RefObject } from 'react';
+import { useEffect, useState } from 'react';
 
 export interface UseIntersectionObserverArgs extends IntersectionObserverInit {
   freezeOnceVisible?: boolean;
@@ -9,9 +11,9 @@ function useIntersectionObserver(
   {
     threshold = 0,
     root = null,
-    rootMargin = "0%",
+    rootMargin = '0%',
     freezeOnceVisible = false,
-  }: UseIntersectionObserverArgs
+  }: UseIntersectionObserverArgs,
 ): IntersectionObserverEntry | undefined {
   const [entry, setEntry] = useState<IntersectionObserverEntry>();
 

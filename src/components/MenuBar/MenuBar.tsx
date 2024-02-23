@@ -1,8 +1,10 @@
-"use client";
-import React, { useState, Fragment, useEffect } from "react";
-import { Transition } from "@/app/headlessui";
-import NavMobile from "@/components/Navigation/NavMobile";
-import { usePathname } from "next/navigation";
+'use client';
+
+import { usePathname } from 'next/navigation';
+import React, { Fragment, useEffect, useState } from 'react';
+
+import { Transition } from '@/app/headlessui';
+import NavMobile from '@/components/Navigation/NavMobile';
 
 export interface MenuBarProps {}
 const MenuBar: React.FC<MenuBarProps> = () => {

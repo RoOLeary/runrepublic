@@ -1,29 +1,30 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { DEMO_POSTS } from "@/data/posts";
-import { PostDataType } from "@/data/types";
-import { DEMO_AUTHORS } from "@/data/authors";
-import { DEMO_CATEGORIES } from "@/data/taxonomies";
-import Pagination from "@/components/Pagination/Pagination";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import Nav from "@/components/Nav/Nav";
-import NavItem from "@/components/NavItem/NavItem";
-import ArchiveFilterListBox from "@/components/ArchiveFilterListBox/ArchiveFilterListBox";
-import Input from "@/components/Input/Input";
-import SectionSubscribe2 from "@/components/SectionSubscribe2/SectionSubscribe2";
-import NcImage from "@/components/NcImage/NcImage";
-import NcLink from "@/components/NcLink/NcLink";
-import SectionSliderNewAuthors from "@/components/SectionSliderNewAthors/SectionSliderNewAuthors";
-import ButtonSecondary from "@/components/Button/ButtonSecondary";
-import SectionGridCategoryBox from "@/components/SectionGridCategoryBox/SectionGridCategoryBox";
-import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
-import Card11 from "@/components/Card11/Card11";
-import ButtonCircle from "@/components/Button/ButtonCircle";
-import CardCategory2 from "@/components/CardCategory2/CardCategory2";
-import Tag from "@/components/Tag/Tag";
-import CardAuthorBox2 from "@/components/CardAuthorBox2/CardAuthorBox2";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import React, { useState } from 'react';
+
+import ArchiveFilterListBox from '@/components/ArchiveFilterListBox/ArchiveFilterListBox';
+import BackgroundSection from '@/components/BackgroundSection/BackgroundSection';
+import ButtonCircle from '@/components/Button/ButtonCircle';
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import ButtonSecondary from '@/components/Button/ButtonSecondary';
+import Card11 from '@/components/Card11/Card11';
+import CardAuthorBox2 from '@/components/CardAuthorBox2/CardAuthorBox2';
+import CardCategory2 from '@/components/CardCategory2/CardCategory2';
+import Input from '@/components/Input/Input';
+import Nav from '@/components/Nav/Nav';
+import NavItem from '@/components/NavItem/NavItem';
+import NcImage from '@/components/NcImage/NcImage';
+import NcLink from '@/components/NcLink/NcLink';
+import Pagination from '@/components/Pagination/Pagination';
+import SectionGridCategoryBox from '@/components/SectionGridCategoryBox/SectionGridCategoryBox';
+import SectionSliderNewAuthors from '@/components/SectionSliderNewAthors/SectionSliderNewAuthors';
+import SectionSubscribe2 from '@/components/SectionSubscribe2/SectionSubscribe2';
+import Tag from '@/components/Tag/Tag';
+import { DEMO_AUTHORS } from '@/data/authors';
+import { DEMO_POSTS } from '@/data/posts';
+import { DEMO_CATEGORIES } from '@/data/taxonomies';
+import type { PostDataType } from '@/data/types';
 
 const posts: PostDataType[] = DEMO_POSTS.filter((_, i) => i < 12);
 const cats = DEMO_CATEGORIES.filter((_, i) => i < 15);
@@ -31,17 +32,17 @@ const tags = DEMO_CATEGORIES.filter((_, i) => i < 32);
 const authors = DEMO_AUTHORS.filter((_, i) => i < 12);
 
 const FILTERS = [
-  { name: "Most Recent" },
-  { name: "Curated by Admin" },
-  { name: "Most Appreciated" },
-  { name: "Most Discussed" },
-  { name: "Most Viewed" },
+  { name: 'Most Recent' },
+  { name: 'Curated by Admin' },
+  { name: 'Most Appreciated' },
+  { name: 'Most Discussed' },
+  { name: 'Most Viewed' },
 ];
 
-const TABS = ["Articles", "Categories", "Tags", "Authors"];
+const TABS = ['Articles', 'Categories', 'Tags', 'Authors'];
 
 const PageSearch = ({}) => {
-  let s = "Technology";
+  const s = 'Technology';
 
   const [tabActive, setTabActive] = useState(TABS[0]);
 
@@ -53,7 +54,7 @@ const PageSearch = ({}) => {
   };
 
   return (
-    <div className={`PageSearch`}>
+    <div className="PageSearch">
       {/* HEADER */}
       <div className="w-screen px-2 xl:max-w-screen-2xl mx-auto">
         <div className="relative aspect-w-16 aspect-h-9 lg:aspect-h-5 overflow-hidden z-0">
@@ -72,11 +73,11 @@ const PageSearch = ({}) => {
             <header className="w-full max-w-3xl mx-auto text-center flex flex-col items-center">
               <h2 className="text-2xl sm:text-4xl font-semibold">{s}</h2>
               <span className="block text-xs sm:text-sm mt-4 text-neutral-500 dark:text-neutral-300">
-                We found{" "}
+                We found{' '}
                 <strong className="font-medium text-neutral-800 dark:text-neutral-100">
                   1135
-                </strong>{" "}
-                results for{" "}
+                </strong>{' '}
+                results for{' '}
                 <strong className="font-medium text-neutral-800 dark:text-neutral-100">
                   {s}
                 </strong>
@@ -112,7 +113,7 @@ const PageSearch = ({}) => {
                         strokeLinejoin="round"
                         strokeWidth="1.5"
                         d="M19.25 19.25L15.5 15.5M4.75 11C4.75 7.54822 7.54822 4.75 11 4.75C14.4518 4.75 17.25 7.54822 17.25 11C17.25 14.4518 14.4518 17.25 11 17.25C7.54822 17.25 4.75 14.4518 4.75 11Z"
-                      ></path>
+                      />
                     </svg>
                   </span>
                 </label>
@@ -158,7 +159,7 @@ const PageSearch = ({}) => {
                 </NavItem>
               ))}
             </Nav>
-            <div className="block my-4 border-b w-full border-neutral-300 dark:border-neutral-500 sm:hidden"></div>
+            <div className="block my-4 border-b w-full border-neutral-300 dark:border-neutral-500 sm:hidden" />
             <div className="flex justify-end">
               <ArchiveFilterListBox lists={FILTERS} />
             </div>
@@ -166,7 +167,7 @@ const PageSearch = ({}) => {
 
           {/* LOOP ITEMS */}
           {/* LOOP ITEMS POSTS */}
-          {tabActive === "Articles" && (
+          {tabActive === 'Articles' && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-8 mt-8 lg:mt-10">
               {posts.map((post) => (
                 <Card11 key={post.id} post={post} />
@@ -174,7 +175,7 @@ const PageSearch = ({}) => {
             </div>
           )}
           {/* LOOP ITEMS CATEGORIES */}
-          {tabActive === "Categories" && (
+          {tabActive === 'Categories' && (
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 md:gap-8 mt-8 lg:mt-10">
               {cats.map((cat) => (
                 <CardCategory2 key={cat.id} taxonomy={cat} />
@@ -182,7 +183,7 @@ const PageSearch = ({}) => {
             </div>
           )}
           {/* LOOP ITEMS TAGS */}
-          {tabActive === "Tags" && (
+          {tabActive === 'Tags' && (
             <div className="flex flex-wrap mt-12 ">
               {tags.map((tag) => (
                 <Tag className="mb-3 mr-3" key={tag.id} tag={tag} />
@@ -190,7 +191,7 @@ const PageSearch = ({}) => {
             </div>
           )}
           {/* LOOP ITEMS POSTS */}
-          {tabActive === "Authors" && (
+          {tabActive === 'Authors' && (
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 md:gap-8 mt-8 lg:mt-10">
               {authors.map((author) => (
                 <CardAuthorBox2 key={author.id} author={author} />

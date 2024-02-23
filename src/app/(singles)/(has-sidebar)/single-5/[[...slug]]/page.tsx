@@ -1,6 +1,7 @@
-import SingleHeader from "@/app/(singles)/SingleHeader";
-import NcImage from "@/components/NcImage/NcImage";
-import React from "react";
+import React from 'react';
+
+import SingleHeader from '@/app/(singles)/SingleHeader';
+import NcImage from '@/components/NcImage/NcImage';
 
 const PageSingleSidebar = ({}) => {
   return (

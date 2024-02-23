@@ -1,17 +1,19 @@
-import React, { FC } from "react";
-import PostCardSaveAction from "@/components/PostCardSaveAction/PostCardSaveAction";
-import { PostDataType } from "@/data/types";
-import CardAuthor2 from "@/components/CardAuthor2/CardAuthor2";
-import CategoryBadgeList from "@/components/CategoryBadgeList/CategoryBadgeList";
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import CardAuthor2 from '@/components/CardAuthor2/CardAuthor2';
+import CategoryBadgeList from '@/components/CategoryBadgeList/CategoryBadgeList';
+import PostCardSaveAction from '@/components/PostCardSaveAction/PostCardSaveAction';
+import type { PostDataType } from '@/data/types';
 
 export interface Card4Props {
   className?: string;
   post: PostDataType;
 }
 
-const Card4: FC<Card4Props> = ({ className = "h-full", post }) => {
+const Card4: FC<Card4Props> = ({ className = 'h-full', post }) => {
   const { title, href, featuredImage, categories, author, date, readingTime } =
     post;
 
@@ -29,7 +31,7 @@ const Card4: FC<Card4Props> = ({ className = "h-full", post }) => {
         />
       </span>
 
-      <Link href={href} className="absolute inset-0"></Link>
+      <Link href={href} className="absolute inset-0" />
 
       <div className="p-4 flex flex-col flex-grow">
         <div className="space-y-2.5 mb-4">

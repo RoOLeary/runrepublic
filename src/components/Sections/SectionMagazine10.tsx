@@ -1,13 +1,16 @@
-import React, { FC } from "react";
-import { SectionMagazine1Props } from "./SectionMagazine1";
-import Card19 from "@/components/Card19/Card19";
-import Card18 from "@/components/Card18/Card18";
+import type { FC } from 'react';
+import React from 'react';
+
+import Card18 from '@/components/Card18/Card18';
+import Card19 from '@/components/Card19/Card19';
+
+import type { SectionMagazine1Props } from './SectionMagazine1';
 
 export interface SectionMagazine10Props extends SectionMagazine1Props {}
 
 const SectionMagazine10: FC<SectionMagazine10Props> = ({
   posts,
-  className = "",
+  className = '',
 }) => {
   return (
     <div className={`SectionMagazine10 ${className}`}>

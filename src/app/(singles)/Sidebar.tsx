@@ -1,12 +1,14 @@
-import React, { FC } from "react";
-import WidgetAuthors from "@/components/WidgetAuthors/WidgetAuthors";
-import WidgetCategories from "@/components/WidgetCategories/WidgetCategories";
-import WidgetPosts from "@/components/WidgetPosts/WidgetPosts";
-import WidgetTags from "@/components/WidgetTags/WidgetTags";
-import { DEMO_AUTHORS } from "@/data/authors";
-import { DEMO_POSTS } from "@/data/posts";
-import { DEMO_CATEGORIES, DEMO_TAGS } from "@/data/taxonomies";
-import { PostDataType } from "@/data/types";
+import type { FC } from 'react';
+import React from 'react';
+
+import WidgetAuthors from '@/components/WidgetAuthors/WidgetAuthors';
+import WidgetCategories from '@/components/WidgetCategories/WidgetCategories';
+import WidgetPosts from '@/components/WidgetPosts/WidgetPosts';
+import WidgetTags from '@/components/WidgetTags/WidgetTags';
+import { DEMO_AUTHORS } from '@/data/authors';
+import { DEMO_POSTS } from '@/data/posts';
+import { DEMO_CATEGORIES, DEMO_TAGS } from '@/data/taxonomies';
+import type { PostDataType } from '@/data/types';
 
 export interface SidebarProps {
   className?: string;
@@ -17,7 +19,7 @@ const tags = DEMO_TAGS.filter((_, i) => i > 5);
 const categories = DEMO_CATEGORIES.filter((_, i) => i > 7 && i < 13);
 const authors = DEMO_AUTHORS.filter((_, i) => i < 5);
 
-export const Sidebar: FC<SidebarProps> = ({ className = "space-y-6 " }) => {
+export const Sidebar: FC<SidebarProps> = ({ className = 'space-y-6 ' }) => {
   return (
     <div className={`SingleSidebar ${className}`}>
       <WidgetTags tags={tags} />

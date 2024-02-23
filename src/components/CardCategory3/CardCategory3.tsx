@@ -1,7 +1,9 @@
-import React, { FC } from "react";
-import { TaxonomyType } from "@/data/types";
-import Link from "next/link";
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import type { TaxonomyType } from '@/data/types';
 
 export interface CardCategory3Props {
   className?: string;
@@ -9,21 +11,21 @@ export interface CardCategory3Props {
 }
 
 const CardCategory3: FC<CardCategory3Props> = ({
-  className = "",
+  className = '',
   taxonomy,
 }) => {
-  const { count, name, href = "/", thumbnail } = taxonomy;
+  const { count, name, href = '/', thumbnail } = taxonomy;
   return (
     <Link href={href} className={`CardCategory3 flex flex-col ${className}`}>
       <div className="flex-shrink-0 relative w-full aspect-w-5 aspect-h-5 h-0 rounded-2xl overflow-hidden group">
         <Image
-          src={thumbnail || ""}
+          src={thumbnail || ''}
           className="object-cover w-full h-full rounded-2xl"
           sizes="(min-width: 1024px) 20rem, (min-width: 640px) 16rem, 12rem"
           fill
           alt=""
         />
-        <span className="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-10 transition-opacity"></span>
+        <span className="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-10 transition-opacity" />
       </div>
       <div className="mt-4 ">
         <h2
@@ -31,9 +33,7 @@ const CardCategory3: FC<CardCategory3Props> = ({
         >
           {name}
         </h2>
-        <span
-          className={`block mt-1 text-sm text-neutral-6000 dark:text-neutral-400`}
-        >
+        <span className="block mt-1 text-sm text-neutral-6000 dark:text-neutral-400">
           {count} Articles
         </span>
       </div>

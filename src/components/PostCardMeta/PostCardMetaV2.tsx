@@ -1,10 +1,12 @@
-import React, { FC } from "react";
-import Avatar from "@/components/Avatar/Avatar";
-import { PostDataType } from "@/data/types";
-import Link from "next/link";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import Avatar from '@/components/Avatar/Avatar';
+import type { PostDataType } from '@/data/types';
 
 export interface PostCardMetaV2Props {
-  meta: Pick<PostDataType, "date" | "author" | "title" | "href">;
+  meta: Pick<PostDataType, 'date' | 'author' | 'title' | 'href'>;
   hiddenAvatar?: boolean;
   className?: string;
   titleClassName?: string;
@@ -14,9 +16,9 @@ export interface PostCardMetaV2Props {
 const PostCardMetaV2: FC<PostCardMetaV2Props> = ({
   meta,
   hiddenAvatar = false,
-  className = "leading-none text-xs",
-  titleClassName = "text-base",
-  avatarSize = "h-9 w-9 text-base",
+  className = 'leading-none text-xs',
+  titleClassName = 'text-base',
+  avatarSize = 'h-9 w-9 text-base',
 }) => {
   const { date, author, title } = meta;
   return (

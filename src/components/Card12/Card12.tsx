@@ -1,16 +1,18 @@
-import React, { FC } from "react";
-import NcImage from "@/components/NcImage/NcImage";
-import { PostDataType } from "@/data/types";
-import PostCardMeta from "@/components/PostCardMeta/PostCardMeta";
-import PostTypeFeaturedIcon from "@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
-import Link from "next/link";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import NcImage from '@/components/NcImage/NcImage';
+import PostCardMeta from '@/components/PostCardMeta/PostCardMeta';
+import PostTypeFeaturedIcon from '@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon';
+import type { PostDataType } from '@/data/types';
 
 export interface Card12Props {
   className?: string;
   post: PostDataType;
 }
 
-const Card12: FC<Card12Props> = ({ className = "h-full", post }) => {
+const Card12: FC<Card12Props> = ({ className = 'h-full', post }) => {
   const { title, href, featuredImage, desc, postType } = post;
 
   return (
@@ -36,9 +38,7 @@ const Card12: FC<Card12Props> = ({ className = "h-full", post }) => {
       </Link>
 
       <div className="mt-5 sm:mt-8 pe-10 flex flex-col">
-        <h2
-          className={`card-title block font-semibold text-neutral-900 dark:text-neutral-100 transition-colors sm:text-lg lg:text-2xl`}
-        >
+        <h2 className="card-title block font-semibold text-neutral-900 dark:text-neutral-100 transition-colors sm:text-lg lg:text-2xl">
           <Link href={href} className="line-clamp-2" title={title}>
             {title}
           </Link>

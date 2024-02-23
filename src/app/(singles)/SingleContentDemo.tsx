@@ -1,10 +1,10 @@
-import Image from "next/image";
-import React from "react";
+import Image from 'next/image';
+import React from 'react';
 
 const SingleContentDemo = () => {
   return (
     <>
-      {/* THIS IS THE DEMP CONTENT - YOU CAN USE MARKDOWN, JSON ...*/}
+      {/* THIS IS THE DEMP CONTENT - YOU CAN USE MARKDOWN, JSON ... */}
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure vel
         officiis ipsum placeat itaque neque dolorem modi perspiciatis dolor
@@ -13,12 +13,12 @@ const SingleContentDemo = () => {
       </p>
       <p>
         It is a long established fact that a <strong>reader</strong> will be
-        distracted by the readable content of a page when looking at its{" "}
+        distracted by the readable content of a page when looking at its{' '}
         <strong>layout</strong>. The point of using Lorem Ipsum is that it has a
-        more-or-less normal{" "}
+        more-or-less normal{' '}
         <a href="/#" target="_blank" rel="noopener noreferrer">
           distribution of letters.
-        </a>{" "}
+        </a>{' '}
       </p>
       <ol>
         <li>We want everything to look good out of the box.</li>
@@ -72,10 +72,10 @@ const SingleContentDemo = () => {
       <p>{`And that's the end of this section.`}</p>
       <h2>Code should look okay by default.</h2>
       <p>
-        I think most people are going to use{" "}
-        <a href="https://highlightjs.org/">highlight.js</a> or{" "}
+        I think most people are going to use{' '}
+        <a href="https://highlightjs.org/">highlight.js</a> or{' '}
         <a href="https://prismjs.com/">Prism</a> or something if they want to
-        {` style their code blocks but it wouldn't hurt to make them look`}{" "}
+        {` style their code blocks but it wouldn't hurt to make them look`}{' '}
         <em>okay</em> out of the box, even with no syntax highlighting.
       </p>
       <p>

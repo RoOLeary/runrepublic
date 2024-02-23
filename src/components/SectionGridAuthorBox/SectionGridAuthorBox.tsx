@@ -1,7 +1,9 @@
-import CardAuthorBox from "@/components/CardAuthorBox/CardAuthorBox";
-import Heading from "@/components/Heading/Heading";
-import { PostAuthorType } from "@/data/types";
-import React, { FC } from "react";
+import type { FC } from 'react';
+import React from 'react';
+
+import CardAuthorBox from '@/components/CardAuthorBox/CardAuthorBox';
+import Heading from '@/components/Heading/Heading';
+import type { PostAuthorType } from '@/data/types';
 
 export interface SectionGridAuthorBoxProps {
   className?: string;
@@ -9,7 +11,7 @@ export interface SectionGridAuthorBoxProps {
 }
 
 const SectionGridAuthorBox: FC<SectionGridAuthorBoxProps> = ({
-  className = "",
+  className = '',
   authors,
 }) => {
   return (

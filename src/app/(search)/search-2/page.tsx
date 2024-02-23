@@ -1,25 +1,26 @@
-"use client";
+'use client';
 
-import React, { FC, useState } from "react";
-import { DEMO_POSTS } from "@/data/posts";
-import { PostDataType } from "@/data/types";
-import { DEMO_AUTHORS } from "@/data/authors";
-import { DEMO_CATEGORIES } from "@/data/taxonomies";
-import Pagination from "@/components/Pagination/Pagination";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import Nav from "@/components/Nav/Nav";
-import NavItem from "@/components/NavItem/NavItem";
-import ArchiveFilterListBox from "@/components/ArchiveFilterListBox/ArchiveFilterListBox";
-import Input from "@/components/Input/Input";
-import SectionSubscribe2 from "@/components/SectionSubscribe2/SectionSubscribe2";
-import SectionSliderNewAuthors from "@/components/SectionSliderNewAthors/SectionSliderNewAuthors";
-import ButtonSecondary from "@/components/Button/ButtonSecondary";
-import SectionGridCategoryBox from "@/components/SectionGridCategoryBox/SectionGridCategoryBox";
-import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
-import Card11 from "@/components/Card11/Card11";
-import CardCategory2 from "@/components/CardCategory2/CardCategory2";
-import Tag from "@/components/Tag/Tag";
-import CardAuthorBox2 from "@/components/CardAuthorBox2/CardAuthorBox2";
+import React, { useState } from 'react';
+
+import ArchiveFilterListBox from '@/components/ArchiveFilterListBox/ArchiveFilterListBox';
+import BackgroundSection from '@/components/BackgroundSection/BackgroundSection';
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import ButtonSecondary from '@/components/Button/ButtonSecondary';
+import Card11 from '@/components/Card11/Card11';
+import CardAuthorBox2 from '@/components/CardAuthorBox2/CardAuthorBox2';
+import CardCategory2 from '@/components/CardCategory2/CardCategory2';
+import Input from '@/components/Input/Input';
+import Nav from '@/components/Nav/Nav';
+import NavItem from '@/components/NavItem/NavItem';
+import Pagination from '@/components/Pagination/Pagination';
+import SectionGridCategoryBox from '@/components/SectionGridCategoryBox/SectionGridCategoryBox';
+import SectionSliderNewAuthors from '@/components/SectionSliderNewAthors/SectionSliderNewAuthors';
+import SectionSubscribe2 from '@/components/SectionSubscribe2/SectionSubscribe2';
+import Tag from '@/components/Tag/Tag';
+import { DEMO_AUTHORS } from '@/data/authors';
+import { DEMO_POSTS } from '@/data/posts';
+import { DEMO_CATEGORIES } from '@/data/taxonomies';
+import type { PostDataType } from '@/data/types';
 
 const posts: PostDataType[] = DEMO_POSTS.filter((_, i) => i < 12);
 const cats = DEMO_CATEGORIES.filter((_, i) => i < 15);
@@ -27,16 +28,16 @@ const tags = DEMO_CATEGORIES.filter((_, i) => i < 32);
 const authors = DEMO_AUTHORS.filter((_, i) => i < 12);
 
 const FILTERS = [
-  { name: "Most Recent" },
-  { name: "Curated by Admin" },
-  { name: "Most Appreciated" },
-  { name: "Most Discussed" },
-  { name: "Most Viewed" },
+  { name: 'Most Recent' },
+  { name: 'Curated by Admin' },
+  { name: 'Most Appreciated' },
+  { name: 'Most Discussed' },
+  { name: 'Most Viewed' },
 ];
-const TABS = ["Articles", "Categories", "Tags", "Authors"];
+const TABS = ['Articles', 'Categories', 'Tags', 'Authors'];
 
 const PageSearchV2 = ({}) => {
-  let s = "Ui Design";
+  const s = 'Ui Design';
 
   const [tabActive, setTabActive] = useState<string>(TABS[0]);
 
@@ -48,10 +49,8 @@ const PageSearchV2 = ({}) => {
   };
 
   return (
-    <div className={`PageSearchV2`}>
-      <div
-        className={`h-24 2xl:h-28 top-0 start-0 right-0 w-full bg-primary-100/50 dark:bg-neutral-900`}
-      />
+    <div className="PageSearchV2">
+      <div className="h-24 2xl:h-28 top-0 start-0 right-0 w-full bg-primary-100/50 dark:bg-neutral-900" />
       <div className="container">
         <header className="max-w-2xl mx-auto -mt-10 flex flex-col lg:-mt-7">
           <form className="relative" action="" method="post">
@@ -76,17 +75,17 @@ const PageSearchV2 = ({}) => {
                     strokeLinejoin="round"
                     strokeWidth="1.5"
                     d="M19.25 19.25L15.5 15.5M4.75 11C4.75 7.54822 7.54822 4.75 11 4.75C14.4518 4.75 17.25 7.54822 17.25 11C17.25 14.4518 14.4518 17.25 11 17.25C7.54822 17.25 4.75 14.4518 4.75 11Z"
-                  ></path>
+                  />
                 </svg>
               </span>
             </label>
           </form>
           <span className="block text-sm mt-4 text-neutral-500 dark:text-neutral-300">
-            We found{" "}
+            We found{' '}
             <strong className="font-semibold text-neutral-800 dark:text-neutral-100">
               1135
-            </strong>{" "}
-            results articles for{" "}
+            </strong>{' '}
+            results articles for{' '}
             <strong className="font-semibold text-neutral-800 dark:text-neutral-100">
               {`"${s}"`}
             </strong>
@@ -111,7 +110,7 @@ const PageSearchV2 = ({}) => {
                 </NavItem>
               ))}
             </Nav>
-            <div className="block my-4 border-b w-full border-neutral-300 dark:border-neutral-500 sm:hidden"></div>
+            <div className="block my-4 border-b w-full border-neutral-300 dark:border-neutral-500 sm:hidden" />
             <div className="flex justify-end">
               <ArchiveFilterListBox lists={FILTERS} />
             </div>
@@ -119,7 +118,7 @@ const PageSearchV2 = ({}) => {
 
           {/* LOOP ITEMS */}
           {/* LOOP ITEMS POSTS */}
-          {tabActive === "Articles" && (
+          {tabActive === 'Articles' && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-8 mt-8 lg:mt-10">
               {posts.map((post) => (
                 <Card11 key={post.id} post={post} />
@@ -127,7 +126,7 @@ const PageSearchV2 = ({}) => {
             </div>
           )}
           {/* LOOP ITEMS CATEGORIES */}
-          {tabActive === "Categories" && (
+          {tabActive === 'Categories' && (
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 md:gap-8 mt-8 lg:mt-10">
               {cats.map((cat) => (
                 <CardCategory2 key={cat.id} taxonomy={cat} />
@@ -135,7 +134,7 @@ const PageSearchV2 = ({}) => {
             </div>
           )}
           {/* LOOP ITEMS TAGS */}
-          {tabActive === "Tags" && (
+          {tabActive === 'Tags' && (
             <div className="flex flex-wrap mt-12 ">
               {tags.map((tag) => (
                 <Tag className="mb-3 mr-3" key={tag.id} tag={tag} />
@@ -143,7 +142,7 @@ const PageSearchV2 = ({}) => {
             </div>
           )}
           {/* LOOP ITEMS POSTS */}
-          {tabActive === "Authors" && (
+          {tabActive === 'Authors' && (
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 md:gap-8 mt-8 lg:mt-10">
               {authors.map((author) => (
                 <CardAuthorBox2 key={author.id} author={author} />

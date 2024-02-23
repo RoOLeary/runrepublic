@@ -1,8 +1,9 @@
-import React from "react";
-import { CheckIcon } from "@heroicons/react/24/solid";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import ButtonSecondary from "@/components/Button/ButtonSecondary";
-import Heading2 from "@/components/Heading/Heading2";
+import { CheckIcon } from '@heroicons/react/24/solid';
+import React from 'react';
+
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import ButtonSecondary from '@/components/Button/ButtonSecondary';
+import Heading2 from '@/components/Heading/Heading2';
 
 export interface PricingItem {
   isPopular: boolean;
@@ -16,35 +17,35 @@ export interface PricingItem {
 const pricings: PricingItem[] = [
   {
     isPopular: false,
-    name: "Starter",
-    pricing: "$5",
-    per: "/mo",
-    features: ["Automated Reporting", "Faster Processing", "Customizations"],
+    name: 'Starter',
+    pricing: '$5',
+    per: '/mo',
+    features: ['Automated Reporting', 'Faster Processing', 'Customizations'],
     desc: ` Literally you probably haven't heard of them jean shorts.`,
   },
   {
     isPopular: true,
-    name: "Basic",
-    pricing: "$15",
-    per: "/mo",
+    name: 'Basic',
+    pricing: '$15',
+    per: '/mo',
     features: [
-      "Everything in Starter",
-      "100 Builds",
-      "Progress Reports",
-      "Premium Support",
+      'Everything in Starter',
+      '100 Builds',
+      'Progress Reports',
+      'Premium Support',
     ],
     desc: ` Literally you probably haven't heard of them jean shorts.`,
   },
   {
     isPopular: false,
-    name: "Plus",
-    pricing: "$25",
-    per: "/mo",
+    name: 'Plus',
+    pricing: '$25',
+    per: '/mo',
     features: [
-      "Everything in Basic",
-      "Unlimited Builds",
-      "Advanced Analytics",
-      "Company Evaluations",
+      'Everything in Basic',
+      'Unlimited Builds',
+      'Advanced Analytics',
+      'Company Evaluations',
     ],
     desc: ` Literally you probably haven't heard of them jean shorts.`,
   },
@@ -57,8 +58,8 @@ const PageSubcription = ({}) => {
         key={index}
         className={`h-full relative px-6 py-8 rounded-3xl border-2 flex flex-col overflow-hidden ${
           pricing.isPopular
-            ? "border-primary-500"
-            : "border-neutral-100 dark:border-neutral-700"
+            ? 'border-primary-500'
+            : 'border-neutral-100 dark:border-neutral-700'
         }`}
       >
         {pricing.isPopular && (

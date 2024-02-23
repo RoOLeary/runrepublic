@@ -1,27 +1,29 @@
-"use client";
+'use client';
 
-import { FC, Fragment, ReactNode, useState } from "react";
-import { Combobox, Dialog, Transition } from "@headlessui/react";
+import { Combobox, Dialog, Transition } from '@headlessui/react';
 import {
+  ClockIcon,
   ExclamationTriangleIcon,
   HashtagIcon,
   LifebuoyIcon,
-  ClockIcon,
   MagnifyingGlassIcon,
-} from "@heroicons/react/24/outline";
-import Image from "next/image";
-import { DEMO_AUTHORS } from "@/data/authors";
-import { DEMO_CATEGORIES } from "@/data/taxonomies";
-import { DEMO_POSTS } from "@/data/posts";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+} from '@heroicons/react/24/outline';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import type { FC, ReactNode } from 'react';
+import { Fragment, useState } from 'react';
+
+import { DEMO_AUTHORS } from '@/data/authors';
+import { DEMO_POSTS } from '@/data/posts';
+import { DEMO_CATEGORIES } from '@/data/taxonomies';
 
 const categories = DEMO_CATEGORIES.filter((_, i) => i < 9);
 const posts = DEMO_POSTS.filter((_, i) => i < 5);
 const authors = DEMO_AUTHORS.filter((_, i) => i < 9);
 
 function classNames(...classes: any) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 interface Props {
@@ -30,36 +32,38 @@ interface Props {
 
 const SearchModal: FC<Props> = ({ renderTrigger }) => {
   const [open, setOpen] = useState(false);
-  const [rawQuery, setRawQuery] = useState("a");
+  const [rawQuery, setRawQuery] = useState('a');
 
   const router = useRouter();
 
-  const query = rawQuery.toLowerCase().replace(/^[#>]/, "");
+  const query = rawQuery.toLowerCase().replace(/^[#>]/, '');
 
   const filteredPosts =
-    rawQuery === "#"
+    rawQuery === '#'
       ? posts
-      : query === "" || rawQuery.startsWith(">")
-      ? []
-      : posts.filter((project) => project.title.toLowerCase().includes(query));
+      : query === '' || rawQuery.startsWith('>')
+        ? []
+        : posts.filter((project) =>
+            project.title.toLowerCase().includes(query),
+          );
 
   const filteredProjects =
-    rawQuery === "#"
+    rawQuery === '#'
       ? categories
-      : query === "" || rawQuery.startsWith(">")
-      ? []
-      : categories.filter((project) =>
-          project.name.toLowerCase().includes(query)
-        );
+      : query === '' || rawQuery.startsWith('>')
+        ? []
+        : categories.filter((project) =>
+            project.name.toLowerCase().includes(query),
+          );
 
   const filteredUsers =
-    rawQuery === ">"
+    rawQuery === '>'
       ? authors
-      : query === "" || rawQuery.startsWith("#")
-      ? []
-      : authors.filter((user) =>
-          user.displayName.toLowerCase().includes(query)
-        );
+      : query === '' || rawQuery.startsWith('#')
+        ? []
+        : authors.filter((user) =>
+            user.displayName.toLowerCase().includes(query),
+          );
 
   return (
     <>
@@ -97,7 +101,7 @@ const SearchModal: FC<Props> = ({ renderTrigger }) => {
       <Transition.Root
         show={open}
         as={Fragment}
-        afterLeave={() => setRawQuery("a")}
+        afterLeave={() => setRawQuery('a')}
         appear
       >
         <Dialog
@@ -132,7 +136,7 @@ const SearchModal: FC<Props> = ({ renderTrigger }) => {
                 as="form"
                 onSubmit={(e) => {
                   e.preventDefault();
-                  router.push("/search");
+                  router.push('/search');
                   setOpen(false);
                 }}
               >
@@ -174,8 +178,8 @@ const SearchModal: FC<Props> = ({ renderTrigger }) => {
                                 value={post}
                                 className={({ active }) =>
                                   classNames(
-                                    "flex select-none items-center px-4 py-2",
-                                    active && "bg-indigo-600 text-white"
+                                    'flex select-none items-center px-4 py-2',
+                                    active && 'bg-indigo-600 text-white',
                                   )
                                 }
                               >
@@ -183,8 +187,8 @@ const SearchModal: FC<Props> = ({ renderTrigger }) => {
                                   <>
                                     <ClockIcon
                                       className={classNames(
-                                        "h-6 w-6 flex-none",
-                                        active ? "text-white" : "text-gray-400"
+                                        'h-6 w-6 flex-none',
+                                        active ? 'text-white' : 'text-gray-400',
                                       )}
                                       aria-hidden="true"
                                     />
@@ -211,8 +215,8 @@ const SearchModal: FC<Props> = ({ renderTrigger }) => {
                                 value={project}
                                 className={({ active }) =>
                                   classNames(
-                                    "flex select-none items-center px-4 py-2",
-                                    active && "bg-indigo-600 text-white"
+                                    'flex select-none items-center px-4 py-2',
+                                    active && 'bg-indigo-600 text-white',
                                   )
                                 }
                               >
@@ -220,8 +224,8 @@ const SearchModal: FC<Props> = ({ renderTrigger }) => {
                                   <>
                                     <HashtagIcon
                                       className={classNames(
-                                        "h-6 w-6 flex-none",
-                                        active ? "text-white" : "text-gray-400"
+                                        'h-6 w-6 flex-none',
+                                        active ? 'text-white' : 'text-gray-400',
                                       )}
                                       aria-hidden="true"
                                     />
@@ -248,8 +252,8 @@ const SearchModal: FC<Props> = ({ renderTrigger }) => {
                                 value={user}
                                 className={({ active }) =>
                                   classNames(
-                                    "flex select-none items-center px-4 py-2",
-                                    active && "bg-indigo-600 text-white"
+                                    'flex select-none items-center px-4 py-2',
+                                    active && 'bg-indigo-600 text-white',
                                   )
                                 }
                               >
@@ -270,7 +274,7 @@ const SearchModal: FC<Props> = ({ renderTrigger }) => {
                     </Combobox.Options>
                   )}
 
-                  {rawQuery === "?" && (
+                  {rawQuery === '?' && (
                     <div className="py-14 px-6 text-center text-sm sm:px-14">
                       <LifebuoyIcon
                         className="mx-auto h-6 w-6 text-gray-400"
@@ -288,8 +292,8 @@ const SearchModal: FC<Props> = ({ renderTrigger }) => {
                     </div>
                   )}
 
-                  {query !== "" &&
-                    rawQuery !== "?" &&
+                  {query !== '' &&
+                    rawQuery !== '?' &&
                     filteredProjects.length === 0 &&
                     filteredUsers.length === 0 && (
                       <div className="py-14 px-6 text-center text-sm sm:px-14">
@@ -308,50 +312,50 @@ const SearchModal: FC<Props> = ({ renderTrigger }) => {
                     )}
 
                   <div className="flex flex-wrap items-center bg-gray-50 py-2.5 px-4 text-xs text-gray-700">
-                    Type{" "}
+                    Type{' '}
                     <kbd
                       className={classNames(
-                        "mx-1 flex h-5 w-5 items-center justify-center rounded border bg-white font-semibold sm:mx-2",
-                        rawQuery.startsWith("#")
-                          ? "border-indigo-600 text-indigo-600"
-                          : "border-gray-400 text-gray-900"
+                        'mx-1 flex h-5 w-5 items-center justify-center rounded border bg-white font-semibold sm:mx-2',
+                        rawQuery.startsWith('#')
+                          ? 'border-indigo-600 text-indigo-600'
+                          : 'border-gray-400 text-gray-900',
                       )}
                     >
                       #
-                    </kbd>{" "}
+                    </kbd>{' '}
                     <span className="sm:hidden">for projects,</span>
                     <span className="hidden sm:inline">
                       to access projects,
                     </span>
                     <kbd
                       className={classNames(
-                        "mx-1 flex h-5 w-5 items-center justify-center rounded border bg-white font-semibold sm:mx-2",
-                        rawQuery.startsWith(">")
-                          ? "border-indigo-600 text-indigo-600"
-                          : "border-gray-400 text-gray-900"
+                        'mx-1 flex h-5 w-5 items-center justify-center rounded border bg-white font-semibold sm:mx-2',
+                        rawQuery.startsWith('>')
+                          ? 'border-indigo-600 text-indigo-600'
+                          : 'border-gray-400 text-gray-900',
                       )}
                     >
                       &gt;
-                    </kbd>{" "}
-                    for users,{" "}
+                    </kbd>{' '}
+                    for users,{' '}
                     <kbd
                       className={classNames(
-                        "mx-1 flex h-5 w-5 items-center justify-center rounded border bg-white font-semibold sm:mx-2",
-                        rawQuery === "?"
-                          ? "border-indigo-600 text-indigo-600"
-                          : "border-gray-400 text-gray-900"
+                        'mx-1 flex h-5 w-5 items-center justify-center rounded border bg-white font-semibold sm:mx-2',
+                        rawQuery === '?'
+                          ? 'border-indigo-600 text-indigo-600'
+                          : 'border-gray-400 text-gray-900',
                       )}
                     >
                       ?
-                    </kbd>{" "}
-                    for help, or{" "}
+                    </kbd>{' '}
+                    for help, or{' '}
                     <Link
-                      href={"/search"}
+                      href="/search"
                       className="mx-1 flex h-5 px-1.5 items-center justify-center rounded border bg-white sm:mx-2 border-primary-6000 text-neutral-900"
                       onClick={() => setOpen(false)}
                     >
                       Go to search page
-                    </Link>{" "}
+                    </Link>{' '}
                   </div>
                 </Combobox>
               </Dialog.Panel>

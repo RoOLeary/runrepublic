@@ -1,20 +1,22 @@
-import React, { FC } from "react";
-import Avatar from "@/components/Avatar/Avatar";
-import { PostDataType } from "@/data/types";
-import Link from "next/link";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import Avatar from '@/components/Avatar/Avatar';
+import type { PostDataType } from '@/data/types';
 
 export interface PostCardMetaProps {
   className?: string;
-  meta: Pick<PostDataType, "date" | "author">;
+  meta: Pick<PostDataType, 'date' | 'author'>;
   hiddenAvatar?: boolean;
   avatarSize?: string;
 }
 
 const PostCardMeta: FC<PostCardMetaProps> = ({
-  className = "leading-none text-xs",
+  className = 'leading-none text-xs',
   meta,
   hiddenAvatar = false,
-  avatarSize = "h-7 w-7 text-sm",
+  avatarSize = 'h-7 w-7 text-sm',
 }) => {
   const { date, author } = meta;
 
@@ -38,14 +40,12 @@ const PostCardMeta: FC<PostCardMetaProps> = ({
           {author.displayName}
         </span>
       </Link>
-      <>
-        <span className="text-neutral-500 dark:text-neutral-400 mx-[6px] font-medium">
-          ·
-        </span>
-        <span className="text-neutral-500 dark:text-neutral-400 font-normal">
-          {date}
-        </span>
-      </>
+      <span className="text-neutral-500 dark:text-neutral-400 mx-[6px] font-medium">
+        ·
+      </span>
+      <span className="text-neutral-500 dark:text-neutral-400 font-normal">
+        {date}
+      </span>
     </div>
   );
 };

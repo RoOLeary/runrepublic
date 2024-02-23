@@ -1,10 +1,13 @@
-import React, { FC } from "react";
-import Logo from "@/components/Logo/Logo";
-import Navigation from "@/components/Navigation/Navigation";
-import MenuBar from "@/components/MenuBar/MenuBar";
-import SwitchDarkMode from "@/components/SwitchDarkMode/SwitchDarkMode";
-import SearchModal from "./SearchModal";
-import Button from "../Button/Button";
+import type { FC } from 'react';
+import React from 'react';
+
+import Logo from '@/components/Logo/Logo';
+import MenuBar from '@/components/MenuBar/MenuBar';
+import Navigation from '@/components/Navigation/Navigation';
+import SwitchDarkMode from '@/components/SwitchDarkMode/SwitchDarkMode';
+
+import Button from '../Button/Button';
+import SearchModal from './SearchModal';
 
 export interface MainNav1Props {}
 
@@ -26,7 +29,7 @@ const MainNav1: FC<MainNav1Props> = ({}) => {
             <div className="hidden items-center lg:flex">
               <SwitchDarkMode />
               <SearchModal />
-              <div className="px-1"></div>
+              <div className="px-1" />
               <Button
                 sizeClass="py-3 px-4 sm:px-6"
                 href="/login"

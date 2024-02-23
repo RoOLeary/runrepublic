@@ -33,6 +33,8 @@ declare namespace __next_route_internal_types__ {
     | `/home-2`
     | `/home-3`
     | `/home-4`
+    | `/about`
+    | `/api/hello`
     | `/contact`
     | `/dashboard`
     | `/dashboard/billing-address`
@@ -46,21 +48,19 @@ declare namespace __next_route_internal_types__ {
     | `/subscription`
     | `/search`
     | `/search-2`
-    | `/about`
-    | `/api/hello`
   type DynamicRoutes<T extends string = string> = 
-    | `/archive/${OptionalCatchAllSlug<T>}`
-    | `/archive-2/${OptionalCatchAllSlug<T>}`
-    | `/archive-3/${OptionalCatchAllSlug<T>}`
     | `/single/${OptionalCatchAllSlug<T>}`
-    | `/single-audio/${OptionalCatchAllSlug<T>}`
     | `/single-2/${OptionalCatchAllSlug<T>}`
-    | `/single-gallery/${OptionalCatchAllSlug<T>}`
+    | `/single-audio/${OptionalCatchAllSlug<T>}`
     | `/single-video/${OptionalCatchAllSlug<T>}`
+    | `/single-gallery/${OptionalCatchAllSlug<T>}`
     | `/single-3/${OptionalCatchAllSlug<T>}`
     | `/single-4/${OptionalCatchAllSlug<T>}`
     | `/single-5/${OptionalCatchAllSlug<T>}`
     | `/author/${OptionalCatchAllSlug<T>}`
+    | `/archive/${OptionalCatchAllSlug<T>}`
+    | `/archive-2/${OptionalCatchAllSlug<T>}`
+    | `/archive-3/${OptionalCatchAllSlug<T>}`
 
   type RouteImpl<T> = 
     | StaticRoutes

@@ -1,27 +1,29 @@
-import React from "react";
-import ModalCategories from "../../ModalCategories";
-import ModalTags from "../../ModalTags";
-import { DEMO_POSTS_AUDIO } from "@/data/posts";
-import { PostDataType } from "@/data/types";
-import { DEMO_CATEGORIES, DEMO_TAGS } from "@/data/taxonomies";
-import { DEMO_AUTHORS } from "@/data/authors";
-import Pagination from "@/components/Pagination/Pagination";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import ArchiveFilterListBox from "@/components/ArchiveFilterListBox/ArchiveFilterListBox";
-import SectionSubscribe2 from "@/components/SectionSubscribe2/SectionSubscribe2";
-import NcImage from "@/components/NcImage/NcImage";
-import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
-import SectionSliderNewAuthors from "@/components/SectionSliderNewAthors/SectionSliderNewAuthors";
-import Card16Podcast from "@/components/Card16Podcast/Card16Podcast";
-import Card15Podcast from "@/components/Card15Podcast/Card15Podcast";
+import React from 'react';
+
+import ArchiveFilterListBox from '@/components/ArchiveFilterListBox/ArchiveFilterListBox';
+import BackgroundSection from '@/components/BackgroundSection/BackgroundSection';
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import Card15Podcast from '@/components/Card15Podcast/Card15Podcast';
+import Card16Podcast from '@/components/Card16Podcast/Card16Podcast';
+import NcImage from '@/components/NcImage/NcImage';
+import Pagination from '@/components/Pagination/Pagination';
+import SectionSliderNewAuthors from '@/components/SectionSliderNewAthors/SectionSliderNewAuthors';
+import SectionSubscribe2 from '@/components/SectionSubscribe2/SectionSubscribe2';
+import { DEMO_AUTHORS } from '@/data/authors';
+import { DEMO_POSTS_AUDIO } from '@/data/posts';
+import { DEMO_CATEGORIES, DEMO_TAGS } from '@/data/taxonomies';
+import type { PostDataType } from '@/data/types';
+
+import ModalCategories from '../../ModalCategories';
+import ModalTags from '../../ModalTags';
 
 const PageArchiveAudio = ({}) => {
   const FILTERS = [
-    { name: "Most Recent" },
-    { name: "Curated by Admin" },
-    { name: "Most Appreciated" },
-    { name: "Most Discussed" },
-    { name: "Most Viewed" },
+    { name: 'Most Recent' },
+    { name: 'Curated by Admin' },
+    { name: 'Most Appreciated' },
+    { name: 'Most Discussed' },
+    { name: 'Most Viewed' },
   ];
 
   const renderSection = (sectionPosts: PostDataType[]) => {
@@ -32,7 +34,7 @@ const PageArchiveAudio = ({}) => {
         <Card16Podcast post={sectionPosts[1]} />
         <Card16Podcast post={sectionPosts[2]} />
         <div className="md:col-span-2 lg:col-span-3">
-          <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8`}>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {loopPosts.map((p, i) => (
               <Card15Podcast key={i} post={p} />
             ))}
@@ -72,7 +74,7 @@ const PageArchiveAudio = ({}) => {
               <ModalCategories categories={DEMO_CATEGORIES} />
               <ModalTags tags={DEMO_TAGS} />
             </div>
-            <div className="block my-4 border-b w-full border-neutral-300 dark:border-neutral-500 sm:hidden"></div>
+            <div className="block my-4 border-b w-full border-neutral-300 dark:border-neutral-500 sm:hidden" />
             <div className="flex justify-end">
               <ArchiveFilterListBox lists={FILTERS} />
             </div>

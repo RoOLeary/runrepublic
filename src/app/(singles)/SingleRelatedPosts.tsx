@@ -1,10 +1,12 @@
-import React, { FC } from "react";
-import Heading from "@/components/Heading/Heading";
-import { PostDataType } from "@/data/types";
-import Card11 from "@/components/Card11/Card11";
-import Card9 from "@/components/Card9/Card9";
-import { DEMO_POSTS } from "@/data/posts";
-import { Route } from "@/routers/types";
+import type { FC } from 'react';
+import React from 'react';
+
+import Card9 from '@/components/Card9/Card9';
+import Card11 from '@/components/Card11/Card11';
+import Heading from '@/components/Heading/Heading';
+import { DEMO_POSTS } from '@/data/posts';
+import type { PostDataType } from '@/data/types';
+import type { Route } from '@/routers/types';
 
 export interface SingleRelatedPostsProps {
   relatedPosts?: PostDataType[];
@@ -13,7 +15,7 @@ export interface SingleRelatedPostsProps {
 
 // DEMO DATA
 let demoRelated: PostDataType[] = DEMO_POSTS.filter(
-  (_, i) => i >= 10 && i < 14
+  (_, i) => i >= 10 && i < 14,
 );
 // make differnt href demo, for user can click
 demoRelated = demoRelated.map((item, index) => ({
@@ -22,12 +24,12 @@ demoRelated = demoRelated.map((item, index) => ({
 }));
 
 let demoMoreFromAuthor: PostDataType[] = DEMO_POSTS.filter(
-  (_, i) => i >= 14 && i < 18
+  (_, i) => i >= 14 && i < 18,
 );
 // make differnt href demo, for user can click
 demoMoreFromAuthor = demoMoreFromAuthor.map((item, index) => ({
   ...item,
-  href: (item.href + index + "-") as Route,
+  href: `${item.href + index}-` as Route,
 }));
 
 const SingleRelatedPosts: FC<SingleRelatedPostsProps> = ({

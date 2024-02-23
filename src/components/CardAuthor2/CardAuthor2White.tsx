@@ -1,17 +1,20 @@
-import React, { FC } from "react";
-import Avatar from "@/components/Avatar/Avatar";
-import { CardAuthor2Props } from "./CardAuthor2";
-import Link from "next/link";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import Avatar from '@/components/Avatar/Avatar';
+
+import type { CardAuthor2Props } from './CardAuthor2';
 
 export interface CardAuthor2WhiteProps extends CardAuthor2Props {}
 
 const CardAuthor2White: FC<CardAuthor2WhiteProps> = ({
-  className = "",
+  className = '',
   author,
   readingTime,
   date,
 }) => {
-  const { displayName, href = "/", avatar } = author;
+  const { displayName, href = '/', avatar } = author;
   return (
     <Link
       href={href}
@@ -25,14 +28,10 @@ const CardAuthor2White: FC<CardAuthor2WhiteProps> = ({
         userName={displayName}
       />
       <div>
-        <h2
-          className={`text-sm text-neutral-200 hover:text-white dark:text-neutral-700 dark:hover:text-black font-medium`}
-        >
+        <h2 className="text-sm text-neutral-200 hover:text-white dark:text-neutral-700 dark:hover:text-black font-medium">
           {displayName}
         </h2>
-        <span
-          className={`flex items-center mt-1 text-xs text-neutral-300 dark:text-neutral-700`}
-        >
+        <span className="flex items-center mt-1 text-xs text-neutral-300 dark:text-neutral-700">
           <span>{date}</span>
           {readingTime && (
             <>

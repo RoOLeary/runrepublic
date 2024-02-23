@@ -1,17 +1,19 @@
-"use client";
+'use client';
 
-import React, { FC } from "react";
-import PostActionDropdown from "@/components/PostActionDropdown/PostActionDropdown";
-import PostCardLikeAndComment from "@/components/PostCardLikeAndComment/PostCardLikeAndComment";
-import { SOCIALS_DATA } from "@/components/SocialsShare/SocialsShare";
-import DropDown from "@/components/DropDown/DropDown";
-import Bookmark from "@/components/Bookmark/Bookmark";
+import type { FC } from 'react';
+import React from 'react';
+
+import Bookmark from '@/components/Bookmark/Bookmark';
+import DropDown from '@/components/DropDown/DropDown';
+import PostActionDropdown from '@/components/PostActionDropdown/PostActionDropdown';
+import PostCardLikeAndComment from '@/components/PostCardLikeAndComment/PostCardLikeAndComment';
+import { SOCIALS_DATA } from '@/components/SocialsShare/SocialsShare';
 
 export interface SingleMetaAction2Props {
   className?: string;
 }
 
-const SingleMetaAction2: FC<SingleMetaAction2Props> = ({ className = "" }) => {
+const SingleMetaAction2: FC<SingleMetaAction2Props> = ({ className = '' }) => {
   return (
     <div className={`SingleMetaAction2 ${className}`}>
       <div className="flex flex-row space-x-2.5 rtl:space-x-reverse items-center">

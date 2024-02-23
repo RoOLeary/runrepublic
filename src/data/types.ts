@@ -1,5 +1,6 @@
-import { Route } from "@/routers/types";
-import { StaticImageData } from "next/image";
+import type { StaticImageData } from 'next/image';
+
+import type { Route } from '@/routers/types';
 
 //  ######  CustomLink  ######## //
 export interface CustomLink {
@@ -17,7 +18,7 @@ export interface TaxonomyType {
   thumbnail?: string | StaticImageData;
   desc?: string;
   color?: TwMainColor | string;
-  taxonomy: "category" | "tag";
+  taxonomy: 'category' | 'tag';
 }
 
 export interface PostAuthorType {
@@ -54,18 +55,18 @@ export interface PostDataType {
   commentCount: number;
   viewdCount: number;
   readingTime: number;
-  postType: "standard" | "video" | "gallery" | "audio";
+  postType: 'standard' | 'video' | 'gallery' | 'audio';
   videoUrl?: string;
   audioUrl?: string | string[];
   galleryImgs?: string[];
 }
 
 export type TwMainColor =
-  | "pink"
-  | "green"
-  | "yellow"
-  | "red"
-  | "indigo"
-  | "blue"
-  | "purple"
-  | "gray";
+  | 'pink'
+  | 'green'
+  | 'yellow'
+  | 'red'
+  | 'indigo'
+  | 'blue'
+  | 'purple'
+  | 'gray';

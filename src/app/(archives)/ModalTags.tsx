@@ -1,11 +1,13 @@
-"use client";
+'use client';
 
-import React, { FC } from "react";
-import Modal from "@/components/Modal/Modal";
-import Tag from "@/components/Tag/Tag";
-import { TaxonomyType } from "@/data/types";
-import Button from "@/components/Button/Button";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
+import type { FC } from 'react';
+import React from 'react';
+
+import Button from '@/components/Button/Button';
+import Modal from '@/components/Modal/Modal';
+import Tag from '@/components/Tag/Tag';
+import type { TaxonomyType } from '@/data/types';
 
 export interface ModalTagsProps {
   tags: TaxonomyType[];

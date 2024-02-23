@@ -1,15 +1,17 @@
-import React from "react";
-import SectionHero from "@/components/SectionHero/SectionHero";
-import rightImg from "@/images/about-hero-right.png";
-import SectionFounder from "./SectionFounder";
-import SectionStatistic from "./SectionStatistic";
-import SectionSubscribe2 from "@/components/SectionSubscribe2/SectionSubscribe2";
-import BgGlassmorphism from "@/components/BgGlassmorphism/BgGlassmorphism";
-import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
+import React from 'react';
+
+import BackgroundSection from '@/components/BackgroundSection/BackgroundSection';
+import BgGlassmorphism from '@/components/BgGlassmorphism/BgGlassmorphism';
+import SectionHero from '@/components/SectionHero/SectionHero';
+import SectionSubscribe2 from '@/components/SectionSubscribe2/SectionSubscribe2';
+import rightImg from '@/images/about-hero-right.png';
+
+import SectionFounder from './SectionFounder';
+import SectionStatistic from './SectionStatistic';
 
 const PageAbout = ({}) => {
   return (
-    <div className={`PageAbout relative`}>
+    <div className="PageAbout relative">
       {/* ======== BG GLASS ======== */}
       <BgGlassmorphism />
 

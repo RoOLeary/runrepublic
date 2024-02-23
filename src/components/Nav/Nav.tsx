@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+import type { FC } from 'react';
+import React from 'react';
 
 export interface NavProps {
   containerClassName?: string;
@@ -7,8 +8,8 @@ export interface NavProps {
 }
 
 const Nav: FC<NavProps> = ({
-  containerClassName = "",
-  className = "",
+  containerClassName = '',
+  className = '',
   children,
 }) => {
   return (

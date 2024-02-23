@@ -1,12 +1,14 @@
-import Card10 from "@/components/Card10/Card10";
-import Card10V3 from "@/components/Card10/Card10V3";
-import Heading from "@/components/Heading/Heading";
-import { DEMO_POSTS_GALLERY } from "@/data/posts";
-import { PostDataType } from "@/data/types";
-import React, { FC } from "react";
+import type { FC } from 'react';
+import React from 'react';
+
+import Card10 from '@/components/Card10/Card10';
+import Card10V3 from '@/components/Card10/Card10V3';
+import Heading from '@/components/Heading/Heading';
+import { DEMO_POSTS_GALLERY } from '@/data/posts';
+import type { PostDataType } from '@/data/types';
 
 const postsDemo: PostDataType[] = DEMO_POSTS_GALLERY.filter(
-  (_, i) => i > 7 && i < 17
+  (_, i) => i > 7 && i < 17,
 );
 
 export interface SectionMagazine7Props {
@@ -16,15 +18,15 @@ export interface SectionMagazine7Props {
 
 const SectionMagazine7: FC<SectionMagazine7Props> = ({
   posts = postsDemo,
-  className = "",
+  className = '',
 }) => {
   return (
     <div className={`SectionMagazine7 relative ${className}`}>
-      <Heading desc={"Over 218 articles has gallery type"}>
-        {"View more gallery articles"}
+      <Heading desc="Over 218 articles has gallery type">
+        View more gallery articles
       </Heading>
-      <div className={`grid grid-cols-1 gap-6 md:gap-8`}>
-        <div className={`grid gap-6 md:gap-8 lg:grid-cols-2`}>
+      <div className="grid grid-cols-1 gap-6 md:gap-8">
+        <div className="grid gap-6 md:gap-8 lg:grid-cols-2">
           <Card10V3 post={posts[0]} />
           <Card10V3 galleryType={2} post={posts[1]} />
         </div>

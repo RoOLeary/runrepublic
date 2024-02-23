@@ -1,17 +1,18 @@
-import CardCategory1 from "@/components/CardCategory1/CardCategory1";
-import CardCategory2 from "@/components/CardCategory2/CardCategory2";
-import CardCategory3 from "@/components/CardCategory3/CardCategory3";
-import CardCategory4 from "@/components/CardCategory4/CardCategory4";
-import CardCategory5 from "@/components/CardCategory5/CardCategory5";
-import Heading from "@/components/Heading/Heading";
-import { DEMO_CATEGORIES } from "@/data/taxonomies";
-import { TaxonomyType } from "@/data/types";
-import React from "react";
+import React from 'react';
+
+import CardCategory1 from '@/components/CardCategory1/CardCategory1';
+import CardCategory2 from '@/components/CardCategory2/CardCategory2';
+import CardCategory3 from '@/components/CardCategory3/CardCategory3';
+import CardCategory4 from '@/components/CardCategory4/CardCategory4';
+import CardCategory5 from '@/components/CardCategory5/CardCategory5';
+import Heading from '@/components/Heading/Heading';
+import { DEMO_CATEGORIES } from '@/data/taxonomies';
+import type { TaxonomyType } from '@/data/types';
 
 export interface SectionGridCategoryBoxProps {
   categories?: TaxonomyType[];
   headingCenter?: boolean;
-  categoryCardType?: "card1" | "card2" | "card3" | "card4" | "card5";
+  categoryCardType?: 'card1' | 'card2' | 'card3' | 'card4' | 'card5';
   className?: string;
 }
 
@@ -19,25 +20,25 @@ const DATA = DEMO_CATEGORIES.filter((_, i) => i < 10);
 
 const SectionGridCategoryBox: React.FC<SectionGridCategoryBoxProps> = ({
   categories = DATA,
-  categoryCardType = "card2",
+  categoryCardType = 'card2',
   headingCenter = true,
-  className = "",
+  className = '',
 }) => {
   let CardComponentName = CardCategory2;
   switch (categoryCardType) {
-    case "card1":
+    case 'card1':
       CardComponentName = CardCategory1;
       break;
-    case "card2":
+    case 'card2':
       CardComponentName = CardCategory2;
       break;
-    case "card3":
+    case 'card3':
       CardComponentName = CardCategory3;
       break;
-    case "card4":
+    case 'card4':
       CardComponentName = CardCategory4;
       break;
-    case "card5":
+    case 'card5':
       CardComponentName = CardCategory5;
       break;
 

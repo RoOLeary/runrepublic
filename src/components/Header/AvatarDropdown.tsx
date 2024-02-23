@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { Popover, Transition } from "@/app/headlessui";
-import { avatarImgs } from "@/contains/fakeData";
-import { Fragment } from "react";
-import Avatar from "@/components/Avatar/Avatar";
-import SwitchDarkMode2 from "@/components/SwitchDarkMode/SwitchDarkMode2";
-import Link from "next/link";
+import Link from 'next/link';
+import { Fragment } from 'react';
+
+import { Popover, Transition } from '@/app/headlessui';
+import Avatar from '@/components/Avatar/Avatar';
+import SwitchDarkMode2 from '@/components/SwitchDarkMode/SwitchDarkMode2';
 
 export default function AvatarDropdown() {
   return (
@@ -13,9 +13,7 @@ export default function AvatarDropdown() {
       <Popover className="relative">
         {({ open, close }) => (
           <>
-            <Popover.Button
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none flex items-center justify-center`}
-            >
+            <Popover.Button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none flex items-center justify-center">
               <svg
                 className=" w-6 h-6"
                 viewBox="0 0 24 24"
@@ -51,7 +49,10 @@ export default function AvatarDropdown() {
                 <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className="relative grid grid-cols-1 gap-6 bg-white dark:bg-neutral-800 py-7 px-6">
                     <div className="flex items-center">
-                      <Avatar imgUrl={'https://ronan-oleary.com/assets/ro-bw.d434f415.png'} sizeClass="w-12 h-12" />
+                      <Avatar
+                        imgUrl="https://ronan-oleary.com/assets/ro-bw.d434f415.png"
+                        sizeClass="w-12 h-12"
+                      />
 
                       <div className="flex-grow ms-3">
                         <h4 className="font-semibold">Ronan O&apos;Leary</h4>
@@ -63,7 +64,7 @@ export default function AvatarDropdown() {
 
                     {/* ------------------ 1 --------------------- */}
                     <Link
-                      href={"/author/demo-slug"}
+                      href="/author/demo-slug"
                       className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                       onClick={() => close()}
                     >
@@ -92,13 +93,13 @@ export default function AvatarDropdown() {
                         </svg>
                       </div>
                       <div className="ms-4">
-                        <p className="text-sm font-medium ">{"My Account"}</p>
+                        <p className="text-sm font-medium ">My Account</p>
                       </div>
                     </Link>
 
                     {/* ------------------ 2 --------------------- */}
                     <Link
-                      href={"/dashboard/posts"}
+                      href="/dashboard/posts"
                       className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                       onClick={() => close()}
                     >
@@ -144,13 +145,13 @@ export default function AvatarDropdown() {
                         </svg>
                       </div>
                       <div className="ms-4">
-                        <p className="text-sm font-medium ">{"My Posts"}</p>
+                        <p className="text-sm font-medium ">My Posts</p>
                       </div>
                     </Link>
 
                     {/* ------------------ 2 --------------------- */}
                     <Link
-                      href={"/author/demo-slug"}
+                      href="/author/demo-slug"
                       className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                       onClick={() => close()}
                     >
@@ -171,7 +172,7 @@ export default function AvatarDropdown() {
                         </svg>
                       </div>
                       <div className="ms-4">
-                        <p className="text-sm font-medium ">{"Wishlist"}</p>
+                        <p className="text-sm font-medium ">Wishlist</p>
                       </div>
                     </Link>
 
@@ -212,7 +213,7 @@ export default function AvatarDropdown() {
                           </svg>
                         </div>
                         <div className="ms-4">
-                          <p className="text-sm font-medium ">{"Dark mode"}</p>
+                          <p className="text-sm font-medium ">Dark mode</p>
                         </div>
                       </div>
                       <SwitchDarkMode2 />
@@ -220,7 +221,7 @@ export default function AvatarDropdown() {
 
                     {/* ------------------ 2 --------------------- */}
                     <Link
-                      href={"/"}
+                      href="/"
                       className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                       onClick={() => close()}
                     >
@@ -277,13 +278,13 @@ export default function AvatarDropdown() {
                         </svg>
                       </div>
                       <div className="ms-4">
-                        <p className="text-sm font-medium ">{"Help"}</p>
+                        <p className="text-sm font-medium ">Help</p>
                       </div>
                     </Link>
 
                     {/* ------------------ 2 --------------------- */}
                     <Link
-                      href={"/#"}
+                      href="/#"
                       className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                       onClick={() => close()}
                     >
@@ -319,7 +320,7 @@ export default function AvatarDropdown() {
                         </svg>
                       </div>
                       <div className="ms-4">
-                        <p className="text-sm font-medium ">{"Log out"}</p>
+                        <p className="text-sm font-medium ">Log out</p>
                       </div>
                     </Link>
                   </div>

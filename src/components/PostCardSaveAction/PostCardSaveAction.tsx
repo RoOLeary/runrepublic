@@ -1,5 +1,7 @@
-import React, { FC } from "react";
-import Bookmark from "../Bookmark/Bookmark";
+import type { FC } from 'react';
+import React from 'react';
+
+import Bookmark from '../Bookmark/Bookmark';
 
 export interface PostCardSaveActionProps {
   className?: string;
@@ -9,7 +11,7 @@ export interface PostCardSaveActionProps {
 }
 
 const PostCardSaveAction: FC<PostCardSaveActionProps> = ({
-  className = "",
+  className = '',
   bookmarkClass,
   hidenReadingTime = true,
   readingTime = 3,

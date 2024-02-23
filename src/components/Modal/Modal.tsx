@@ -1,8 +1,12 @@
-"use client";
-import React, { FC, Fragment, ReactNode, useEffect, useState } from "react";
-import { Dialog, Transition } from "@/app/headlessui";
-import Button from "../Button/Button";
-import ButtonClose from "../ButtonClose/ButtonClose";
+'use client';
+
+import type { FC, ReactNode } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
+
+import { Dialog, Transition } from '@/app/headlessui';
+
+import Button from '../Button/Button';
+import ButtonClose from '../ButtonClose/ButtonClose';
 
 export interface ModalProps {
   renderContent: () => ReactNode;
@@ -18,24 +22,24 @@ export interface ModalProps {
 const Modal: FC<ModalProps> = ({
   renderTrigger,
   renderContent,
-  contentExtraClass = "max-w-screen-xl",
-  contentPaddingClass = "py-4 px-6 md:py-5",
-  triggerText = "Open Modal",
-  modalTitle = "Modal title",
+  contentExtraClass = 'max-w-screen-xl',
+  contentPaddingClass = 'py-4 px-6 md:py-5',
+  triggerText = 'Open Modal',
+  modalTitle = 'Modal title',
   isOpenProp,
   onCloseModal,
 }) => {
-  let [isOpen, setIsOpen] = useState(!!isOpenProp);
+  const [isOpen, setIsOpen] = useState(!!isOpenProp);
 
   function closeModal() {
-    if (typeof isOpenProp !== "boolean") {
+    if (typeof isOpenProp !== 'boolean') {
       setIsOpen(false);
     }
     onCloseModal && onCloseModal();
   }
 
   function openModal() {
-    if (typeof isOpenProp !== "boolean") {
+    if (typeof isOpenProp !== 'boolean') {
       setIsOpen(true);
     }
   }

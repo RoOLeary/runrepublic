@@ -1,4 +1,5 @@
-import React, { FC, SelectHTMLAttributes } from "react";
+import type { FC, SelectHTMLAttributes } from 'react';
+import React from 'react';
 
 export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   className?: string;
@@ -6,8 +7,8 @@ export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
 }
 
 const Select: FC<SelectProps> = ({
-  className = "",
-  sizeClass = "h-11",
+  className = '',
+  sizeClass = 'h-11',
   children,
   ...args
 }) => {

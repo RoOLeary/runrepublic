@@ -1,6 +1,8 @@
-import React, { ReactNode } from "react";
-import SingleContent from "../SingleContent";
-import SingleRelatedPosts from "../SingleRelatedPosts";
+import type { ReactNode } from 'react';
+import React from 'react';
+
+import SingleContent from '../SingleContent';
+import SingleRelatedPosts from '../SingleRelatedPosts';
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (

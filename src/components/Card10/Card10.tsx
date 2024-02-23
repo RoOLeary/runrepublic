@@ -1,19 +1,21 @@
-"use client";
+'use client';
 
-import React, { FC, useState } from "react";
-import PostCardSaveAction from "@/components/PostCardSaveAction/PostCardSaveAction";
-import { PostDataType } from "@/data/types";
-import CategoryBadgeList from "@/components/CategoryBadgeList/CategoryBadgeList";
-import PostFeaturedMedia from "@/components/PostFeaturedMedia/PostFeaturedMedia";
-import PostCardMetaV2 from "@/components/PostCardMeta/PostCardMetaV2";
-import Link from "next/link";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React, { useState } from 'react';
+
+import CategoryBadgeList from '@/components/CategoryBadgeList/CategoryBadgeList';
+import PostCardMetaV2 from '@/components/PostCardMeta/PostCardMetaV2';
+import PostCardSaveAction from '@/components/PostCardSaveAction/PostCardSaveAction';
+import PostFeaturedMedia from '@/components/PostFeaturedMedia/PostFeaturedMedia';
+import type { PostDataType } from '@/data/types';
 
 export interface Card10Props {
   className?: string;
   post: PostDataType;
 }
 
-const Card10: FC<Card10Props> = ({ className = "h-full", post }) => {
+const Card10: FC<Card10Props> = ({ className = 'h-full', post }) => {
   const { href, categories } = post;
   const [isHover, setIsHover] = useState(false);
 
@@ -32,7 +34,7 @@ const Card10: FC<Card10Props> = ({ className = "h-full", post }) => {
         <Link
           href={href}
           className="absolute inset-0 bg-neutral-900 bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity"
-        ></Link>
+        />
       </div>
       <div className="absolute top-3 inset-x-3 flex justify-between items-start space-x-4 rtl:space-x-reverse z-10">
         <CategoryBadgeList categories={categories} />

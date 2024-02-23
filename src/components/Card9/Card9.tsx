@@ -1,12 +1,14 @@
-import React, { FC } from "react";
-import PostCardSaveAction from "@/components/PostCardSaveAction/PostCardSaveAction";
-import { PostDataType } from "@/data/types";
-import PostCardLikeAndComment from "@/components/PostCardLikeAndComment/PostCardLikeAndComment";
-import CategoryBadgeList from "@/components/CategoryBadgeList/CategoryBadgeList";
-import PostTypeFeaturedIcon from "@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
-import PostFeaturedMedia from "@/components/PostFeaturedMedia/PostFeaturedMedia";
-import Link from "next/link";
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import CategoryBadgeList from '@/components/CategoryBadgeList/CategoryBadgeList';
+import PostCardLikeAndComment from '@/components/PostCardLikeAndComment/PostCardLikeAndComment';
+import PostCardSaveAction from '@/components/PostCardSaveAction/PostCardSaveAction';
+import PostFeaturedMedia from '@/components/PostFeaturedMedia/PostFeaturedMedia';
+import PostTypeFeaturedIcon from '@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon';
+import type { PostDataType } from '@/data/types';
 
 export interface Card9Props {
   className?: string;
@@ -16,10 +18,10 @@ export interface Card9Props {
 }
 
 const Card9: FC<Card9Props> = ({
-  className = "h-full",
-  ratio = "aspect-w-3 aspect-h-3 sm:aspect-h-4",
+  className = 'h-full',
+  ratio = 'aspect-w-3 aspect-h-3 sm:aspect-h-4',
   post,
-  hoverClass = "",
+  hoverClass = '',
 }) => {
   const { title, href, featuredImage, categories, author, date, postType } =
     post;
@@ -53,8 +55,8 @@ const Card9: FC<Card9Props> = ({
         <PostCardLikeAndComment className="relative" />
         <PostCardSaveAction hidenReadingTime className="relative" />
       </div>
-      <div className={`flex items-start relative w-full ${ratio}`}></div>
-      {postType === "audio" ? (
+      <div className={`flex items-start relative w-full ${ratio}`} />
+      {postType === 'audio' ? (
         <div className="absolute inset-0">
           <PostFeaturedMedia post={post} />
         </div>
@@ -73,15 +75,15 @@ const Card9: FC<Card9Props> = ({
             wrapSize="w-7 h-7"
             iconSize="w-4 h-4"
           />
-          <span className="absolute inset-0 bg-black bg-opacity-10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+          <span className="absolute inset-0 bg-black bg-opacity-10 opacity-0 group-hover:opacity-100 transition-opacity" />
         </Link>
       )}
       <Link
         href={href}
         className="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t from-black opacity-50"
-      ></Link>
+      />
       <div className="absolute bottom-0 inset-x-0 p-4 flex flex-col flex-grow">
-        <Link href={href} className="absolute inset-0"></Link>
+        <Link href={href} className="absolute inset-0" />
         <div className="mb-3">
           <CategoryBadgeList categories={categories} />
         </div>

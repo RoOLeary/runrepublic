@@ -1,10 +1,12 @@
-"use client";
+'use client';
 
-import React, { FC } from "react";
-import { Fragment, useState } from "react";
-import { Listbox, Transition } from "@/app/headlessui";
-import { CheckIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
-import Button from "../Button/Button";
+import { CheckIcon, ChevronDownIcon } from '@heroicons/react/24/solid';
+import type { FC } from 'react';
+import React, { Fragment, useState } from 'react';
+
+import { Listbox, Transition } from '@/app/headlessui';
+
+import Button from '../Button/Button';
 
 export interface ArchiveFilterListBoxProps {
   className?: string;
@@ -12,7 +14,7 @@ export interface ArchiveFilterListBoxProps {
 }
 
 const ArchiveFilterListBox: FC<ArchiveFilterListBoxProps> = ({
-  className = "",
+  className = '',
   lists,
 }) => {
   const [selected, setSelected] = useState(lists[0]);
@@ -20,7 +22,7 @@ const ArchiveFilterListBox: FC<ArchiveFilterListBoxProps> = ({
     <div className={`ArchiveFilterListBox flex-shrink-0 ${className}`}>
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative">
-          <Listbox.Button as={"div"}>
+          <Listbox.Button as="div">
             <Button pattern="third" fontSize="text-sm font-medium">
               {selected.name}
               <ChevronDownIcon
@@ -42,8 +44,8 @@ const ArchiveFilterListBox: FC<ArchiveFilterListBoxProps> = ({
                   className={({ active }) =>
                     `${
                       active
-                        ? "text-primary-700 dark:text-neutral-200 bg-primary-50 dark:bg-neutral-700"
-                        : ""
+                        ? 'text-primary-700 dark:text-neutral-200 bg-primary-50 dark:bg-neutral-700'
+                        : ''
                     } cursor-default select-none relative py-2 ps-10 pe-4`
                   }
                   value={item}
@@ -52,7 +54,7 @@ const ArchiveFilterListBox: FC<ArchiveFilterListBoxProps> = ({
                     <>
                       <span
                         className={`${
-                          selected ? "font-medium" : "font-normal"
+                          selected ? 'font-medium' : 'font-normal'
                         } block truncate`}
                       >
                         {item.name}

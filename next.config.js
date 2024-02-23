@@ -6,28 +6,28 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "images.pexels.com",
-        port: "",
-        pathname: "/**",
+        protocol: 'https',
+        hostname: 'source.unsplash.com',
       },
       {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        port: "",
-        pathname: "/**",
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
       },
       {
-        protocol: "https",
-        hostname: "ronan-oleary.com",
-        port: "",
-        pathname: "/**",
+        protocol: 'https',
+        hostname: 'images.pexels.com',
       },
       {
-        protocol: "http",
-        hostname: "localhost",
-        port: "3000",
-        pathname: "/**",
+        protocol: 'https',
+        hostname: 'busylittlepixels.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'craft-ezhk.frb.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ronan-oleary.com',
       },
     ],
   },

@@ -1,23 +1,24 @@
-import React, { FC } from "react";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import Input from "@/components/Input/Input";
-import Label from "@/components/Label/Label";
-import SocialsList from "@/components/SocialsList/SocialsList";
-import Textarea from "@/components/Textarea/Textarea";
-import Heading2 from "@/components/Heading/Heading2";
+import React from 'react';
+
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import Heading2 from '@/components/Heading/Heading2';
+import Input from '@/components/Input/Input';
+import Label from '@/components/Label/Label';
+import SocialsList from '@/components/SocialsList/SocialsList';
+import Textarea from '@/components/Textarea/Textarea';
 
 const info = [
   {
-    title: "🗺 ADDRESS",
-    desc: "Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter",
+    title: '🗺 ADDRESS',
+    desc: 'Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter',
   },
   {
-    title: "💌 EMAIL",
-    desc: "example@runrepublic.com",
+    title: '💌 EMAIL',
+    desc: 'example@runrepublic.com',
   },
   {
-    title: "☎ PHONE",
-    desc: "0031 6 1805 5024",
+    title: '☎ PHONE',
+    desc: '0031 6 1805 5024',
   },
 ];
 
@@ -50,7 +51,7 @@ const PageContact = ({}) => {
             <SocialsList className="mt-2" />
           </div>
         </div>
-        <div className="border border-neutral-100 dark:border-neutral-700 lg:hidden"></div>
+        <div className="border border-neutral-100 dark:border-neutral-700 lg:hidden" />
         <div>
           <form className="grid grid-cols-1 gap-6" action="#" method="post">
             <label className="block">

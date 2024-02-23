@@ -1,16 +1,17 @@
-import React from "react";
+import React from 'react';
+
 export interface HeartIconProps {
   containerClassName?: string;
   isLiked?: boolean;
 }
 const HeartIcon: React.FC<HeartIconProps> = ({
-  containerClassName = "w-5 h-5",
+  containerClassName = 'w-5 h-5',
   isLiked = false,
 }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill={!isLiked ? "none" : "currentColor"}
+      fill={!isLiked ? 'none' : 'currentColor'}
       viewBox="0 0 24 24"
       stroke="currentColor"
       className={containerClassName}

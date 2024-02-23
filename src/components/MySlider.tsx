@@ -1,10 +1,12 @@
-import React, { FC, ReactNode, useEffect, useState } from "react";
-import { useWindowSize } from "react-use";
-import { useSwipeable } from "react-swipeable";
-import { variants } from "@/utils/animationVariants";
-import { AnimatePresence, motion, MotionConfig } from "framer-motion";
-import PrevBtn from "@/components/NextPrev/PrevBtn";
-import NextBtn from "@/components/NextPrev/NextBtn";
+import { AnimatePresence, motion, MotionConfig } from 'framer-motion';
+import type { ReactNode } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
+import { useWindowSize } from 'react-use';
+
+import NextBtn from '@/components/NextPrev/NextBtn';
+import PrevBtn from '@/components/NextPrev/PrevBtn';
+import { variants } from '@/utils/animationVariants';
 
 export interface MySliderProps<T> {
   className?: string;
@@ -15,11 +17,11 @@ export interface MySliderProps<T> {
 }
 
 export default function MySlider<T>({
-  className = "",
+  className = '',
   itemPerRow = 5,
   data,
-  renderItem = () => <div></div>,
-  arrowBtnClass = "top-1/2 -translate-y-1/2",
+  renderItem = () => <div />,
+  arrowBtnClass = 'top-1/2 -translate-y-1/2',
 }: MySliderProps<T>) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -67,21 +69,21 @@ export default function MySlider<T>({
   });
 
   if (!numberOfItems) {
-    return <div></div>;
+    return <div />;
   }
 
-  const isRTL = document.querySelector("html")?.getAttribute("dir") === "rtl";
+  const isRTL = document.querySelector('html')?.getAttribute('dir') === 'rtl';
 
   return (
     <div className={`MySlider ${className}`}>
       <MotionConfig
         transition={{
-          x: { type: "spring", stiffness: 300, damping: 30 },
+          x: { type: 'spring', stiffness: 300, damping: 30 },
           opacity: { duration: 0.2 },
         }}
       >
-        <div className={`relative flow-root`} {...handlers}>
-          <div className={`flow-root overflow-hidden rounded-xl`}>
+        <div className="relative flow-root" {...handlers}>
+          <div className="flow-root overflow-hidden rounded-xl">
             <motion.ul
               initial={false}
               className="relative whitespace-nowrap -mx-2 xl:-mx-4 "
@@ -89,7 +91,7 @@ export default function MySlider<T>({
               <AnimatePresence initial={false} custom={direction}>
                 {data.map((item, indx) => (
                   <motion.li
-                    className={`relative inline-block px-2 xl:px-4 whitespace-normal`}
+                    className="relative inline-block px-2 xl:px-4 whitespace-normal"
                     custom={direction}
                     initial={{
                       x: !isRTL

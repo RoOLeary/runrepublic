@@ -1,5 +1,7 @@
-"use client";
-import React, { FC } from "react";
+'use client';
+
+import type { FC } from 'react';
+import React from 'react';
 
 export interface NextPrevProps {
   className?: string;
@@ -11,14 +13,14 @@ export interface NextPrevProps {
 }
 
 const NextPrev: FC<NextPrevProps> = ({
-  className = "",
+  className = '',
   onClickNext = () => {},
   onClickPrev = () => {},
-  btnClassName = "w-10 h-10",
+  btnClassName = 'w-10 h-10',
   onlyNext = false,
   onlyPrev = false,
 }) => {
-  const [focus, setFocus] = React.useState<"left" | "right">("right");
+  const [focus, setFocus] = React.useState<'left' | 'right'>('right');
 
   return (
     <div
@@ -27,16 +29,16 @@ const NextPrev: FC<NextPrevProps> = ({
       {!onlyNext && (
         <button
           className={`${btnClassName} ${
-            !onlyPrev ? "mr-2" : ""
+            !onlyPrev ? 'mr-2' : ''
           } border-slate-200 dark:border-slate-600 rounded-full flex items-center justify-center ${
-            focus === "left" ? "border-2" : ""
+            focus === 'left' ? 'border-2' : ''
           }`}
           onClick={(e) => {
             e.preventDefault();
             onClickPrev();
           }}
           title="Prev"
-          onMouseEnter={() => setFocus("left")}
+          onMouseEnter={() => setFocus('left')}
         >
           <svg
             className="w-5 h-5 rtl:rotate-180"
@@ -65,14 +67,14 @@ const NextPrev: FC<NextPrevProps> = ({
       {!onlyPrev && (
         <button
           className={`${btnClassName}  border-slate-200 dark:border-slate-600 rounded-full flex items-center justify-center ${
-            focus === "right" ? "border-2" : ""
+            focus === 'right' ? 'border-2' : ''
           }`}
           onClick={(e) => {
             e.preventDefault();
             onClickNext();
           }}
           title="Next"
-          onMouseEnter={() => setFocus("right")}
+          onMouseEnter={() => setFocus('right')}
         >
           <svg
             className="w-5 h-5 rtl:rotate-180"

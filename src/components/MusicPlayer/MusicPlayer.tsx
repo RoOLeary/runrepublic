@@ -1,19 +1,15 @@
-"use client";
+'use client';
 
-import React, {
-  FC,
-  LegacyRef,
-  useRef,
-  useState,
-  ChangeEvent,
-  useEffect,
-  useMemo,
-} from "react";
-import PlayerContent from "./PlayerContent";
-import _ from "lodash";
-import ReactFilePlayer, { FilePlayerProps } from "react-player/file";
-import ReactYoutubePlayer from "react-player/youtube";
-import { useMusicPlayer } from "@/hooks/useMusicPlayer";
+import _ from 'lodash';
+import type { ChangeEvent, FC, LegacyRef } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import type { FilePlayerProps } from 'react-player/file';
+import ReactFilePlayer from 'react-player/file';
+import ReactYoutubePlayer from 'react-player/youtube';
+
+import { useMusicPlayer } from '@/hooks/useMusicPlayer';
+
+import PlayerContent from './PlayerContent';
 
 export interface MusicPlayerProps {}
 
@@ -54,14 +50,14 @@ const MusicPlayer: FC<MusicPlayerProps> = ({}) => {
     let MyPlayer = ReactFilePlayer;
     // if file (mp3/mp4)
     if (
-      postData?.audioUrl?.includes(".mp3") ||
-      postData?.audioUrl?.includes(".mp4")
+      postData?.audioUrl?.includes('.mp3') ||
+      postData?.audioUrl?.includes('.mp4')
     ) {
       // @ts-ignore
       MyPlayer = ReactFilePlayer;
     }
     // if Youtube
-    if (postData?.audioUrl?.includes("youtube.com/")) {
+    if (postData?.audioUrl?.includes('youtube.com/')) {
       // @ts-ignore
       MyPlayer = ReactYoutubePlayer;
     }
@@ -73,7 +69,7 @@ const MusicPlayer: FC<MusicPlayerProps> = ({}) => {
   const handleSeekMouseUp = (
     e:
       | React.MouseEvent<HTMLInputElement, MouseEvent>
-      | React.TouchEvent<HTMLInputElement>
+      | React.TouchEvent<HTMLInputElement>,
   ) => {
     setSeeking(false);
     playerRef?.current?.seekTo(parseFloat(e.currentTarget.value));
@@ -96,11 +92,11 @@ const MusicPlayer: FC<MusicPlayerProps> = ({}) => {
   };
 
   const onClickBackwards10Sec = () => {
-    playerRef?.current?.seekTo(playedSeconds - 10, "seconds");
+    playerRef?.current?.seekTo(playedSeconds - 10, 'seconds');
   };
 
   const onClickForwarkds15Sec = () => {
-    playerRef?.current?.seekTo(playedSeconds + 15, "seconds");
+    playerRef?.current?.seekTo(playedSeconds + 15, 'seconds');
   };
 
   const handlePlay = () => {
@@ -114,7 +110,7 @@ const MusicPlayer: FC<MusicPlayerProps> = ({}) => {
     setPlaying(false);
   };
 
-  const handleProgress: FilePlayerProps["onProgress"] = (state) => {
+  const handleProgress: FilePlayerProps['onProgress'] = (state) => {
     // We only want to update time slider if we are not currently seeking
     if (!seeking) {
       setLoaded(state.loaded);
@@ -129,7 +125,7 @@ const MusicPlayer: FC<MusicPlayerProps> = ({}) => {
   };
 
   return (
-    <div className={`MusicPlayer fixed bottom-0 inset-x-0 flex z-30`}>
+    <div className="MusicPlayer fixed bottom-0 inset-x-0 flex z-30">
       {/* ---- PLAYER CONTROL ---- */}
       <PlayerContent
         isError={isError}
@@ -151,18 +147,18 @@ const MusicPlayer: FC<MusicPlayerProps> = ({}) => {
             className="react-player"
             width="100%"
             height="100%"
-            url={postData?.audioUrl || ""}
+            url={postData?.audioUrl || ''}
             playing={playing}
             controls
             playbackRate={playbackRate}
             volume={volume}
             muted={muted}
-            onReady={() => console.log("onReady")}
+            onReady={() => console.log('onReady')}
             onStart={() => setIsError(false)}
             onPlay={handlePlay}
             onPause={handlePause}
-            onBuffer={() => console.log("onBuffer")}
-            onSeek={(e) => console.log("onSeek", e)}
+            onBuffer={() => console.log('onBuffer')}
+            onSeek={(e) => console.log('onSeek', e)}
             onEnded={handleEnded}
             onError={(e) => setIsError(true)}
             onProgress={handleProgress}

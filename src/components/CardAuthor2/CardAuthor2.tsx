@@ -1,23 +1,25 @@
-import React, { FC } from "react";
-import { PostDataType } from "@/data/types";
-import Avatar from "@/components/Avatar/Avatar";
-import Link from "next/link";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import Avatar from '@/components/Avatar/Avatar';
+import type { PostDataType } from '@/data/types';
 
 export interface CardAuthor2Props
-  extends Pick<PostDataType, "date" | "author"> {
+  extends Pick<PostDataType, 'date' | 'author'> {
   className?: string;
-  readingTime?: PostDataType["readingTime"];
+  readingTime?: PostDataType['readingTime'];
   hoverReadingTime?: boolean;
 }
 
 const CardAuthor2: FC<CardAuthor2Props> = ({
-  className = "",
+  className = '',
   author,
   readingTime,
   date,
   hoverReadingTime = true,
 }) => {
-  const { displayName, href = "/", avatar } = author;
+  const { displayName, href = '/', avatar } = author;
   return (
     <Link
       href={href}
@@ -31,27 +33,23 @@ const CardAuthor2: FC<CardAuthor2Props> = ({
         userName={displayName}
       />
       <div>
-        <h2
-          className={`text-sm text-neutral-700 hover:text-black dark:text-neutral-300 dark:hover:text-white font-medium`}
-        >
+        <h2 className="text-sm text-neutral-700 hover:text-black dark:text-neutral-300 dark:hover:text-white font-medium">
           {displayName}
         </h2>
-        <span
-          className={`flex items-center mt-1 text-xs text-neutral-500 dark:text-neutral-400`}
-        >
+        <span className="flex items-center mt-1 text-xs text-neutral-500 dark:text-neutral-400">
           <span>{date}</span>
           {readingTime && (
             <>
               <span
                 className={`hidden lg:inline mx-1 transition-opacity ${
-                  hoverReadingTime ? "opacity-0 group-hover:opacity-100" : ""
+                  hoverReadingTime ? 'opacity-0 group-hover:opacity-100' : ''
                 }`}
               >
                 ·
               </span>
               <span
                 className={`hidden lg:inline transition-opacity ${
-                  hoverReadingTime ? "opacity-0 group-hover:opacity-100" : ""
+                  hoverReadingTime ? 'opacity-0 group-hover:opacity-100' : ''
                 }`}
               >
                 {readingTime} min read

@@ -1,10 +1,12 @@
-"use client";
+'use client';
 
-import React, { FC, useEffect, useRef } from "react";
-import Modal from "@/components/Modal/Modal";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import ButtonSecondary from "@/components/Button/ButtonSecondary";
-import ButtonThird from "../Button/ButtonThird";
+import type { FC } from 'react';
+import React, { useEffect, useRef } from 'react';
+
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import Modal from '@/components/Modal/Modal';
+
+import ButtonThird from '../Button/ButtonThird';
 
 export interface ModalDeleteCommentProps {
   show: boolean;

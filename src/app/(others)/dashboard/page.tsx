@@ -1,9 +1,10 @@
-import React from "react";
-import Input from "@/components/Input/Input";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import Select from "@/components/Select/Select";
-import Textarea from "@/components/Textarea/Textarea";
-import Label from "@/components/Label/Label";
+import React from 'react';
+
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import Input from '@/components/Input/Input';
+import Label from '@/components/Label/Label';
+import Select from '@/components/Select/Select';
+import Textarea from '@/components/Textarea/Textarea';
 
 const DashboardSubmitPost = () => {
   return (
@@ -55,7 +56,7 @@ const DashboardSubmitPost = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                ></path>
+                />
               </svg>
               <div className="flex flex-col sm:flex-row text-sm text-neutral-6000">
                 <label

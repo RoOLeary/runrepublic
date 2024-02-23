@@ -1,8 +1,11 @@
-import React, { FC } from "react";
-import Card2 from "@/components/Card2/Card2";
-import { PostDataType } from "@/data/types";
-import Card6 from "@/components/Card6/Card6";
-import HeaderFilter from "./HeaderFilter";
+import type { FC } from 'react';
+import React from 'react';
+
+import Card2 from '@/components/Card2/Card2';
+import Card6 from '@/components/Card6/Card6';
+import type { PostDataType } from '@/data/types';
+
+import HeaderFilter from './HeaderFilter';
 
 export interface SectionMagazine1Props {
   posts: PostDataType[];
@@ -12,8 +15,8 @@ export interface SectionMagazine1Props {
 
 const SectionMagazine1: FC<SectionMagazine1Props> = ({
   posts,
-  heading = "Latest Articles 🎈 ",
-  className = "",
+  heading = 'Latest Articles 🎈 ',
+  className = '',
 }) => {
   return (
     <div className={`SectionMagazine1 ${className}`}>

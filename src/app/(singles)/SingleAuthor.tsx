@@ -1,8 +1,10 @@
-import Avatar from "@/components/Avatar/Avatar";
-import { DEMO_AUTHORS } from "@/data/authors";
-import { PostAuthorType } from "@/data/types";
-import Link from "next/link";
-import React, { FC } from "react";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import Avatar from '@/components/Avatar/Avatar';
+import { DEMO_AUTHORS } from '@/data/authors';
+import type { PostAuthorType } from '@/data/types';
 
 export interface SingleAuthorProps {
   author?: PostAuthorType;

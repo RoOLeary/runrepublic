@@ -1,11 +1,13 @@
-import CardCategory1 from "@/components/CardCategory1/CardCategory1";
-import WidgetHeading1 from "@/components/WidgetHeading1/WidgetHeading1";
-import { DEMO_CATEGORIES } from "@/data/taxonomies";
-import { TaxonomyType } from "@/data/types";
-import React, { FC } from "react";
+import type { FC } from 'react';
+import React from 'react';
+
+import CardCategory1 from '@/components/CardCategory1/CardCategory1';
+import WidgetHeading1 from '@/components/WidgetHeading1/WidgetHeading1';
+import { DEMO_CATEGORIES } from '@/data/taxonomies';
+import type { TaxonomyType } from '@/data/types';
 
 const categoriesDemo: TaxonomyType[] = DEMO_CATEGORIES.filter(
-  (_, i) => i > 7 && i < 13
+  (_, i) => i > 7 && i < 13,
 );
 export interface WidgetCategoriesProps {
   className?: string;
@@ -13,7 +15,7 @@ export interface WidgetCategoriesProps {
 }
 
 const WidgetCategories: FC<WidgetCategoriesProps> = ({
-  className = "bg-neutral-100 dark:bg-neutral-800",
+  className = 'bg-neutral-100 dark:bg-neutral-800',
   categories = categoriesDemo,
 }) => {
   return (
@@ -22,7 +24,7 @@ const WidgetCategories: FC<WidgetCategoriesProps> = ({
     >
       <WidgetHeading1
         title="✨ Trending topic"
-        viewAll={{ label: "View all", href: "/#" }}
+        viewAll={{ label: 'View all', href: '/#' }}
       />
       <div className="flow-root">
         <div className="flex flex-col divide-y divide-neutral-200 dark:divide-neutral-700">

@@ -1,24 +1,24 @@
-import React, { FC } from "react";
-import NcImage from "@/components/NcImage/NcImage";
-import PostCardMeta from "@/components/PostCardMeta/PostCardMeta";
-import { PostDataType } from "@/data/types";
-import PostTypeFeaturedIcon from "@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
-import Link from "next/link";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import NcImage from '@/components/NcImage/NcImage';
+import PostCardMeta from '@/components/PostCardMeta/PostCardMeta';
+import PostTypeFeaturedIcon from '@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon';
+import type { PostDataType } from '@/data/types';
 
 export interface Card13Props {
   className?: string;
   post: PostDataType;
 }
 
-const Card13: FC<Card13Props> = ({ className = "", post }) => {
+const Card13: FC<Card13Props> = ({ className = '', post }) => {
   const { title, href, desc, featuredImage, date, postType } = post;
 
   return (
     <div className={`Card13 relative flex justify-between ${className}`}>
       <div className="flex flex-col h-full py-2">
-        <h2
-          className={`card-title block font-semibold text-sm sm:text-base`}
-        >
+        <h2 className="card-title block font-semibold text-sm sm:text-base">
           <Link href={href} className="line-clamp-2" title={title}>
             {title}
           </Link>
@@ -36,7 +36,7 @@ const Card13: FC<Card13Props> = ({ className = "", post }) => {
 
       <Link
         href={href}
-        className={`block relative h-full flex-shrink-0 w-24 sm:w-36 lg:w-40 xl:w-48 2xl:w-[200px] ms-4 sm:ms-5`}
+        className="block relative h-full flex-shrink-0 w-24 sm:w-36 lg:w-40 xl:w-48 2xl:w-[200px] ms-4 sm:ms-5"
       >
         <NcImage
           containerClassName="absolute inset-0"

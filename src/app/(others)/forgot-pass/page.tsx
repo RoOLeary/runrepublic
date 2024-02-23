@@ -1,8 +1,9 @@
-import React from "react";
-import Input from "@/components/Input/Input";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import NcLink from "@/components/NcLink/NcLink";
-import Heading2 from "@/components/Heading/Heading2";
+import React from 'react';
+
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import Heading2 from '@/components/Heading/Heading2';
+import Input from '@/components/Input/Input';
+import NcLink from '@/components/NcLink/NcLink';
 
 const PageForgotPass = ({}) => {
   return (

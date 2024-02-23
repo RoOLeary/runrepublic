@@ -1,11 +1,14 @@
-import React, { FC } from "react";
-import { PostDataType } from "@/data/types";
-import HeaderFilter from "./HeaderFilter";
-import PostCardMeta from "@/components/PostCardMeta/PostCardMeta";
-import CardAuthor2 from "@/components/CardAuthor2/CardAuthor2";
-import Image from "next/image";
-import Link from "next/link";
-import { DEMO_POSTS } from "@/data/posts";
+import Image from 'next/image';
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import CardAuthor2 from '@/components/CardAuthor2/CardAuthor2';
+import PostCardMeta from '@/components/PostCardMeta/PostCardMeta';
+import { DEMO_POSTS } from '@/data/posts';
+import type { PostDataType } from '@/data/types';
+
+import HeaderFilter from './HeaderFilter';
 
 const MAGAZINE1_POSTS = DEMO_POSTS.filter((_, i) => i >= 8 && i < 16);
 
@@ -17,8 +20,8 @@ export interface SectionMagazine6Props {
 
 const SectionMagazine6: FC<SectionMagazine6Props> = ({
   posts = MAGAZINE1_POSTS,
-  heading = "Latest Articles 🎈 ",
-  className = "",
+  heading = 'Latest Articles 🎈 ',
+  className = '',
 }) => {
   const renderMain = () => {
     const { featuredImage, author, title, date, desc, href, readingTime } =
@@ -36,7 +39,7 @@ const SectionMagazine6: FC<SectionMagazine6Props> = ({
             className="object-cover"
           />
           <div>
-            <span className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black"></span>
+            <span className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black" />
           </div>
 
           {/* CONTENT */}

@@ -1,10 +1,12 @@
-import React, { FC } from "react";
-import NcImage from "@/components/NcImage/NcImage";
-import { PostDataType } from "@/data/types";
-import CategoryBadgeList from "@/components/CategoryBadgeList/CategoryBadgeList";
-import Avatar from "@/components/Avatar/Avatar";
-import PostTypeFeaturedIcon from "@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
-import Link from "next/link";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import Avatar from '@/components/Avatar/Avatar';
+import CategoryBadgeList from '@/components/CategoryBadgeList/CategoryBadgeList';
+import NcImage from '@/components/NcImage/NcImage';
+import PostTypeFeaturedIcon from '@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon';
+import type { PostDataType } from '@/data/types';
 
 export interface Card14Props {
   className?: string;
@@ -14,10 +16,10 @@ export interface Card14Props {
 }
 
 const Card14: FC<Card14Props> = ({
-  className = "h-full",
-  ratio = "aspect-w-5 aspect-h-5",
+  className = 'h-full',
+  ratio = 'aspect-w-5 aspect-h-5',
   post,
-  hoverClass = "",
+  hoverClass = '',
 }) => {
   const { title, href, featuredImage, categories, author, date, postType } =
     post;
@@ -72,10 +74,8 @@ const Card14: FC<Card14Props> = ({
               {author.displayName}
             </span>
           </Link>
-          <>
-            <span className=" mx-[6px]">·</span>
-            <span className=" font-normal truncate">{date}</span>
-          </>
+          <span className=" mx-[6px]">·</span>
+          <span className=" font-normal truncate">{date}</span>
         </div>
       </div>
     </div>

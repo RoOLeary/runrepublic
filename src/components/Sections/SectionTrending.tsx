@@ -1,7 +1,9 @@
-import React, { FC } from "react";
-import Heading from "@/components/Heading/Heading";
-import { PostDataType } from "@/data/types";
-import Card5 from "@/components/Card5/Card5";
+import type { FC } from 'react';
+import React from 'react';
+
+import Card5 from '@/components/Card5/Card5';
+import Heading from '@/components/Heading/Heading';
+import type { PostDataType } from '@/data/types';
 
 export interface SectionTrendingProps {
   posts: PostDataType[];
@@ -11,8 +13,8 @@ export interface SectionTrendingProps {
 
 const SectionTrending: FC<SectionTrendingProps> = ({
   posts,
-  heading = "Trending on Ncmaz",
-  className = "",
+  heading = 'Trending on Ncmaz',
+  className = '',
 }) => {
   return (
     <div className={`SectionTrending relative ${className}`}>

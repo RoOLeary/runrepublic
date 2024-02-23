@@ -1,45 +1,47 @@
-"use client";
+'use client';
 
-import Heading2 from "@/components/Heading/Heading2";
-import { Route } from "@/routers/types";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React, { ReactNode } from "react";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import type { ReactNode } from 'react';
+import React from 'react';
+
+import Heading2 from '@/components/Heading/Heading2';
+import type { Route } from '@/routers/types';
 
 const subPages: { href: Route; pageName: string; emoij: string }[] = [
   {
-    href: "/dashboard",
-    emoij: "⏳",
-    pageName: "Dash board",
+    href: '/dashboard',
+    emoij: '⏳',
+    pageName: 'Dash board',
   },
   {
-    href: "/dashboard/posts",
+    href: '/dashboard/posts',
 
-    emoij: "📕",
-    pageName: "Posts",
+    emoij: '📕',
+    pageName: 'Posts',
   },
   {
-    href: "/dashboard/edit-profile",
+    href: '/dashboard/edit-profile',
 
-    emoij: "🛠",
-    pageName: "Edit profile",
+    emoij: '🛠',
+    pageName: 'Edit profile',
   },
   {
-    href: "/dashboard/subscription",
-    emoij: "📃",
-    pageName: "Subscription",
+    href: '/dashboard/subscription',
+    emoij: '📃',
+    pageName: 'Subscription',
   },
   {
-    href: "/dashboard/billing-address",
+    href: '/dashboard/billing-address',
 
-    emoij: "✈",
-    pageName: "Billing address",
+    emoij: '✈',
+    pageName: 'Billing address',
   },
   {
-    href: "/dashboard/submit-post",
+    href: '/dashboard/submit-post',
 
-    emoij: "✍",
-    pageName: "Submit post",
+    emoij: '✍',
+    pageName: 'Submit post',
   },
 ];
 
@@ -47,7 +49,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
 
   return (
-    <div className={`PageDashboard`}>
+    <div className="PageDashboard">
       <header className="text-center max-w-2xl mx-auto - mb-14 sm:mb-16 lg:mb-24">
         <Heading2 emoji="">Dash board</Heading2>
         <span className="block text-sm mt-2 text-neutral-700 sm:text-base dark:text-neutral-200">
@@ -67,8 +69,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
                   <Link
                     className={`px-6 py-3 font-medium rounded-full flex items-center ${
                       pathname === href
-                        ? "bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"
-                        : "hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-100"
+                        ? 'bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100'
+                        : 'hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-100'
                     }`}
                     href={href}
                   >
@@ -82,8 +84,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
             <li className=" border-t border-neutral-200 dark:border-neutral-700" />
             <li>
               <Link
-                className={`flex items-center px-6 py-3 font-medium text-red-500`}
-                href={"/"}
+                className="flex items-center px-6 py-3 font-medium text-red-500"
+                href="/"
               >
                 <span className="w-8 me-2 text-lg">💡</span>
                 Sign out
@@ -92,7 +94,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
           </ul>
         </div>
 
-        <div className="border-t border-neutral-500 dark:border-neutral-300 md:hidden"></div>
+        <div className="border-t border-neutral-500 dark:border-neutral-300 md:hidden" />
 
         <div className="flex-1">{children}</div>
       </div>

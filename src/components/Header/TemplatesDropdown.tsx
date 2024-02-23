@@ -1,45 +1,47 @@
-"use client";
+'use client';
 
-import { Popover, Transition } from "@/app/headlessui";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import { Fragment } from "react";
-import { MEGAMENU_TEMPLATES } from "@/data/navigation";
-import { NavItemType } from "@/components/Navigation/NavigationItem";
-import Link from "next/link";
-import NcImage from "../NcImage/NcImage";
-import { Route } from "@/routers/types";
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import { Fragment } from 'react';
+
+import { Popover, Transition } from '@/app/headlessui';
+import type { NavItemType } from '@/components/Navigation/NavigationItem';
+import { MEGAMENU_TEMPLATES } from '@/data/navigation';
+import type { Route } from '@/routers/types';
+
+import NcImage from '../NcImage/NcImage';
 
 const recentPosts = [
   {
     id: 1,
-    title: "Boost your conversion rate",
-    href: "/single-gallery/demo-slug",
-    date: "Mar 16, 2023",
-    datetime: "2023-03-16",
-    category: { title: "Marketing", href: "/archive/demo-slug" },
+    title: 'Boost your conversion rate',
+    href: '/single-gallery/demo-slug',
+    date: 'Mar 16, 2023',
+    datetime: '2023-03-16',
+    category: { title: 'Marketing', href: '/archive/demo-slug' },
     imageUrl:
-      "https://images.unsplash.com/photo-1678720175173-f57e293022e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0MjJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      'https://images.unsplash.com/photo-1678720175173-f57e293022e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0MjJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
     description:
-      "Et et dolore officia quis nostrud esse aute cillum irure do esse. Eiusmod ad deserunt cupidatat est magna Lorem.",
+      'Et et dolore officia quis nostrud esse aute cillum irure do esse. Eiusmod ad deserunt cupidatat est magna Lorem.',
   },
   {
     id: 2,
-    title: "How to use search engine optimization to drive sales",
-    href: "/single-gallery/demo-slug",
-    date: "Mar 10, 2023",
-    datetime: "2023-03-10",
-    category: { title: "Sales", href: "/archive/demo-slug" },
+    title: 'How to use search engine optimization to drive sales',
+    href: '/single-gallery/demo-slug',
+    date: 'Mar 10, 2023',
+    datetime: '2023-03-10',
+    category: { title: 'Sales', href: '/archive/demo-slug' },
     imageUrl:
-      "https://images.unsplash.com/photo-1678846912726-667eda5a850f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyODh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      'https://images.unsplash.com/photo-1678846912726-667eda5a850f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyODh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
     description:
-      "Optio cum necessitatibus dolor voluptatum provident commodi et.",
+      'Optio cum necessitatibus dolor voluptatum provident commodi et.',
   },
 ];
 
 export default function TemplatesDropdown() {
   const renderMegaMenuNavlink = (item: NavItemType) => {
     return (
-      <li key={item.id} className={`${item.isNew ? "menuIsNew" : ""}`}>
+      <li key={item.id} className={`${item.isNew ? 'menuIsNew' : ''}`}>
         <Link
           className="font-normal text-slate-600 hover:text-black dark:text-slate-400 dark:hover:text-white"
           href={{
@@ -59,12 +61,12 @@ export default function TemplatesDropdown() {
           <>
             <Popover.Button
               className={`
-                ${open ? "" : "text-opacity-80"}
+                ${open ? '' : 'text-opacity-80'}
                 group h-10 sm:h-12 px-3 py-1.5 inline-flex items-center text-sm text-gray-800 dark:text-slate-300 font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
             >
               <span className="">Templates</span>
               <ChevronDownIcon
-                className={`${open ? "-rotate-180" : ""}
+                className={`${open ? '-rotate-180' : ''}
                   ms-1 h-4 w-4 transition ease-in-out duration-150 `}
                 aria-hidden="true"
               />

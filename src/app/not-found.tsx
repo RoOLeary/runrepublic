@@ -1,5 +1,6 @@
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import React from "react";
+import React from 'react';
+
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
 
 const Page404: React.FC = () => (
   <div className="Page404">

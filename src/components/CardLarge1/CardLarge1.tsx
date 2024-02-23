@@ -1,13 +1,15 @@
-import PostCardSaveAction from "@/components/PostCardSaveAction/PostCardSaveAction";
-import NcImage from "@/components/NcImage/NcImage";
-import NextPrev from "@/components/NextPrev/NextPrev";
-import PostCardLikeAndComment from "@/components/PostCardLikeAndComment/PostCardLikeAndComment";
-import { PostDataType } from "@/data/types";
-import React, { FC } from "react";
-import CardAuthor2 from "@/components/CardAuthor2/CardAuthor2";
-import CategoryBadgeList from "@/components/CategoryBadgeList/CategoryBadgeList";
-import PostTypeFeaturedIcon from "@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
-import Link from "next/link";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import CardAuthor2 from '@/components/CardAuthor2/CardAuthor2';
+import CategoryBadgeList from '@/components/CategoryBadgeList/CategoryBadgeList';
+import NcImage from '@/components/NcImage/NcImage';
+import NextPrev from '@/components/NextPrev/NextPrev';
+import PostCardLikeAndComment from '@/components/PostCardLikeAndComment/PostCardLikeAndComment';
+import PostCardSaveAction from '@/components/PostCardSaveAction/PostCardSaveAction';
+import PostTypeFeaturedIcon from '@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon';
+import type { PostDataType } from '@/data/types';
 
 export interface CardLarge1Props {
   className?: string;
@@ -17,7 +19,7 @@ export interface CardLarge1Props {
 }
 
 const CardLarge1: FC<CardLarge1Props> = ({
-  className = "",
+  className = '',
   post,
   onClickNext = () => {},
   onClickPrev = () => {},

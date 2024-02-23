@@ -1,9 +1,10 @@
-"use client";
+'use client';
 
-import CardLarge1 from "@/components/CardLarge1/CardLarge1";
-import Heading from "@/components/Heading/Heading";
-import { PostDataType } from "@/data/types";
-import React, { useState } from "react";
+import React, { useState } from 'react';
+
+import CardLarge1 from '@/components/CardLarge1/CardLarge1';
+import Heading from '@/components/Heading/Heading';
+import type { PostDataType } from '@/data/types';
 
 export interface SectionLargeSliderProps {
   className?: string;
@@ -14,8 +15,8 @@ export interface SectionLargeSliderProps {
 const SectionLargeSlider = ({
   posts,
   heading = "Editor's pick",
-  className = "",
-}:SectionLargeSliderProps) => {
+  className = '',
+}: SectionLargeSliderProps) => {
   const [indexActive, setIndexActive] = useState(0);
 
   const handleClickNext = () => {

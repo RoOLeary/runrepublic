@@ -1,19 +1,21 @@
-import React, { FC } from "react";
-import NcImage from "@/components/NcImage/NcImage";
-import PostCardMeta from "@/components/PostCardMeta/PostCardMeta";
-import PostCardSaveAction from "@/components/PostCardSaveAction/PostCardSaveAction";
-import { PostDataType } from "@/data/types";
-import PostCardLikeAndComment from "@/components/PostCardLikeAndComment/PostCardLikeAndComment";
-import CategoryBadgeList from "@/components/CategoryBadgeList/CategoryBadgeList";
-import PostTypeFeaturedIcon from "@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
-import Link from "next/link";
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import CategoryBadgeList from '@/components/CategoryBadgeList/CategoryBadgeList';
+import NcImage from '@/components/NcImage/NcImage';
+import PostCardLikeAndComment from '@/components/PostCardLikeAndComment/PostCardLikeAndComment';
+import PostCardMeta from '@/components/PostCardMeta/PostCardMeta';
+import PostCardSaveAction from '@/components/PostCardSaveAction/PostCardSaveAction';
+import PostTypeFeaturedIcon from '@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon';
+import type { PostDataType } from '@/data/types';
 
 export interface Card3Props {
   className?: string;
   post: PostDataType;
 }
 
-const Card3: FC<Card3Props> = ({ className = "h-full", post }) => {
+const Card3: FC<Card3Props> = ({ className = 'h-full', post }) => {
   const {
     title,
     href,
@@ -32,9 +34,7 @@ const Card3: FC<Card3Props> = ({ className = "h-full", post }) => {
         <div className="space-y-3.5">
           <CategoryBadgeList categories={categories} />
           <Link href={href} className="block">
-            <h2
-              className={`card-title block font-medium sm:font-semibold text-neutral-900 dark:text-neutral-100 text-sm sm:text-base xl:text-lg`}
-            >
+            <h2 className="card-title block font-medium sm:font-semibold text-neutral-900 dark:text-neutral-100 text-sm sm:text-base xl:text-lg">
               <span className="line-clamp-2" title={title}>
                 {title}
               </span>
@@ -54,9 +54,7 @@ const Card3: FC<Card3Props> = ({ className = "h-full", post }) => {
         </div>
       </div>
 
-      <div
-        className={`block flex-shrink-0 w-24 sm:w-36 md:w-44 xl:w-56 ms-3 sm:ms-6 rounded-3xl overflow-hidden z-0 mb-5 sm:mb-0`}
-      >
+      <div className="block flex-shrink-0 w-24 sm:w-36 md:w-44 xl:w-56 ms-3 sm:ms-6 rounded-3xl overflow-hidden z-0 mb-5 sm:mb-0">
         <Link
           href={href}
           className="block w-full h-0 aspect-h-1 aspect-w-1 relative"

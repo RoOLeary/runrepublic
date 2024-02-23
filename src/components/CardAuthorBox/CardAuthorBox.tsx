@@ -1,16 +1,18 @@
-import React, { FC } from "react";
-import { PostAuthorType } from "@/data/types";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import Avatar from "@/components/Avatar/Avatar";
-import Link from "next/link";
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import Avatar from '@/components/Avatar/Avatar';
+import type { PostAuthorType } from '@/data/types';
 
 export interface CardAuthorBoxProps {
   className?: string;
   author: PostAuthorType;
 }
 
-const CardAuthorBox: FC<CardAuthorBoxProps> = ({ className = "", author }) => {
-  const { displayName, href = "/", avatar, jobName, count } = author;
+const CardAuthorBox: FC<CardAuthorBoxProps> = ({ className = '', author }) => {
+  const { displayName, href = '/', avatar, jobName, count } = author;
   return (
     <Link
       href={href}
@@ -23,12 +25,10 @@ const CardAuthorBox: FC<CardAuthorBoxProps> = ({ className = "", author }) => {
         userName={displayName}
       />
       <div className="mt-3">
-        <h2 className={`text-sm sm:text-base font-medium`}>
+        <h2 className="text-sm sm:text-base font-medium">
           <span className="line-clamp-1">{displayName}</span>
         </h2>
-        <span
-          className={`block mt-1 text-sm text-neutral-500 dark:text-neutral-400`}
-        >
+        <span className="block mt-1 text-sm text-neutral-500 dark:text-neutral-400">
           @{jobName}
         </span>
       </div>

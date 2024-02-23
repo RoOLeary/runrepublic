@@ -1,12 +1,15 @@
-"use client";
-import React, { FC, useState } from "react";
-import NcImage from "@/components/NcImage/NcImage";
-import PostCardSaveAction from "@/components/PostCardSaveAction/PostCardSaveAction";
-import { PostDataType } from "@/data/types";
-import CategoryBadgeList from "@/components/CategoryBadgeList/CategoryBadgeList";
-import PostFeaturedMedia from "@/components/PostFeaturedMedia/PostFeaturedMedia";
-import CardAuthor2 from "@/components/CardAuthor2/CardAuthor2";
-import Link from "next/link";
+'use client';
+
+import Link from 'next/link';
+import type { FC } from 'react';
+import React, { useState } from 'react';
+
+import CardAuthor2 from '@/components/CardAuthor2/CardAuthor2';
+import CategoryBadgeList from '@/components/CategoryBadgeList/CategoryBadgeList';
+import NcImage from '@/components/NcImage/NcImage';
+import PostCardSaveAction from '@/components/PostCardSaveAction/PostCardSaveAction';
+import PostFeaturedMedia from '@/components/PostFeaturedMedia/PostFeaturedMedia';
+import type { PostDataType } from '@/data/types';
 
 export interface Card10V3Props {
   className?: string;
@@ -15,7 +18,7 @@ export interface Card10V3Props {
 }
 
 const Card10V3: FC<Card10V3Props> = ({
-  className = "h-full",
+  className = 'h-full',
   post,
   galleryType = 1,
 }) => {
@@ -121,7 +124,7 @@ const Card10V3: FC<Card10V3Props> = ({
     >
       <div className="block group rounded-3xl flex-shrink-0 relative w-full aspect-w-16 aspect-h-16 sm:aspect-h-9 overflow-hidden z-0">
         <div>
-          {postType !== "gallery" && !!galleryImgs?.length ? (
+          {postType !== 'gallery' && !!galleryImgs?.length ? (
             <PostFeaturedMedia post={post} isHover={isHover} />
           ) : galleryType === 1 ? (
             renderGallery()
@@ -133,7 +136,7 @@ const Card10V3: FC<Card10V3Props> = ({
         <Link
           href={href}
           className="absolute inset-0 bg-neutral-900 bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity"
-        ></Link>
+        />
       </div>
       <div className="absolute top-3 inset-x-3 flex justify-between items-start space-x-4 rtl:space-x-reverse">
         <CategoryBadgeList categories={categories} />

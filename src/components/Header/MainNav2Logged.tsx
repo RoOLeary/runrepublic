@@ -1,12 +1,14 @@
-"use client";
+'use client';
 
-import React, { FC } from "react";
-import Logo from "@/components/Logo/Logo";
-import MenuBar from "@/components/MenuBar/MenuBar";
-import AvatarDropdown from "./AvatarDropdown";
-import Navigation from "@/components/Navigation/Navigation";
-import SearchModal from "./SearchModal";
-import NotifyDropDown from "./NotifyDropdown";
+import type { FC } from 'react';
+import React from 'react';
+
+import Logo from '@/components/Logo/Logo';
+import MenuBar from '@/components/MenuBar/MenuBar';
+import Navigation from '@/components/Navigation/Navigation';
+
+import AvatarDropdown from './AvatarDropdown';
+import SearchModal from './SearchModal';
 
 export interface MainNav2LoggedProps {}
 

@@ -1,16 +1,19 @@
-"use client";
+'use client';
 
-import React, { FC, useEffect, useRef, useState } from "react";
-import Tag from "@/components/Tag/Tag";
-import SingleAuthor from "./SingleAuthor";
-import SingleCommentForm from "./SingleCommentForm";
-import SingleCommentLists from "./SingleCommentLists";
-import SingleContentDemo from "./SingleContentDemo";
-import { DEMO_TAGS } from "@/data/taxonomies";
-import useIntersectionObserver from "@/hooks/useIntersectionObserver";
-import PostCardLikeAction from "@/components/PostCardLikeAction/PostCardLikeAction";
-import PostCardCommentBtn from "@/components/PostCardCommentBtn/PostCardCommentBtn";
-import { ArrowUpIcon } from "@heroicons/react/24/solid";
+import { ArrowUpIcon } from '@heroicons/react/24/solid';
+import type { FC } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+
+import PostCardCommentBtn from '@/components/PostCardCommentBtn/PostCardCommentBtn';
+import PostCardLikeAction from '@/components/PostCardLikeAction/PostCardLikeAction';
+import Tag from '@/components/Tag/Tag';
+import { DEMO_TAGS } from '@/data/taxonomies';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
+
+import SingleAuthor from './SingleAuthor';
+import SingleCommentForm from './SingleCommentForm';
+import SingleCommentLists from './SingleCommentLists';
+import SingleContentDemo from './SingleContentDemo';
 
 const demoTags = DEMO_TAGS.filter((_, i) => i < 9);
 
@@ -27,7 +30,7 @@ const SingleContent: FC<SingleContentProps> = ({}) => {
   const endedAnchorEntry = useIntersectionObserver(endedAnchorRef, {
     threshold: 0,
     root: null,
-    rootMargin: "0%",
+    rootMargin: '0%',
     freezeOnceVisible: false,
   });
 
@@ -41,11 +44,11 @@ const SingleContent: FC<SingleContentProps> = ({}) => {
       }
 
       const totalEntryH = entryContent.offsetTop + entryContent.offsetHeight;
-      let winScroll =
+      const winScroll =
         document.body.scrollTop || document.documentElement.scrollTop;
-      let scrolled = (winScroll / totalEntryH) * 100;
+      const scrolled = (winScroll / totalEntryH) * 100;
 
-      progressBarContent.innerText = scrolled.toFixed(0) + "%";
+      progressBarContent.innerText = `${scrolled.toFixed(0)}%`;
 
       if (scrolled >= 100) {
         setIsShowScrollToTop(true);
@@ -58,9 +61,9 @@ const SingleContent: FC<SingleContentProps> = ({}) => {
       window?.requestAnimationFrame(handleProgressIndicator);
     };
     handleProgressIndicator();
-    window?.addEventListener("scroll", handleProgressIndicatorHeadeEvent);
+    window?.addEventListener('scroll', handleProgressIndicatorHeadeEvent);
     return () => {
-      window?.removeEventListener("scroll", handleProgressIndicatorHeadeEvent);
+      window?.removeEventListener('scroll', handleProgressIndicatorHeadeEvent);
     };
   }, []);
 
@@ -88,7 +91,7 @@ const SingleContent: FC<SingleContentProps> = ({}) => {
         </div>
 
         {/* AUTHOR */}
-        <div className="max-w-screen-md mx-auto border-b border-t border-neutral-100 dark:border-neutral-700"></div>
+        <div className="max-w-screen-md mx-auto border-b border-t border-neutral-100 dark:border-neutral-700" />
         <div className="max-w-screen-md mx-auto ">
           <SingleAuthor />
         </div>
@@ -107,29 +110,29 @@ const SingleContent: FC<SingleContentProps> = ({}) => {
         {/* COMMENTS LIST */}
         <div className="max-w-screen-md mx-auto">
           <SingleCommentLists />
-          <div ref={endedAnchorRef}></div>
+          <div ref={endedAnchorRef} />
         </div>
       </div>
       <div
         className={`sticky mt-8 bottom-8 z-40 justify-center ${
-          showLikeAndCommentSticky ? "flex" : "hidden"
+          showLikeAndCommentSticky ? 'flex' : 'hidden'
         }`}
       >
         <div className="bg-white dark:bg-neutral-800 shadow-lg rounded-full ring-1 ring-offset-1 ring-neutral-900/5 p-1.5 flex items-center justify-center space-x-2 rtl:space-x-reverse text-xs">
           <PostCardLikeAction className="px-3 h-9 text-xs" />
-          <div className="border-s h-4 border-neutral-200 dark:border-neutral-700"></div>
+          <div className="border-s h-4 border-neutral-200 dark:border-neutral-700" />
           <PostCardCommentBtn
             isATagOnSingle
             className={` flex px-3 h-9 text-xs`}
           />
-          <div className="border-s h-4 border-neutral-200 dark:border-neutral-700"></div>
+          <div className="border-s h-4 border-neutral-200 dark:border-neutral-700" />
 
           <button
             className={`w-9 h-9 items-center justify-center bg-neutral-50 dark:bg-neutral-800 hover:bg-neutral-100 rounded-full ${
-              isShowScrollToTop ? "flex" : "hidden"
+              isShowScrollToTop ? 'flex' : 'hidden'
             }`}
             onClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
             <ArrowUpIcon className="w-4 h-4" />
@@ -138,7 +141,7 @@ const SingleContent: FC<SingleContentProps> = ({}) => {
           <button
             ref={progressRef}
             className={`w-9 h-9 items-center justify-center ${
-              isShowScrollToTop ? "hidden" : "flex"
+              isShowScrollToTop ? 'hidden' : 'flex'
             }`}
             title="Go to top"
           >

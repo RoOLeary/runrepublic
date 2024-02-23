@@ -1,11 +1,14 @@
-"use client";
+'use client';
 
-import React, { FC, useState } from "react";
-import ButtonPrimary from "@/components/Button/ButtonPrimary";
-import Modal from "@/components/Modal/Modal";
-import { PlayIcon } from "@heroicons/react/24/solid";
-import Image from "next/image";
-import Button from "../Button/Button";
+import { PlayIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
+import type { FC } from 'react';
+import React, { useState } from 'react';
+
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import Modal from '@/components/Modal/Modal';
+
+import Button from '../Button/Button';
 
 export interface SectionHero2Props {}
 const SectionHero2: FC<SectionHero2Props> = ({}) => {
@@ -24,11 +27,11 @@ const SectionHero2: FC<SectionHero2Props> = ({}) => {
     return (
       <div className="aspect-w-16 aspect-h-9 ">
         <iframe
-          src={`https://www.youtube.com/embed/qTsXfGVjm1w?autoplay=1`}
+          src="https://www.youtube.com/embed/qTsXfGVjm1w?autoplay=1"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           title="ncblog hero video"
-        ></iframe>
+        />
       </div>
     );
   };
@@ -36,7 +39,7 @@ const SectionHero2: FC<SectionHero2Props> = ({}) => {
   return (
     <div className="SectionHero2 relative pb-20 md:py-32 lg:py-60 bg-black">
       <div className="flex w-full mb-10 md:w-1/2 xl:w-3/5 md:absolute md:end-0 md:top-0 md:bottom-0 md:mb-0">
-        <div className="hidden md:block absolute z-[1] top-0 start-0 bottom-0 w-44 from-black bg-gradient-to-r rtl:bg-gradient-to-l"></div>
+        <div className="hidden md:block absolute z-[1] top-0 start-0 bottom-0 w-44 from-black bg-gradient-to-r rtl:bg-gradient-to-l" />
         <Image
           fill
           className="object-cover"

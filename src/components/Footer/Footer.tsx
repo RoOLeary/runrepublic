@@ -1,8 +1,7 @@
-import React from "react";
-import Logo from "@/components/Logo/Logo";
-import Image from 'next/image';
-import SocialsList1 from "@/components/SocialsList1/SocialsList1";
-import { CustomLink } from "@/data/types";
+import React from 'react';
+
+import SocialsList1 from '@/components/SocialsList1/SocialsList1';
+import type { CustomLink } from '@/data/types';
 
 export interface WidgetFooterMenu {
   id: string;
@@ -12,47 +11,47 @@ export interface WidgetFooterMenu {
 
 const widgetMenus: WidgetFooterMenu[] = [
   {
-    id: "5",
-    title: "Getting started",
+    id: '5',
+    title: 'Getting started',
     menus: [
-      { href: "/", label: "Installation" },
-      { href: "/", label: "Release Notes" },
-      { href: "/", label: "Upgrade Guide" },
-      { href: "/", label: "Browser Support" },
-      { href: "/", label: "Editor Support" },
+      { href: '/', label: 'Installation' },
+      { href: '/', label: 'Release Notes' },
+      { href: '/', label: 'Upgrade Guide' },
+      { href: '/', label: 'Browser Support' },
+      { href: '/', label: 'Editor Support' },
     ],
   },
   {
-    id: "1",
-    title: "Explore",
+    id: '1',
+    title: 'Explore',
     menus: [
-      { href: "/", label: "Design features" },
-      { href: "/", label: "Prototyping" },
-      { href: "/", label: "Design systems" },
-      { href: "/", label: "Pricing" },
-      { href: "/", label: "Customers" },
+      { href: '/', label: 'Design features' },
+      { href: '/', label: 'Prototyping' },
+      { href: '/', label: 'Design systems' },
+      { href: '/', label: 'Pricing' },
+      { href: '/', label: 'Customers' },
     ],
   },
   {
-    id: "2",
-    title: "Resources",
+    id: '2',
+    title: 'Resources',
     menus: [
-      { href: "/", label: "Best practices" },
-      { href: "/", label: "Support" },
-      { href: "/", label: "Developers" },
-      { href: "/", label: "Learn design" },
-      { href: "/", label: "What's new" },
+      { href: '/', label: 'Best practices' },
+      { href: '/', label: 'Support' },
+      { href: '/', label: 'Developers' },
+      { href: '/', label: 'Learn design' },
+      { href: '/', label: "What's new" },
     ],
   },
   {
-    id: "4",
-    title: "Community",
+    id: '4',
+    title: 'Community',
     menus: [
-      { href: "/", label: "Discussion Forums" },
-      { href: "/", label: "Code of Conduct" },
-      { href: "/", label: "Community Resources" },
-      { href: "/", label: "Contributing" },
-      { href: "/", label: "Concurrent Mode" },
+      { href: '/', label: 'Discussion Forums' },
+      { href: '/', label: 'Code of Conduct' },
+      { href: '/', label: 'Community Resources' },
+      { href: '/', label: 'Contributing' },
+      { href: '/', label: 'Concurrent Mode' },
     ],
   },
 ];
@@ -87,7 +86,9 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-4 gap-5 col-span-2 md:col-span-4 lg:md:col-span-1 lg:flex lg:flex-col">
           <div className="col-span-2 md:col-span-1">
             {/* <Logo /> */}
-            <h2 className="font-semibold text-xl tracking-tighter">RUN REPUBLIC</h2>
+            <h2 className="font-semibold text-xl tracking-tighter">
+              RUN REPUBLIC
+            </h2>
             {/* <Image alt="Logo" src="https://ronan-oleary.com/assets/ro-bw.d434f415.png" width="50" height="50" className="rounded-full" /> */}
           </div>
           <div className="col-span-2 flex items-center md:col-span-3">

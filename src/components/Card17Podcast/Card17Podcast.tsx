@@ -1,26 +1,29 @@
-"use client";
+'use client';
 
-import React, { FC } from "react";
-import { PostDataType } from "@/data/types";
-import Link from "next/link";
-import ButtonPlayMusicPlayer from "../ButtonPlayMusicPlayer";
-import Image from "next/image";
-import { PauseIcon } from "@heroicons/react/24/outline";
-import { PlayIcon } from "@heroicons/react/24/solid";
+import { PauseIcon } from '@heroicons/react/24/outline';
+import { PlayIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
+import Link from 'next/link';
+import type { FC } from 'react';
+import React from 'react';
+
+import type { PostDataType } from '@/data/types';
+
+import ButtonPlayMusicPlayer from '../ButtonPlayMusicPlayer';
 
 export interface Card17PodcastProps {
   className?: string;
   post: PostDataType;
 }
 
-const Card17Podcast: FC<Card17PodcastProps> = ({ className = "", post }) => {
+const Card17Podcast: FC<Card17PodcastProps> = ({ className = '', post }) => {
   const { title, href, featuredImage, postType, date } = post;
-  const IS_AUDIO = postType === "audio";
+  const IS_AUDIO = postType === 'audio';
 
-  const renderDefaultBtnListen = (state?: "playing") => {
+  const renderDefaultBtnListen = (state?: 'playing') => {
     return (
       <span className="w-11 h-11 flex items-center justify-center rounded-full bg-white dark:bg-neutral-800 text-primary-6000 dark:text-primary-200 shadow-lg cursor-pointer">
-        {state === "playing" ? (
+        {state === 'playing' ? (
           <PauseIcon className="w-6 h-6" />
         ) : (
           <PlayIcon className="w-6 h-6" />
@@ -44,7 +47,7 @@ const Card17Podcast: FC<Card17PodcastProps> = ({ className = "", post }) => {
           />
         </div>
         <div className="flex flex-col flex-grow">
-          <h2 className={`block font-medium sm:font-semibold sm:text-lg`}>
+          <h2 className="block font-medium sm:font-semibold sm:text-lg">
             <span className="line-clamp-1" title={title}>
               {title}
             </span>
@@ -59,7 +62,7 @@ const Card17Podcast: FC<Card17PodcastProps> = ({ className = "", post }) => {
         <ButtonPlayMusicPlayer
           post={post}
           renderDefaultBtn={() => renderDefaultBtnListen()}
-          renderPlayingBtn={() => renderDefaultBtnListen("playing")}
+          renderPlayingBtn={() => renderDefaultBtnListen('playing')}
         />
       )}
     </div>

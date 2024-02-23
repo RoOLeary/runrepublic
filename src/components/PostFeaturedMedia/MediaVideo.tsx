@@ -1,9 +1,11 @@
-"use client";
+'use client';
 
-import LoadingVideo from "@/components/LoadingVideo/LoadingVideo";
-import { SpeakerWaveIcon, SpeakerXMarkIcon } from "@heroicons/react/24/outline";
-import React, { FC, useEffect, useState } from "react";
-import ReactPlayer from "react-player";
+import { SpeakerWaveIcon, SpeakerXMarkIcon } from '@heroicons/react/24/outline';
+import type { FC } from 'react';
+import React, { useEffect, useState } from 'react';
+import ReactPlayer from 'react-player';
+
+import LoadingVideo from '@/components/LoadingVideo/LoadingVideo';
 
 export interface MediaVideoProps {
   videoUrl: string;
@@ -31,7 +33,7 @@ const MediaVideo: FC<MediaVideoProps> = ({ videoUrl, isHover }) => {
         style={{
           opacity: isPlaying ? 1 : 0,
         }}
-        className={`absolute bg-neutral-900 inset-0 transition-opacity`}
+        className="absolute bg-neutral-900 inset-0 transition-opacity"
         width="100%"
         height="100%"
         onStart={() => {
@@ -44,7 +46,7 @@ const MediaVideo: FC<MediaVideoProps> = ({ videoUrl, isHover }) => {
       />
       <div
         className={`${
-          isPlaying ? "opacity-0" : "opacity-100"
+          isPlaying ? 'opacity-0' : 'opacity-100'
         } absolute bg-neutral-900/30 flex items-center justify-center inset-0 transition-opacity`}
       >
         <LoadingVideo />
@@ -52,7 +54,7 @@ const MediaVideo: FC<MediaVideoProps> = ({ videoUrl, isHover }) => {
       {isPlaying && (
         <div
           className={`absolute z-20 bottom-2 start-2 h-6 rounded-full bg-black bg-opacity-70 text-white flex items-center justify-center text-sm transform transition-transform ${
-            showDescUnmuted ? "ps-[6px] pe-2" : "w-6 hover:scale-125"
+            showDescUnmuted ? 'ps-[6px] pe-2' : 'w-6 hover:scale-125'
           }`}
           onClick={() => setIsMuted(!isMuted)}
         >
