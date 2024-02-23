@@ -16,7 +16,7 @@ function customColors(cssVar) {
 }
 
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ['./src/**/*.{js,jsx,ts,tsx,css,scss}'],
   darkMode: "class", // or 'media' or 'class',
   theme: {
     container: {
