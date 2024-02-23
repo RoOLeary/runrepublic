@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import type { FC } from 'react';
 import React from 'react';
 

@@ -1,4 +1,3 @@
-/* eslint-disable unused-imports/no-unused-vars */
 import _ from 'lodash';
 
 import type { NavItemType } from '@/components/Navigation/NavigationItem';

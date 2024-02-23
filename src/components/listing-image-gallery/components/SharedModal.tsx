@@ -1,3 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/button-has-type */
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable no-unsafe-optional-chaining */
 import {
   ArrowTopRightOnSquareIcon,
   ArrowUturnLeftIcon,

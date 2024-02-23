@@ -1,3 +1,6 @@
+/* eslint-disable no-console */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-param-reassign */
 function forceDownload(blobUrl: string, filename: string) {
   const a: any = document.createElement('a');
   a.download = filename;

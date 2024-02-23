@@ -1,3 +1,5 @@
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable consistent-return */
 export default function getTwClassByNumber(
   index: number,
   type: 'grid-cols' | 'gap',

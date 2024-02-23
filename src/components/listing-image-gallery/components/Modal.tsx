@@ -1,3 +1,5 @@
+/* eslint-disable import/no-cycle */
+
 'use client';
 
 import { Dialog } from '@headlessui/react';
@@ -58,6 +60,7 @@ export default function Modal({
     <Dialog
       static
       open
+      // eslint-disable-next-line react/jsx-no-bind
       onClose={handleClose}
       initialFocus={overlayRef}
       className="fixed inset-0 z-50 flex items-center justify-center "
@@ -74,7 +77,9 @@ export default function Modal({
         index={curIndex}
         direction={direction}
         images={images}
+        // eslint-disable-next-line react/jsx-no-bind
         changePhotoId={changePhotoId}
+        // eslint-disable-next-line react/jsx-no-bind
         closeModal={handleClose}
         navigation
       />

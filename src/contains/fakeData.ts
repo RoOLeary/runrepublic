@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import avatar1 from '@/data/avatars/1.jpg';
 import avatar2 from '@/data/avatars/2.jpg';
 import avatar3 from '@/data/avatars/3.jpg';

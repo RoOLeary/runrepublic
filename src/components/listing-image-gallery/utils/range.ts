@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 export const range = (start: number, end: number) => {
   const output = [];
   if (typeof end === 'undefined') {

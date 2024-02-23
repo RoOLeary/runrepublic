@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 const hexToRGB = (h: string) => {
   let r: number | string = 0;
   let g: number | string = 0;

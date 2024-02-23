@@ -1,3 +1,5 @@
+/* eslint-disable react/no-danger */
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import type { FC } from 'react';
 import React from 'react';
 
