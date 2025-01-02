@@ -72,7 +72,7 @@ const Modal: FC<ModalProps> = ({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="fixed inset-0 bg-neutral-900 bg-opacity-50 dark:bg-opacity-80" />
+              <div className="fixed inset-0 bg-neutral-900 bg-opacity-50 dark:bg-opacity-80" />
             </Transition.Child>
 
             {/* This element is to trick the browser into centering the modal contents. */}

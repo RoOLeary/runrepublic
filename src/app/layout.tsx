@@ -4,7 +4,7 @@ import '@/styles/index.scss';
 import { Poppins } from 'next/font/google';
 
 import Footer from '@/components/Footer/Footer';
-import MusicPlayer from '@/components/MusicPlayer/MusicPlayer';
+// import MusicPlayer from '@/components/MusicPlayer/MusicPlayer';
 import { ViewTransitions } from "next-view-transitions";
 import SiteHeader from './SiteHeader';
 
@@ -34,7 +34,7 @@ export default function RootLayout({
             <SiteHeader />
           </div>
           {children}
-          <MusicPlayer />
+          {/* <MusicPlayer /> */}
           <Footer />
         </div>
       </body>

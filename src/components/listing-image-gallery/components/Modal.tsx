@@ -4,7 +4,7 @@
 
 import { Dialog } from '@headlessui/react';
 import { motion } from 'framer-motion';
-import type { Route } from 'next';
+import { Route } from 'next';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useRef, useState } from 'react';
 import useKeypress from 'react-use-keypress';
@@ -65,9 +65,8 @@ export default function Modal({
       initialFocus={overlayRef}
       className="fixed inset-0 z-50 flex items-center justify-center "
     >
-      <Dialog.Overlay
+      <div
         ref={overlayRef}
-        as={motion.div}
         key="backdrop"
         className="fixed inset-0 z-30 bg-black"
         // initial={{ opacity: 0 }}
