@@ -1,7 +1,6 @@
-import _ from 'lodash';
-
-import type { NavItemType } from '@/components/Navigation/NavigationItem';
-import type { Route } from '@/routers/types';
+import { NavItemType } from "@/components/Navigation/NavigationItem";
+import { Route } from "@/routers/types";
+import _ from "lodash";
 
 const randomId = _.uniqueId;
 

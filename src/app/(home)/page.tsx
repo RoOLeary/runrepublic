@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import SectionAds from "@/components/Sections/SectionAds";
+import SectionAds from "@/components/Sections/SectionAds"; 
 import SectionLatestPosts from '@/components/Sections/SectionLatestPosts';
 import SectionMagazine2 from '@/components/Sections/SectionMagazine2';
 import SectionMagazine9 from '@/components/Sections/SectionMagazine9';
@@ -32,7 +32,7 @@ const PageHome = () => {
             posts={DEMO_POSTS_NEWS.filter((_, i) => i >= 6 && i < 18)}
           />
 
-          {/* <SectionAds className="pt-16 lg:pt-24" /> */}
+          <SectionAds className="pt-16 lg:pt-24" />
 
           {/* === SECTION 11 === */}
           <SectionMagazine11 className="py-16 lg:py-24" />

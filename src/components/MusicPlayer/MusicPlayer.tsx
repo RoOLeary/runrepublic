@@ -1,7 +1,7 @@
 'use client';
 
 import _ from 'lodash';
-import type { ChangeEvent, FC, LegacyRef } from 'react';
+import type { ChangeEvent, FC, Ref } from 'react';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import type { FilePlayerProps } from 'react-player/file';
 import ReactFilePlayer from 'react-player/file';
@@ -14,7 +14,7 @@ import PlayerContent from './PlayerContent';
 export interface MusicPlayerProps {}
 
 const MusicPlayer: FC<MusicPlayerProps> = ({}) => {
-  const playerRef: LegacyRef<ReactFilePlayer> | undefined = useRef(null);
+  const playerRef: Ref<ReactFilePlayer> | undefined = useRef(null);
 
   const {
     duration,

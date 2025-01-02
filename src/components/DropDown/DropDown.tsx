@@ -2,7 +2,7 @@
 
 import { Menu, Transition } from '@headlessui/react';
 import { EllipsisHorizontalIcon } from '@heroicons/react/24/solid';
-import type { FC, ReactNode } from 'react';
+import type { FC, ReactNode, JSX } from 'react';
 import React, { Fragment } from 'react';
 
 export interface DropDownItem {
@@ -33,7 +33,7 @@ const DropDown: FC<DropDownProps> = ({
   onClick,
 }) => {
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    (<Menu as="div" className="relative inline-block text-left">
       <Menu.Button className={className} title={title}>
         {renderTrigger ? (
           renderTrigger()
@@ -67,7 +67,7 @@ const DropDown: FC<DropDownProps> = ({
                   ) : (
                     <button className="flex items-center rounded-xl w-full px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-neutral-100 truncate ">
                       {!!item.icon && (
-                        <div dangerouslySetInnerHTML={{ __html: item.icon }} />
+                        (<div dangerouslySetInnerHTML={{ __html: item.icon }} />)
                         // <i className={`${item.icon} mr-1 w-7 text-base`}></i>
                       )}
                       <span className="ms-3">{item.name}</span>
@@ -79,7 +79,7 @@ const DropDown: FC<DropDownProps> = ({
           </div>
         </Menu.Items>
       </Transition>
-    </Menu>
+    </Menu>)
   );
 };
 

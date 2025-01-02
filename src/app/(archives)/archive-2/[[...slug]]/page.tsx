@@ -101,8 +101,6 @@ const PageArchiveAudio = ({}) => {
           />
         </div>
 
-        {/* SUBCRIBES */}
-        <SectionSubscribe2 />
       </div>
     </div>
   );
