@@ -30,9 +30,7 @@ export default function RootLayout({
     <html lang="en" className={poppins.className}>
       <body className="">
         <div className="bg-[#f8f8f8] text-base dark:bg-neutral-900/95 text-neutral-900 dark:text-neutral-200">
-          <div className="mb-2">
-            <SiteHeader />
-          </div>
+          <SiteHeader />
           {children}
           {/* <MusicPlayer /> */}
           <Footer />
