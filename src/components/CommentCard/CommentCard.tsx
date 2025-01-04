@@ -20,7 +20,7 @@ const DEMO_COMMENTS = [
   {
     id: 1,
     author: null,
-    date: 'Jan 24, 2024',
+    date: 'Jan 24, 2025',
     content:
       'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.',
     like: { count: 96, isLiked: false },
@@ -29,7 +29,7 @@ const DEMO_COMMENTS = [
   {
     id: 3,
     author: null,
-    date: 'Jan 24, 2024',
+    date: 'Jan 24, 2025',
     content:
       'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
     like: { count: 66, isLiked: true },
@@ -37,7 +37,7 @@ const DEMO_COMMENTS = [
   {
     id: 4,
     author: null,
-    date: 'Jan 24, 2024',
+    date: 'Jan 24, 2025',
     content:
       'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.',
     like: { count: 45, isLiked: true },

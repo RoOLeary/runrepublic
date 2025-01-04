@@ -30,7 +30,7 @@ const SingleHeader: FC<SingleHeaderProps> = ({
         />
         <SingleTitle
           mainClass={titleMainClass}
-          title="Trending web & landing page designs in 2024"
+          title="Trending web & landing page designs in 2025"
         />
         {!hiddenDesc && (
           <span className="block text-base text-neutral-500 md:text-lg dark:text-neutral-400 pb-1">

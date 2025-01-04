@@ -27,7 +27,7 @@ const SingleHeader4: FC<SingleHeader4Props> = ({
         />
         <SingleTitle
           mainClass="text-neutral-900 font-bold text-3xl md:text-4xl md:!leading-[120%] lg:text-5xl 2xl:text-6xl dark:text-neutral-100"
-          title="Trending web & landing page designs in 2024"
+          title="Trending web & landing page designs in 2025"
         />
         {!hiddenDesc && (
           <span className="block text-base text-neutral-500 md:text-lg dark:text-neutral-400 pb-1">
