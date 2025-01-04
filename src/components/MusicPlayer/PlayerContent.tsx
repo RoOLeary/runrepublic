@@ -586,7 +586,6 @@ const PlayerContent: FC<PlayerContentProps> = ({
 
   return (
     <Transition
-      className="relative bg-white dark:bg-neutral-800 w-full flex flex-col px-2 sm:px-3 z-0"
       show={!!post && !!post.audioUrl}
       enter="transition-transform duration-150"
       enterFrom="translate-y-full"
